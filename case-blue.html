@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study — BLUE</title>
+  <meta name="description" content="Caso de estudio BLUE: proceso UX/UI, decisiones de diseño y aprendizajes del proyecto." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#f4f4f5" />
+  <link rel="canonical" href="/case-blue.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Case Study — BLUE" />
+  <meta property="og:description" content="Proceso UX/UI, decisiones de diseño y resultados del proyecto BLUE." />
+  <meta property="og:url" content="/case-blue.html" />
+  <meta property="og:image" content="/images/home/placeholder.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study — BLUE" />
+  <meta name="twitter:description" content="Proceso UX/UI, decisiones de diseño y resultados del proyecto BLUE." />
+  <meta name="twitter:image" content="/images/home/placeholder.png" />
+  <link rel="icon" type="image/svg+xml" href="logo_redondo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="case-blue">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <!-- SVG SPRITE INLINE (GLOBAL) -->
+  <svg xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true"
+       style="position:absolute;width:0;height:0;overflow:hidden">
+
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+      <path d="M19 12L5 12M5 12L11 6M5 12L11 18"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12H19M19 12L13 18M19 12L13 6"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
+      <path d="M7 17L17 7M17 7L8 7M17 7L17 16"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-arrow-down-right" viewBox="0 0 24 24">
+      <path d="M7 7L17 17M17 17L17 8M17 17L8 17"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+      <path d="M6 9L12 15L18 9"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M3 8H21M3 16H21"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M18 6L6 18M6 6L18 18"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path d="M4 17V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H18C18.5304 21 19.0391 20.7893 19.4142 20.4142C19.7893 20.0391 20 19.5304 20 19V17M7 11L12 16M12 16L17 11M12 16V4"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-folder" viewBox="0 0 24 24">
+      <path d="M5 4H9L12 7H19C19.5304 7 20.0391 7.21071 20.4142 7.58579C20.7893 7.96086 21 8.46957 21 9V17C21 17.5304 20.7893 18.0391 20.4142 18.4142C20.0391 18.7893 19.5304 19 19 19H5C4.46957 19 3.96086 18.7893 3.58579 18.4142C3.21071 18.0391 3 17.5304 3 17V6C3 5.46957 3.21071 4.96086 3.58579 4.58579C3.96086 4.21071 4.46957 4 5 4Z"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-profile" viewBox="0 0 24 24">
+      <path d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 16.9217 18 17.9391 18 19V21M8 7C8 8.06087 8.42143 9.07828 9.17157 9.82843C9.92172 10.5786 10.9391 11 12 11C13.0609 11 14.0783 10.5786 14.8284 9.82843C15.5786 9.07828 16 8.06087 16 7C16 5.93913 15.5786 4.92172 14.8284 4.17157C14.0783 3.42143 13.0609 3 12 3C10.9391 3 9.92172 3.42143 9.17157 4.17157C8.42143 4.92172 8 5.93913 8 7Z"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-contact" viewBox="0 0 24 24">
+      <path d="M8 8H16M8 12H14M18 3C18.7956 3 19.5587 3.31607 20.1213 3.87868C20.6839 4.44129 21 5.20435 21 6V14C21 14.7956 20.6839 15.5587 20.1213 16.1213C19.5587 16.6839 18.7956 17 18 17H13L8 20V17H6C5.20435 17 4.44129 16.6839 3.87868 16.1213C3.31607 15.5587 3 14.7956 3 14V6C3 5.20435 3.31607 4.44129 3.87868 3.87868C4.44129 3.31607 5.20435 3 6 3H18Z"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+  </svg>
+
+  <!-- ✅ Overlay (necesario para mobile menu) -->
+  <div class="nav-overlay" id="navOverlay" hidden></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="siteNav">
+    <div class="navbar-inner container">
+      <a href="index.html#top" class="logo" aria-label="Home">
+        <img src="logo_redondo.svg" alt="Logo" class="navbar-logo" />
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html#work">CASOS DE ESTUDIO</a></li>
+          <li><a href="index.html#about">SOBRE MÍ</a></li>
+          <li><a href="index.html#contact">CONTACTO</a></li>
+        </ul>
+      </nav>
+
+      <!-- SOLO desktop -->
+      <a href="#" class="button button--primary desktop-only">
+        Descargar CV
+        <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+      </a>
+
+      <!-- ✅ Mobile toggle -->
+      <button
+        class="hamburger mobile-only"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="navDropdown"
+        aria-expanded="false"
+      >
+        <svg class="icon icon-menu" aria-hidden="true"><use href="#icon-menu"></use></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#icon-close"></use></svg>
+      </button>
+
+      <!-- ✅ Dropdown -->
+      <div class="nav-dropdown" id="navDropdown" hidden>
+        <ul class="nav-links nav-links--mobile">
+          <li>
+            <a href="index.html#work">
+              <svg class="icon" aria-hidden="true"><use href="#icon-folder"></use></svg>
+              Casos de estudio
+            </a>
+          </li>
+          <li>
+            <a href="index.html#about">
+              <svg class="icon" aria-hidden="true"><use href="#icon-profile"></use></svg>
+              Sobre mí
+            </a>
+          </li>
+          <li>
+            <a href="index.html#contact">
+              <svg class="icon" aria-hidden="true"><use href="#icon-contact"></use></svg>
+              Contacto
+            </a>
+          </li>
+        </ul>
+
+        <a href="#" class="button button--primary nav-dropdown-cta">
+          Descargar CV
+          <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="case-hero">
+    <div class="container">
+      <section class="case-panel">
+        <h1>CASE STUDY — BLUE</h1>
+        <p>Esta es la página temporal del case study. Aquí construiremos el contenido real.</p>
+        <p><a href="index.html#work" style="color: inherit; text-decoration: underline;">← Volver a casos</a></p>
+      </section>
+    </div>
+  </main>
+
+  <!-- ✅ necesario para que el menú funcione -->
+  <script src="script.js" defer></script>
+</body>
+</html>

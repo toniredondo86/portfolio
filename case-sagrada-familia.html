@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto — Sagrada Familia</title>
+  <meta name="description" content="Caso de estudio Sagrada Familia: investigación, definición y diseño UX/UI para mejorar la experiencia digital." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#f4f4f5" />
+  <link rel="canonical" href="/case-sagrada-familia.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Proyecto — Sagrada Familia" />
+  <meta property="og:description" content="Proceso UX/UI en Sagrada Familia: investigación, oportunidades y diseño de producto." />
+  <meta property="og:url" content="/case-sagrada-familia.html" />
+  <meta property="og:image" content="/images/sagrada%20familia/splash.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Proyecto — Sagrada Familia" />
+  <meta name="twitter:description" content="Proceso UX/UI en Sagrada Familia: investigación, oportunidades y diseño de producto." />
+  <meta name="twitter:image" content="/images/sagrada%20familia/splash.png" />
+  <link rel="icon" type="image/svg+xml" href="logo_redondo.svg" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./styles.css?v=2" />
+
+  <!-- Swiper JS + site JS (defer) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="./script.js?v=2" defer></script>
+</head>
+
+<body class="case case-sagrada-familia">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <!-- SVG SPRITE INLINE (GLOBAL) -->
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+      <path d="M19 12L5 12M5 12L11 6M5 12L11 18"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
+      <path d="M7 17L17 7M17 7L8 7M17 7L17 16"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M3 8H21M3 16H21"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M18 6L6 18M6 6L18 18"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path d="M4 17V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H18C18.5304 21 19.0391 20.7893 19.4142 20.4142C19.7893 20.0391 20 19.5304 20 19V17M7 11L12 16M12 16L17 11M12 16V4"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-folder" viewBox="0 0 24 24">
+      <path d="M5 4H9L12 7H19C19.5304 7 20.0391 7.21071 20.4142 7.58579C20.7893 7.96086 21 8.46957 21 9V17C21 17.5304 20.7893 18.0391 20.4142 18.4142C20.0391 18.7893 19.5304 19 19 19H5C4.46957 19 3.96086 18.7893 3.58579 18.4142C3.21071 18.0391 3 17.5304 3 17V6C3 5.46957 3.21071 4.96086 3.58579 4.58579C3.96086 4.21071 4.46957 4 5 4Z"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-profile" viewBox="0 0 24 24">
+      <path d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 15.4217 18 17.9391 18 19V21M8 7C8 8.06087 8.42143 9.07828 9.17157 9.82843C9.92172 10.5786 10.9391 11 12 11C13.0609 11 14.0783 10.5786 14.8284 9.82843C15.5786 9.07828 16 8.06087 16 7C16 5.93913 15.5786 4.92172 14.8284 4.17157C14.0783 3.42143 13.0609 3 12 3C10.9391 3 9.92172 3.42143 9.17157 4.17157C8.42143 4.92172 8 5.93913 8 7Z"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-contact" viewBox="0 0 24 24">
+      <path d="M8 8H16M8 12H14M18 3C18.7956 3 19.5587 3.31607 20.1213 3.87868C20.6839 4.44129 21 5.20435 21 6V14C21 14.7956 20.6839 15.5587 20.1213 16.1213C19.5587 16.6839 18.7956 17 18 17H13L8 20V17H6C5.20435 17 4.44129 16.6839 3.87868 16.1213C3.31607 15.5587 3 14.7956 3 14V6C3 5.20435 3.31607 4.44129 3.87868 3.87868C4.44129 3.31607 5.20435 3 6 3H18Z"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-chevron" viewBox="0 0 24 24">
+      <path d="M6 9L12 15L18 9"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12H19M19 12L13 18M19 12L13 6"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+  </svg>
+
+  <!-- Overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true" hidden></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="siteNav">
+    <div class="container">
+      <div class="navbar-inner">
+
+<a href="index.html#top" class="logo" aria-label="Home">
+  <span class="logo-box" aria-hidden="true">
+    <svg
+      class="navbar-logo"
+      width="119"
+      height="32"
+      viewBox="-2 -2 123 36"
+      preserveAspectRatio="xMinYMid meet"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M1.89333 26V11.8933H5.54667L5.68 16.4267L5.04 15.4933C5.25333 14.7644 5.6 14.1067 6.08 13.52C6.56 12.9156 7.12 12.4444 7.76 12.1067C8.41778 11.7689 9.10222 11.6 9.81333 11.6C10.1156 11.6 10.4089 11.6267 10.6933 11.68C10.9778 11.7333 11.2178 11.7956 11.4133 11.8667L10.4 16.0267C10.1867 15.92 9.92889 15.8311 9.62667 15.76C9.32445 15.6711 9.01333 15.6267 8.69333 15.6267C8.26667 15.6267 7.86667 15.7067 7.49333 15.8667C7.13778 16.0089 6.82667 16.2222 6.56 16.5067C6.29333 16.7733 6.08 17.0933 5.92 17.4667C5.77778 17.84 5.70667 18.2489 5.70667 18.6933V26H1.89333ZM19.6804 26.2667C18.1515 26.2667 16.8182 25.9556 15.6804 25.3333C14.5426 24.7111 13.6538 23.8578 13.0138 22.7733C12.3738 21.6889 12.0538 20.4444 12.0538 19.04C12.0538 17.9556 12.2315 16.96 12.5871 16.0533C12.9426 15.1467 13.4404 14.3644 14.0804 13.7067C14.7204 13.0311 15.476 12.5156 16.3471 12.16C17.236 11.7867 18.196 11.6 19.2271 11.6C20.1871 11.6 21.076 11.7778 21.8938 12.1333C22.7115 12.4711 23.4138 12.96 24.0004 13.6C24.6049 14.2222 25.0671 14.96 25.3871 15.8133C25.7071 16.6667 25.8493 17.6 25.8138 18.6133L25.7871 19.7867H14.4538L13.8404 17.4667H22.6671L22.2404 17.9467V17.36C22.2049 16.88 22.0449 16.4444 21.7604 16.0533C21.4938 15.6622 21.1471 15.36 20.7204 15.1467C20.2938 14.9333 19.8138 14.8267 19.2804 14.8267C18.4982 14.8267 17.8315 14.9778 17.2804 15.28C16.7471 15.5822 16.3382 16.0267 16.0538 16.6133C15.7693 17.2 15.6271 17.9111 15.6271 18.7467C15.6271 19.6 15.8049 20.3378 16.1604 20.96C16.5338 21.5822 17.0493 22.0711 17.7071 22.4267C18.3826 22.7644 19.1738 22.9333 20.0804 22.9333C20.7026 22.9333 21.2715 22.8356 21.7871 22.64C22.3026 22.4444 22.8538 22.1067 23.4404 21.6267L25.2538 24.16C24.7382 24.6222 24.1693 25.0133 23.5471 25.3333C22.9249 25.6356 22.2849 25.8667 21.6271 26.0267C20.9693 26.1867 20.3204 26.2667 19.6804 26.2667ZM34.1321 26.2667C32.9054 26.2667 31.8032 25.9556 30.8254 25.3333C29.8476 24.6933 29.0743 23.8311 28.5054 22.7467C27.9543 21.6444 27.6788 20.3733 27.6788 18.9333C27.6788 17.5289 27.9543 16.2756 28.5054 15.1733C29.0743 14.0711 29.8388 13.2 30.7988 12.56C31.7765 11.92 32.8876 11.6 34.1321 11.6C34.7899 11.6 35.421 11.7067 36.0254 11.92C36.6476 12.1156 37.1988 12.3911 37.6788 12.7467C38.1765 13.1022 38.5765 13.5022 38.8788 13.9467C39.181 14.3733 39.3499 14.8267 39.3854 15.3067L38.4254 15.4667V6.26667H42.2121V26H38.6388L38.4788 22.7467L39.2254 22.8267C39.1899 23.2711 39.0299 23.6978 38.7454 24.1067C38.461 24.5156 38.0788 24.8889 37.5988 25.2267C37.1365 25.5467 36.6032 25.8044 35.9988 26C35.4121 26.1778 34.7899 26.2667 34.1321 26.2667ZM34.9854 23.12C35.6965 23.12 36.3188 22.9422 36.8521 22.5867C37.3854 22.2311 37.8032 21.7422 38.1054 21.12C38.4076 20.4978 38.5588 19.7689 38.5588 18.9333C38.5588 18.1156 38.4076 17.3956 38.1054 16.7733C37.8032 16.1333 37.3854 15.6444 36.8521 15.3067C36.3188 14.9511 35.6965 14.7733 34.9854 14.7733C34.2743 14.7733 33.6521 14.9511 33.1188 15.3067C32.6032 15.6444 32.1943 16.1333 31.8921 16.7733C31.6076 17.3956 31.4654 18.1156 31.4654 18.9333C31.4654 19.7689 31.6076 20.4978 31.8921 21.12C32.1943 21.7422 32.6032 22.2311 33.1188 22.5867C33.6521 22.9422 34.2743 23.12 34.9854 23.12Z" fill="black"/>
+
+      <path d="M69.2268 26V11.8933H72.8535L72.9602 14.7733L72.2135 15.0933C72.4091 14.4533 72.7557 13.8756 73.2535 13.36C73.7691 12.8267 74.3824 12.4 75.0935 12.08C75.8046 11.76 76.5513 11.6 77.3335 11.6C78.4002 11.6 79.2891 11.8133 80.0002 12.24C80.7291 12.6667 81.2713 13.3156 81.6268 14.1867C82.0002 15.04 82.1868 16.0978 82.1868 17.36V26H78.4002V17.6533C78.4002 17.0133 78.3113 16.48 78.1335 16.0533C77.9557 15.6267 77.6802 15.3156 77.3068 15.12C76.9513 14.9067 76.5068 14.8178 75.9735 14.8533C75.5468 14.8533 75.1468 14.9244 74.7735 15.0667C74.4179 15.1911 74.1068 15.3778 73.8402 15.6267C73.5913 15.8756 73.3868 16.16 73.2268 16.48C73.0846 16.8 73.0135 17.1467 73.0135 17.52V26H71.1468C70.7379 26 70.3735 26 70.0535 26C69.7335 26 69.4579 26 69.2268 26ZM91.3354 26.2667C90.1087 26.2667 89.0065 25.9556 88.0287 25.3333C87.0509 24.6933 86.2776 23.8311 85.7087 22.7467C85.1576 21.6444 84.882 20.3733 84.882 18.9333C84.882 17.5289 85.1576 16.2756 85.7087 15.1733C86.2776 14.0711 87.042 13.2 88.002 12.56C88.9798 11.92 90.0909 11.6 91.3354 11.6C91.9932 11.6 92.6243 11.7067 93.2287 11.92C93.8509 12.1156 94.402 12.3911 94.882 12.7467C95.3798 13.1022 95.7798 13.5022 96.082 13.9467C96.3843 14.3733 96.5532 14.8267 96.5887 15.3067L95.6287 15.4667V6.26667H99.4154V26H95.842L95.682 22.7467L96.4287 22.8267C96.3932 23.2711 96.2332 23.6978 95.9487 24.1067C95.6643 24.5156 95.282 24.8889 94.802 25.2267C94.3398 25.5467 93.8065 25.8044 93.202 26C92.6154 26.1778 91.9932 26.2667 91.3354 26.2667ZM92.1887 23.12C92.8998 23.12 93.522 22.9422 94.0554 22.5867C94.5887 22.2311 95.0065 21.7422 95.3087 21.12C95.6109 20.4978 95.762 19.7689 95.762 18.9333C95.762 18.1156 95.6109 17.3956 95.3087 16.7733C95.0065 16.1333 94.5887 15.6444 94.0554 15.3067C93.522 14.9511 92.8998 14.7733 92.1887 14.7733C91.4776 14.7733 90.8554 14.9511 90.322 15.3067C89.8065 15.6444 89.3976 16.1333 89.0954 16.7733C88.8109 17.3956 88.6687 18.1156 88.6687 18.9333C88.6687 19.7689 88.8109 20.4978 89.0954 21.12C89.3976 21.7422 89.8065 22.2311 90.322 22.5867C90.8554 22.9422 91.4776 23.12 92.1887 23.12ZM109.667 26.2667C108.227 26.2667 106.938 25.9556 105.8 25.3333C104.68 24.6933 103.791 23.8222 103.134 22.72C102.494 21.6178 102.174 20.3556 102.174 18.9333C102.174 17.5111 102.494 16.2578 103.134 15.1733C103.791 14.0711 104.68 13.2 105.8 12.56C106.938 11.92 108.227 11.6 109.667 11.6C111.089 11.6 112.36 11.92 113.48 12.56C114.618 13.2 115.507 14.0711 116.147 15.1733C116.787 16.2578 117.107 17.5111 117.107 18.9333C117.107 20.3556 116.787 21.6178 116.147 22.72C115.507 23.8222 114.618 24.6933 113.48 25.3333C112.36 25.9556 111.089 26.2667 109.667 26.2667ZM109.667 22.96C110.36 22.96 110.983 22.7911 111.534 22.4533C112.085 22.0978 112.511 21.6178 112.814 21.0133C113.134 20.3911 113.294 19.6978 113.294 18.9333C113.294 18.1511 113.134 17.4578 112.814 16.8533C112.511 16.2311 112.085 15.7511 111.534 15.4133C110.983 15.0578 110.36 14.88 109.667 14.88C108.956 14.88 108.325 15.0578 107.774 15.4133C107.223 15.7689 106.787 16.2489 106.467 16.8533C106.147 17.4578 105.996 18.1511 106.014 18.9333C105.996 19.6978 106.147 20.3911 106.467 21.0133C106.787 21.6178 107.223 22.0978 107.774 22.4533C108.325 22.7911 108.956 22.96 109.667 22.96Z" fill="black"/>
+
+      <rect x="44.6668" y="11.3335" width="22.6667" height="14.6667" rx="7.33333" fill="#E1443B"/>
+      <circle cx="60" cy="18.667" r="6" fill="white"/>
+    </svg>
+  </span>
+</a>
+
+
+        <nav class="nav-desktop" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="index.html#work">PROYECTOS</a></li>
+            <li><a href="index.html#about">SOBRE MÍ</a></li>
+            <li><a href="index.html#contact">CONTACTO</a></li>
+          </ul>
+        </nav>
+
+        <a href="#" class="button button--primary desktop-only">
+          Descargar CV
+          <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+        </a>
+
+        <button class="hamburger mobile-only" type="button" aria-label="Open menu" aria-controls="navDropdown" aria-expanded="false">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#icon-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#icon-close"></use></svg>
+        </button>
+
+        <div class="nav-dropdown" id="navDropdown" aria-hidden="true" hidden>
+          <ul class="nav-links nav-links--mobile">
+            <li>
+              <a href="index.html#work">
+                <svg class="icon" aria-hidden="true"><use href="#icon-folder"></use></svg>
+                Proyectos
+              </a>
+            </li>
+            <li>
+              <a href="index.html#about">
+                <svg class="icon" aria-hidden="true"><use href="#icon-profile"></use></svg>
+                Sobre mí
+              </a>
+            </li>
+            <li>
+              <a href="index.html#contact">
+                <svg class="icon" aria-hidden="true"><use href="#icon-contact"></use></svg>
+                Contacto
+              </a>
+            </li>
+          </ul>
+
+          <a href="#" class="button button--primary nav-dropdown-cta">
+            Descargar CV
+            <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="project-hero" id="top">
+      <div class="container project-hero__inner">
+        <a class="button button--tertiary project-back" href="index.html#work">
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+          Volver a Proyectos
+        </a>
+
+        <div class="project-hero__grid">
+          <div class="project-hero__content">
+            <div class="project-app-logo">
+              <img src="images/sagrada familia/logo_safa.svg" alt="Logo Sagrada Familia" />
+            </div>
+
+            <h1 class="project-title">Sagrada Familia</h1>
+
+            <div class="project-tags" aria-label="Tags del proyecto">
+              <span class="tag">APP MÓVIL</span>
+              <span class="tag">PROPUESTA DE EVOLUCIÓN</span>
+              <span class="tag">ACCESIBILIDAD</span>
+              <span class="tag">GAMIFICACIÓN</span>
+            </div>
+
+            <p class="project-lead">
+              Propuesta de evolución de la aplicación móvil orientada a mejorar la accesibilidad,
+              enriquecer la experiencia y explorar nuevas funcionalidades para distintos perfiles de usuario.
+            </p>
+
+            <div class="project-meta">
+              <div class="project-meta__row">
+                <h6 class="project-meta__title">AÑO</h6>
+                <p class="project-meta__value">2025</p>
+              </div>
+
+              <div class="project-meta__row">
+                <h6 class="project-meta__title">TIMELINE</h6>
+                <p class="project-meta__value">4 meses</p>
+              </div>
+
+              <div class="project-meta__row">
+                <h6 class="project-meta__title">ROL</h6>
+                <p class="project-meta__value">Lead UX/UI Designer · Responsable del equipo de diseño</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-hero__media" aria-label="Imagen del proyecto">
+            <img class="project-mockup" src="images/sagrada familia/splash.png" alt="Pantalla de la app Sagrada Familia" width="453" height="912" fetchpriority="high" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- DESAFÍO -->
+    <section class="section project-challenge" id="desafio">
+      <div class="container project-challenge__grid">
+        <div class="project-challenge__image card-media">
+          <img src="images/sagrada familia/placeholder.png" alt="App Sagrada Familia rediseño" width="361" height="320" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="project-challenge__content">
+          <div class="section-head project-challenge__head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">DESAFÍO</h2>
+          </div>
+
+          <h4 class="project-challenge__title">Repensar la experiencia digital de Sagrada Familia</h4>
+
+          <div class="project-challenge__body">
+            <p>La aplicación móvil de la Sagrada Familia presentaba una experiencia limitada y poco adaptada a las necesidades actuales de los usuarios. Más allá de un diseño visual desactualizado, el producto ofrecía una navegación poco clara, barreras de accesibilidad y escasas opciones para personalizar o enriquecer la experiencia de la visita.</p>
+            <p>El reto consistía en replantear la aplicación como una experiencia digital más inclusiva, flexible y participativa. No se trataba únicamente de modernizar la interfaz, sino de pensar el producto a futuro, explorando cómo podía evolucionar para adaptarse a distintos perfiles de usuario y a nuevas formas de consumo cultural.</p>
+
+            <h6 class="project-challenge__subhead">OBJETIVOS DEL PROYECTO</h6>
+
+            <ul class="project-challenge__list">
+              <li>Mejorar la accesibilidad de la aplicación desde una perspectiva inclusiva</li>
+              <li>Simplificar la navegación y facilitar el acceso a los contenidos</li>
+              <li>Explorar nuevas funcionalidades que enriquecieran la experiencia cultural</li>
+              <li>Definir una visión de evolución del producto alineada con el contexto digital actual</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- PROCESO -->
+    <section class="section process-accordion" id="process-accordion" aria-label="Process">
+      <div class="container">
+        <div class="section-head">
+          <span class="dot" aria-hidden="true"></span>
+          <h2 class="section-title">PROCESO</h2>
+        </div>
+
+        <div class="process-accordion__wrap">
+          <div class="process-accordion__media">
+            <div class="process-accordion__media-item is-active" data-step="1">
+              <img src="images/sagrada familia/placeholder.png" alt="Research phase" width="361" height="320" loading="lazy" decoding="async" />
+            </div>
+            <div class="process-accordion__media-item" data-step="2">
+              <img src="images/sagrada familia/placeholder.png" alt="Ideation phase" width="361" height="320" loading="lazy" decoding="async" />
+            </div>
+            <div class="process-accordion__media-item" data-step="3">
+              <img src="images/sagrada familia/placeholder.png" alt="Design phase" width="361" height="320" loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+          <div class="process-accordion__list" aria-label="Process list">
+            <article class="process-accordion__item is-active" data-step="1">
+              <button class="process-accordion__trigger" type="button" id="pa-trigger-1" aria-expanded="true" aria-controls="pa-panel-1">
+                <h5 class="process-accordion__title">Investigación y definición</h5>
+              </button>
+
+              <div class="process-accordion__panel" id="pa-panel-1" role="region" aria-labelledby="pa-trigger-1">
+                <div class="process-accordion__panel-inner">
+                  <p class="process-accordion__desc">
+                    Se analizó la aplicación existente con el objetivo de comprender el estado actual del producto, detectar problemas de usabilidad y accesibilidad, y establecer una base clara sobre la que definir la evolución de la experiencia.
+                  </p>
+
+                  <ul class="process-accordion__bullets">
+                    <li>Análisis del producto y navegación actual</li>
+                    <li>Identificación de problemas de usabilidad y accesibilidad</li>
+                    <li>Revisión de flujos clave y contenidos principales</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="process-accordion__item" data-step="2">
+              <button class="process-accordion__trigger" type="button" id="pa-trigger-2" aria-expanded="false" aria-controls="pa-panel-2">
+                <h5 class="process-accordion__title">Definición de oportunidades</h5>
+              </button>
+
+              <div class="process-accordion__panel" id="pa-panel-2" role="region" aria-labelledby="pa-trigger-2" hidden>
+                <div class="process-accordion__panel-inner">
+                  <p class="process-accordion__desc">
+                    A partir del análisis se identificaron oportunidades de mejora centradas en enriquecer la experiencia del usuario y ampliar el valor del producto más allá de su función informativa.
+                  </p>
+
+                  <ul class="process-accordion__bullets">
+                    <li>Accesibilidad como eje transversal del diseño</li>
+                    <li>Exploración de audioguías más flexibles mediante IA</li>
+                    <li>Incorporación de gamificación para fomentar la interacción y el aprendizaje</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="process-accordion__item" data-step="3">
+              <button class="process-accordion__trigger" type="button" id="pa-trigger-3" aria-expanded="false" aria-controls="pa-panel-3">
+                <h5 class="process-accordion__title">Diseño UX/UI y prototipado</h5>
+              </button>
+
+              <div class="process-accordion__panel" id="pa-panel-3" role="region" aria-labelledby="pa-trigger-3" hidden>
+                <div class="process-accordion__panel-inner">
+                  <p class="process-accordion__desc">
+                    Se trabajó en una propuesta de rediseño UX/UI que integrara las oportunidades definidas dentro de una experiencia clara, coherente y alineada con el contexto del producto.
+                  </p>
+
+                  <ul class="process-accordion__bullets">
+                    <li>Revisión de la arquitectura de información</li>
+                    <li>Rediseño de flujos principales de la aplicación</li>
+                    <li>Creación de prototipos interactivos para validar la experiencia</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- RESULTADO -->
+    <section class="section result-swiper" id="resultado" aria-label="Resultado">
+      <div class="container">
+        <div class="section-head">
+          <span class="dot" aria-hidden="true"></span>
+          <h2 class="section-title">RESULTADO</h2>
+        </div>
+
+        <div class="result-swiper__wrap">
+          <div class="swiper resultSwiper" aria-label="Carousel resultado">
+            <div class="swiper-wrapper" id="resultLoop">
+              <div class="swiper-slide" data-index="1"><div class="result-swiper__card" data-color="1"><img src="images/sagrada familia/splash.png" alt="Mockup 1" loading="lazy" /></div></div>
+              <div class="swiper-slide" data-index="2"><div class="result-swiper__card" data-color="2"><img src="images/sagrada familia/splash.png" alt="Mockup 2" loading="lazy" /></div></div>
+              <div class="swiper-slide" data-index="3"><div class="result-swiper__card" data-color="3"><img src="images/sagrada familia/splash.png" alt="Mockup 3" loading="lazy" /></div></div>
+              <div class="swiper-slide" data-index="4"><div class="result-swiper__card" data-color="4"><img src="images/sagrada familia/splash.png" alt="Mockup 4" loading="lazy" /></div></div>
+              <div class="swiper-slide" data-index="5"><div class="result-swiper__card" data-color="5"><img src="images/sagrada familia/splash.png" alt="Mockup 5" loading="lazy" /></div></div>
+              <div class="swiper-slide" data-index="6"><div class="result-swiper__card" data-color="6"><img src="images/sagrada familia/splash.png" alt="Mockup 6" loading="lazy" /></div></div>
+              <div class="swiper-slide" data-index="7"><div class="result-swiper__card" data-color="7"><img src="images/sagrada familia/splash.png" alt="Mockup 7" loading="lazy" /></div></div>
+              <div class="swiper-slide" data-index="8"><div class="result-swiper__card" data-color="8"><img src="images/sagrada familia/splash.png" alt="Mockup 8" loading="lazy" /></div></div>
+              <div class="swiper-slide" data-index="9"><div class="result-swiper__card" data-color="9"><img src="images/sagrada familia/splash.png" alt="Mockup 9" loading="lazy" /></div></div>
+            </div>
+          </div>
+
+          <div class="result-swiper__nav" aria-label="Controles del carrusel">
+            <button class="button button--icon button--secondary result-swiper__btn result-swiper__btn--prev" type="button" aria-label="Anterior">
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+            </button>
+
+            <button class="button button--icon button--secondary result-swiper__btn result-swiper__btn--next" type="button" aria-label="Siguiente">
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- IMPACTO -->
+    <section class="section" id="impacto">
+      <div class="container">
+        <div class="section-head">
+          <span class="dot" aria-hidden="true"></span>
+          <h2 class="section-title">RESULTADOS</h2>
+        </div>
+
+        <h3>Impacto del rediseño</h3>
+
+        <div class="results-grid">
+          <div class="result-item">
+            <h4>+35%</h4>
+            <p>Mejora en la tasa de finalización de recorrido</p>
+          </div>
+
+          <div class="result-item">
+            <h4>-28%</h4>
+            <p>Reducción en incidencias de navegación</p>
+          </div>
+
+          <div class="result-item">
+            <h4>+40%</h4>
+            <p>Aumento en interacción con contenido cultural</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <div class="section-head footer-head">
+        <span class="dot dot--red" aria-hidden="true"></span>
+        <h2 class="section-title footer-title">Contact</h2>
+      </div>
+
+      <h2 class="footer-hero">¿Hablamos?</h2>
+
+      <div class="footer-links">
+        <a href="#" class="button button--footer">
+          Envíame un E-mail
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+        </a>
+
+        <a href="#" class="button button--footer">
+          Envíame un mensaje a Linkedin
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+        </a>
+
+        <a href="#" class="button button--footer">
+          Descarga mi CV
+          <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="footer-copy">© Derechos de autor — Toni Redondo 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
