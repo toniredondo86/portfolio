@@ -17,19 +17,13 @@
   <meta name="twitter:title" content="Proyecto — iSocial" />
   <meta name="twitter:description" content="Rediseño UX/UI para iSocial con foco en accesibilidad y consistencia de producto." />
   <meta name="twitter:image" content="/images/isocial/placeholder.png" />
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-  <link rel="shortcut icon" href="./favicon.svg" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap" />
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&amp;display=swap" />
   <link rel="stylesheet" href="./styles.css?v=2" />
 
-  <!-- Swiper JS + site JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <!-- Site JS -->
   <script src="./script.js?v=2" defer></script>
 </head>
 
@@ -124,7 +118,7 @@
           </ul>
         </nav>
 
-        <a href="#" class="button button--primary desktop-only">
+        <a href="#" class="button button--primary desktop-only" onclick="event.preventDefault()">
           Descargar CV
           <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
         </a>
@@ -156,7 +150,7 @@
             </li>
           </ul>
 
-          <a href="#" class="button button--primary nav-dropdown-cta">
+          <a href="#" class="button button--primary nav-dropdown-cta" onclick="event.preventDefault()">
             Descargar CV
             <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
           </a>
@@ -358,34 +352,285 @@
     <div class="container"><div class="divider"></div></div>
 
     <!-- RESULTADO -->
-    <section class="section result-swiper" id="resultado" aria-label="Resultado">
+    <section class="section result-stack" id="resultado" aria-label="Resultado">
       <div class="container">
         <div class="section-head">
           <span class="dot" aria-hidden="true"></span>
           <h2 class="section-title">RESULTADO</h2>
         </div>
 
-        <div class="result-swiper__wrap">
-          <div class="swiper resultSwiper" aria-label="Carousel resultado">
-            <div class="swiper-wrapper" id="resultLoop">
-              <div class="swiper-slide" data-index="1"><div class="result-swiper__card" data-color="1"><img src="images/isocial/placeholder.png" alt="Mockup iSocial 1" loading="lazy" /></div></div>
-              <div class="swiper-slide" data-index="2"><div class="result-swiper__card" data-color="2"><img src="images/isocial/placeholder.png" alt="Mockup iSocial 2" loading="lazy" /></div></div>
-              <div class="swiper-slide" data-index="3"><div class="result-swiper__card" data-color="3"><img src="images/isocial/placeholder.png" alt="Mockup iSocial 3" loading="lazy" /></div></div>
-              <div class="swiper-slide" data-index="4"><div class="result-swiper__card" data-color="4"><img src="images/isocial/placeholder.png" alt="Mockup iSocial 4" loading="lazy" /></div></div>
-              <div class="swiper-slide" data-index="5"><div class="result-swiper__card" data-color="5"><img src="images/isocial/placeholder.png" alt="Mockup iSocial 5" loading="lazy" /></div></div>
+        <div class="result-stack__list">
+          <article class="result-stack__block">
+            <div class="result-stack__content">
+              <h4 class="result-stack__title">Integración de compra dentro de la app</h4>
+              <div class="result-stack__body">
+                <p class="result-stack__desc">
+                  En la versión anterior, la aplicación mostraba los tipos de entrada y precios, pero el proceso de compra se completaba
+                  en la web externa. Esto interrumpía la experiencia y generaba una transición fuera del entorno nativo.
+                  <br><br>
+                  La nueva versión incorpora un flujo de compra completo dentro de la aplicación, estructurado en pasos claros:
+                  selección de tipo de visita, fecha y hora, configuración del grupo y pago.
+                  <br><br>
+                  De esta forma, la compra pasa a formar parte de la experiencia digital, manteniendo la continuidad dentro de la app.
+                </p>
+              </div>
             </div>
-          </div>
+            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
+              <div class="result-stack__track">
+                <div class="result-stack__slide is-active">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-stack__slide">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-stack__nav" aria-label="Controles de imágenes">
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+                </button>
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+                </button>
+              </div>
+            </div>
+          </article>
 
-          <div class="result-swiper__nav" aria-label="Controles del carrusel">
-            <button class="button button--icon button--secondary result-swiper__btn result-swiper__btn--prev" type="button" aria-label="Anterior">
-              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-            </button>
+          <article class="result-stack__block">
+            <div class="result-stack__content">
+              <h4 class="result-stack__title">Reestructuración de la experiencia de visita</h4>
+              <div class="result-stack__body">
+                <p class="result-stack__desc">
+                  La arquitectura anterior agrupaba normativa, mapas, audioguías y accesos secundarios sin una jerarquía clara.
+                  La información crítica para el día de la visita competía con contenidos secundarios.
+                  <br><br>
+                  La nueva estructura reorganiza la experiencia en función del contexto real del usuario:
+                </p>
+                <ul class="result-stack__bullets">
+                  <li>Para visitantes con entrada: se priorizan “Tus entradas”, horarios específicos y detalles operativos.</li>
+                  <li>Para visitantes sin entrada: se introduce un módulo de planificación con horarios, cómo llegar, transporte y accesibilidad.</li>
+                </ul>
+                <p class="result-stack__desc">
+                  La normativa se mantiene, pero deja de ocupar el centro del flujo. La experiencia se adapta al momento real de uso.
+                </p>
+              </div>
+            </div>
+            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
+              <div class="result-stack__track">
+                <div class="result-stack__slide is-active">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-stack__slide">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-stack__nav" aria-label="Controles de imágenes">
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+                </button>
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+                </button>
+              </div>
+            </div>
+          </article>
 
-            <button class="button button--icon button--secondary result-swiper__btn result-swiper__btn--next" type="button" aria-label="Siguiente">
-              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-            </button>
-          </div>
+          <article class="result-stack__block">
+            <div class="result-stack__content">
+              <h4 class="result-stack__title">Mapa interactivo como herramienta de orientación</h4>
+              <div class="result-stack__body">
+                <p class="result-stack__desc">
+                  El mapa anterior era estático y funcionaba únicamente como referencia visual. No permitía interactuar con los espacios
+                  ni acceder directamente a información contextual durante la visita.
+                  <br><br>
+                  La nueva versión incorpora un mapa interactivo por plantas que permite seleccionar puntos de interés y acceder a su detalle
+                  desde el propio mapa. Esto facilita la navegación sin salir del flujo principal.
+                  <br><br>
+                  Además, el contenido visible se adapta al tipo de visita contratada, mostrando únicamente los espacios relevantes.
+                  El mapa pasa a ser una herramienta activa de orientación dentro del recorrido.
+                </p>
+              </div>
+            </div>
+            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
+              <div class="result-stack__track">
+                <div class="result-stack__slide is-active">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-stack__slide">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-stack__nav" aria-label="Controles de imágenes">
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+                </button>
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+                </button>
+              </div>
+            </div>
+          </article>
 
+          <article class="result-stack__block">
+            <div class="result-stack__content">
+              <h4 class="result-stack__title">Evolución de la audioguía</h4>
+              <div class="result-stack__body">
+                <p class="result-stack__desc">
+                  La audioguía original presentaba el contenido de forma lineal, con bloques extensos y poca diferenciación visual.
+                  La experiencia estaba centrada en la lectura más que en el acompañamiento durante el recorrido.
+                  <br><br>
+                  La nueva estructura organiza los contenidos en módulos claros, con miniaturas, tiempos estimados y jerarquía tipográfica
+                  más definida. Esto facilita el escaneo rápido y la navegación flexible.
+                  <br><br>
+                  La audioguía se integra dentro del flujo general de visita y se conecta con otros elementos como el mapa.
+                  Deja de ser una sección aislada para formar parte del sistema completo de experiencia.
+                </p>
+              </div>
+            </div>
+            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
+              <div class="result-stack__track">
+                <div class="result-stack__slide is-active">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-stack__slide">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-stack__nav" aria-label="Controles de imágenes">
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+                </button>
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="result-stack__block">
+            <div class="result-stack__content">
+              <h4 class="result-stack__title">Gamificación y activación on-site</h4>
+              <div class="result-stack__body">
+                <p class="result-stack__desc">
+                  Se incorporan dinámicas de interacción vinculadas a elementos arquitectónicos concretos dentro del espacio.
+                  El usuario puede participar en pequeños retos durante el recorrido.
+                  <br><br>
+                  Estas dinámicas fomentan una exploración más activa sin interrumpir la experiencia cultural. La interacción se integra
+                  de forma natural dentro del flujo de la visita.
+                  <br><br>
+                  Además, la participación se conecta con incentivos posteriores, reforzando la continuidad entre experiencia digital
+                  y entorno físico.
+                </p>
+              </div>
+            </div>
+            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
+              <div class="result-stack__track">
+                <div class="result-stack__slide is-active">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="result-stack__slide">
+                  <div class="result-stack__media-grid">
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">ANTES</h6>
+                    </div>
+                    <div class="result-stack__media-item">
+                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
+                      <h6 class="result-stack__media-label">DESPUÉS</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="result-stack__nav" aria-label="Controles de imágenes">
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+                </button>
+                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -428,23 +673,28 @@
     <div class="container footer-inner">
       <div class="section-head footer-head">
         <span class="dot dot--red" aria-hidden="true"></span>
-        <h2 class="section-title footer-title">Contact</h2>
+        <h6 class="section-title footer-title">Contact</h6>
       </div>
 
       <h2 class="footer-hero">¿Hablamos?</h2>
+      <p class="footer-intro">
+        Si estás desarrollando un producto digital y necesitas<br />
+        ayuda con UX o diseño de producto, estaré encantado<br />
+        de conocer tu proyecto.
+      </p>
 
       <div class="footer-links">
-        <a href="#" class="button button--footer">
+        <a href="#" class="button button--footer" onclick="event.preventDefault()">
           Envíame un E-mail
           <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
         </a>
 
-        <a href="#" class="button button--footer">
+        <a href="#" class="button button--footer" onclick="event.preventDefault()">
           Envíame un mensaje a Linkedin
           <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
         </a>
 
-        <a href="#" class="button button--footer">
+        <a href="#" class="button button--footer" onclick="event.preventDefault()">
           Descarga mi CV
           <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
         </a>
@@ -452,7 +702,7 @@
 
       <div class="divider"></div>
 
-      <p class="footer-copy">© Derechos de autor — Toni Redondo 2026</p>
+      <p class="footer-copy">© 2026 Toni Redondo<br />Diseñado y desarrollado por mí</p>
     </div>
   </footer>
 
