@@ -25,10 +25,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&amp;display=swap" />
-  <link rel="stylesheet" href="./styles.css?v=45" />
+  <link rel="stylesheet" href="./styles.css?v=54" />
 
   <!-- Site JS (defer) -->
-  <script src="./script.js?v=15" defer></script>
+  <script src="./script.js?v=16" defer></script>
 </head>
 
 <body class="case case-sagrada-familia">
@@ -44,6 +44,16 @@
     <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
       <path d="M7 17L17 7M17 7L8 7M17 7L17 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
         fill="none" />
+    </symbol>
+
+    <symbol id="icon-external-link" viewBox="0 0 24 24">
+      <path d="M14 5H19V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" />
+      <path d="M10 14L19 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" />
+      <path
+        d="M19 14V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H7C6.46957 19 5.96086 18.7893 5.58579 18.4142C5.21071 18.0391 5 17.5304 5 17V7C5 6.46957 5.21071 5.96086 5.58579 5.58579C5.96086 5.21071 6.46957 5 7 5H10"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-menu" viewBox="0 0 24 24">
@@ -79,6 +89,12 @@
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
 
+    <symbol id="icon-drag" viewBox="0 0 24 24">
+      <path
+        d="M8.29302 7.29302C8.68354 6.90249 9.31655 6.90249 9.70708 7.29302C10.0975 7.68355 10.0976 8.31659 9.70708 8.70708L6.41411 12L9.70708 15.293C10.0975 15.6835 10.0976 16.3166 9.70708 16.7071C9.31659 17.0976 8.68355 17.0975 8.29302 16.7071L4.29302 12.7071C3.90249 12.3166 3.90249 11.6835 4.29302 11.293L8.29302 7.29302ZM14.293 7.29302C14.6835 6.90249 15.3166 6.90249 15.7071 7.29302L19.7071 11.293L19.7754 11.3692C20.0957 11.762 20.0732 12.341 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6835 17.0975 14.293 16.7071C13.9025 16.3166 13.9025 15.6835 14.293 15.293L17.586 12L14.293 8.70708C13.9025 8.31655 13.9025 7.68354 14.293 7.29302Z"
+        fill="currentColor" />
+    </symbol>
+
     <symbol id="icon-chevron" viewBox="0 0 24 24">
       <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         fill="none" />
@@ -87,6 +103,29 @@
     <symbol id="icon-arrow-right" viewBox="0 0 24 24">
       <path d="M5 12H19M19 12L13 18M19 12L13 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
         stroke-linejoin="round" fill="none" />
+    </symbol>
+
+    <symbol id="icon-stack" viewBox="0 0 24 24">
+      <path d="M12 4L4 8L12 12L20 8L12 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" fill="none" />
+      <path d="M4 12L12 16L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" fill="none" />
+      <path d="M4 16L12 20L20 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" fill="none" />
+    </symbol>
+
+    <symbol id="icon-map" viewBox="0 0 24 24">
+      <path d="M9 4L15 6L21 4V19L15 21L9 19L3 21V6L9 4Z" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <path d="M9 4V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" />
+      <path d="M15 6V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" />
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path d="M12 3L3 8L12 13L21 8L12 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <path d="M3 12L12 17L21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <path d="M3 16L12 21L21 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
   </svg>
 
@@ -99,22 +138,8 @@
       <div class="navbar-inner">
 
         <a href="index.html#top" class="logo" aria-label="Home">
-          <span class="logo-box" aria-hidden="true">
-            <svg class="navbar-logo" width="119" height="32" viewBox="-2 -2 123 36" preserveAspectRatio="xMinYMid meet"
-              fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <path
-                d="M1.89333 26V11.8933H5.54667L5.68 16.4267L5.04 15.4933C5.25333 14.7644 5.6 14.1067 6.08 13.52C6.56 12.9156 7.12 12.4444 7.76 12.1067C8.41778 11.7689 9.10222 11.6 9.81333 11.6C10.1156 11.6 10.4089 11.6267 10.6933 11.68C10.9778 11.7333 11.2178 11.7956 11.4133 11.8667L10.4 16.0267C10.1867 15.92 9.92889 15.8311 9.62667 15.76C9.32445 15.6711 9.01333 15.6267 8.69333 15.6267C8.26667 15.6267 7.86667 15.7067 7.49333 15.8667C7.13778 16.0089 6.82667 16.2222 6.56 16.5067C6.29333 16.7733 6.08 17.0933 5.92 17.4667C5.77778 17.84 5.70667 18.2489 5.70667 18.6933V26H1.89333ZM19.6804 26.2667C18.1515 26.2667 16.8182 25.9556 15.6804 25.3333C14.5426 24.7111 13.6538 23.8578 13.0138 22.7733C12.3738 21.6889 12.0538 20.4444 12.0538 19.04C12.0538 17.9556 12.2315 16.96 12.5871 16.0533C12.9426 15.1467 13.4404 14.3644 14.0804 13.7067C14.7204 13.0311 15.476 12.5156 16.3471 12.16C17.236 11.7867 18.196 11.6 19.2271 11.6C20.1871 11.6 21.076 11.7778 21.8938 12.1333C22.7115 12.4711 23.4138 12.96 24.0004 13.6C24.6049 14.2222 25.0671 14.96 25.3871 15.8133C25.7071 16.6667 25.8493 17.6 25.8138 18.6133L25.7871 19.7867H14.4538L13.8404 17.4667H22.6671L22.2404 17.9467V17.36C22.2049 16.88 22.0449 16.4444 21.7604 16.0533C21.4938 15.6622 21.1471 15.36 20.7204 15.1467C20.2938 14.9333 19.8138 14.8267 19.2804 14.8267C18.4982 14.8267 17.8315 14.9778 17.2804 15.28C16.7471 15.5822 16.3382 16.0267 16.0538 16.6133C15.7693 17.2 15.6271 17.9111 15.6271 18.7467C15.6271 19.6 15.8049 20.3378 16.1604 20.96C16.5338 21.5822 17.0493 22.0711 17.7071 22.4267C18.3826 22.7644 19.1738 22.9333 20.0804 22.9333C20.7026 22.9333 21.2715 22.8356 21.7871 22.64C22.3026 22.4444 22.8538 22.1067 23.4404 21.6267L25.2538 24.16C24.7382 24.6222 24.1693 25.0133 23.5471 25.3333C22.9249 25.6356 22.2849 25.8667 21.6271 26.0267C20.9693 26.1867 20.3204 26.2667 19.6804 26.2667ZM34.1321 26.2667C32.9054 26.2667 31.8032 25.9556 30.8254 25.3333C29.8476 24.6933 29.0743 23.8311 28.5054 22.7467C27.9543 21.6444 27.6788 20.3733 27.6788 18.9333C27.6788 17.5289 27.9543 16.2756 28.5054 15.1733C29.0743 14.0711 29.8388 13.2 30.7988 12.56C31.7765 11.92 32.8876 11.6 34.1321 11.6C34.7899 11.6 35.421 11.7067 36.0254 11.92C36.6476 12.1156 37.1988 12.3911 37.6788 12.7467C38.1765 13.1022 38.5765 13.5022 38.8788 13.9467C39.181 14.3733 39.3499 14.8267 39.3854 15.3067L38.4254 15.4667V6.26667H42.2121V26H38.6388L38.4788 22.7467L39.2254 22.8267C39.1899 23.2711 39.0299 23.6978 38.7454 24.1067C38.461 24.5156 38.0788 24.8889 37.5988 25.2267C37.1365 25.5467 36.6032 25.8044 35.9988 26C35.4121 26.1778 34.7899 26.2667 34.1321 26.2667ZM34.9854 23.12C35.6965 23.12 36.3188 22.9422 36.8521 22.5867C37.3854 22.2311 37.8032 21.7422 38.1054 21.12C38.4076 20.4978 38.5588 19.7689 38.5588 18.9333C38.5588 18.1156 38.4076 17.3956 38.1054 16.7733C37.8032 16.1333 37.3854 15.6444 36.8521 15.3067C36.3188 14.9511 35.6965 14.7733 34.9854 14.7733C34.2743 14.7733 33.6521 14.9511 33.1188 15.3067C32.6032 15.6444 32.1943 16.1333 31.8921 16.7733C31.6076 17.3956 31.4654 18.1156 31.4654 18.9333C31.4654 19.7689 31.6076 20.4978 31.8921 21.12C32.1943 21.7422 32.6032 22.2311 33.1188 22.5867C33.6521 22.9422 34.2743 23.12 34.9854 23.12Z"
-                fill="black" />
-
-              <path
-                d="M69.2268 26V11.8933H72.8535L72.9602 14.7733L72.2135 15.0933C72.4091 14.4533 72.7557 13.8756 73.2535 13.36C73.7691 12.8267 74.3824 12.4 75.0935 12.08C75.8046 11.76 76.5513 11.6 77.3335 11.6C78.4002 11.6 79.2891 11.8133 80.0002 12.24C80.7291 12.6667 81.2713 13.3156 81.6268 14.1867C82.0002 15.04 82.1868 16.0978 82.1868 17.36V26H78.4002V17.6533C78.4002 17.0133 78.3113 16.48 78.1335 16.0533C77.9557 15.6267 77.6802 15.3156 77.3068 15.12C76.9513 14.9067 76.5068 14.8178 75.9735 14.8533C75.5468 14.8533 75.1468 14.9244 74.7735 15.0667C74.4179 15.1911 74.1068 15.3778 73.8402 15.6267C73.5913 15.8756 73.3868 16.16 73.2268 16.48C73.0846 16.8 73.0135 17.1467 73.0135 17.52V26H71.1468C70.7379 26 70.3735 26 70.0535 26C69.7335 26 69.4579 26 69.2268 26ZM91.3354 26.2667C90.1087 26.2667 89.0065 25.9556 88.0287 25.3333C87.0509 24.6933 86.2776 23.8311 85.7087 22.7467C85.1576 21.6444 84.882 20.3733 84.882 18.9333C84.882 17.5289 85.1576 16.2756 85.7087 15.1733C86.2776 14.0711 87.042 13.2 88.002 12.56C88.9798 11.92 90.0909 11.6 91.3354 11.6C91.9932 11.6 92.6243 11.7067 93.2287 11.92C93.8509 12.1156 94.402 12.3911 94.882 12.7467C95.3798 13.1022 95.7798 13.5022 96.082 13.9467C96.3843 14.3733 96.5532 14.8267 96.5887 15.3067L95.6287 15.4667V6.26667H99.4154V26H95.842L95.682 22.7467L96.4287 22.8267C96.3932 23.2711 96.2332 23.6978 95.9487 24.1067C95.6643 24.5156 95.282 24.8889 94.802 25.2267C94.3398 25.5467 93.8065 25.8044 93.202 26C92.6154 26.1778 91.9932 26.2667 91.3354 26.2667ZM92.1887 23.12C92.8998 23.12 93.522 22.9422 94.0554 22.5867C94.5887 22.2311 95.0065 21.7422 95.3087 21.12C95.6109 20.4978 95.762 19.7689 95.762 18.9333C95.762 18.1156 95.6109 17.3956 95.3087 16.7733C95.0065 16.1333 94.5887 15.6444 94.0554 15.3067C93.522 14.9511 92.8998 14.7733 92.1887 14.7733C91.4776 14.7733 90.8554 14.9511 90.322 15.3067C89.8065 15.6444 89.3976 16.1333 89.0954 16.7733C88.8109 17.3956 88.6687 18.1156 88.6687 18.9333C88.6687 19.7689 88.8109 20.4978 89.0954 21.12C89.3976 21.7422 89.8065 22.2311 90.322 22.5867C90.8554 22.9422 91.4776 23.12 92.1887 23.12ZM109.667 26.2667C108.227 26.2667 106.938 25.9556 105.8 25.3333C104.68 24.6933 103.791 23.8222 103.134 22.72C102.494 21.6178 102.174 20.3556 102.174 18.9333C102.174 17.5111 102.494 16.2578 103.134 15.1733C103.791 14.0711 104.68 13.2 105.8 12.56C106.938 11.92 108.227 11.6 109.667 11.6C111.089 11.6 112.36 11.92 113.48 12.56C114.618 13.2 115.507 14.0711 116.147 15.1733C116.787 16.2578 117.107 17.5111 117.107 18.9333C117.107 20.3556 116.787 21.6178 116.147 22.72C115.507 23.8222 114.618 24.6933 113.48 25.3333C112.36 25.9556 111.089 26.2667 109.667 26.2667ZM109.667 22.96C110.36 22.96 110.983 22.7911 111.534 22.4533C112.085 22.0978 112.511 21.6178 112.814 21.0133C113.134 20.3911 113.294 19.6978 113.294 18.9333C113.294 18.1511 113.134 17.4578 112.814 16.8533C112.511 16.2311 112.085 15.7511 111.534 15.4133C110.983 15.0578 110.36 14.88 109.667 14.88C108.956 14.88 108.325 15.0578 107.774 15.4133C107.223 15.7689 106.787 16.2489 106.467 16.8533C106.147 17.4578 105.996 18.1511 106.014 18.9333C105.996 19.6978 106.147 20.3911 106.467 21.0133C106.787 21.6178 107.223 22.0978 107.774 22.4533C108.325 22.7911 108.956 22.96 109.667 22.96Z"
-                fill="black" />
-
-              <rect x="44.6668" y="11.3335" width="22.6667" height="14.6667" rx="7.33333" fill="#E1443B" />
-              <circle cx="60" cy="18.667" r="6" fill="white" />
-            </svg>
-          </span>
-        </a>
+  <img src="logo_redondo.svg" alt="Logo Toni Redondo" class="navbar-logo" />
+</a>
 
 
         <nav class="nav-desktop" aria-label="Primary">
@@ -125,7 +150,7 @@
           </ul>
         </nav>
 
-        <a href="#" class="button button--primary desktop-only" onclick="event.preventDefault()">
+        <a href="index.html#contact" class="button button--primary desktop-only">
           Descargar CV
           <svg class="icon" aria-hidden="true">
             <use href="#icon-download"></use>
@@ -170,7 +195,7 @@
             </li>
           </ul>
 
-          <a href="#" class="button button--primary nav-dropdown-cta" onclick="event.preventDefault()">
+          <a href="index.html#contact" class="button button--primary nav-dropdown-cta">
             Descargar CV
             <svg class="icon" aria-hidden="true">
               <use href="#icon-download"></use>
@@ -205,152 +230,148 @@
             <div class="project-tags" aria-label="Tags del proyecto">
               <span class="tag">APP MÓVIL</span>
               <span class="tag">ARQUITECTURA DE LA INFORMACIÓN</span>
-              <span class="tag">EXPERIENCIA ON-SITE</span>
               <span class="tag">ACCESIBILIDAD</span>
-              <span class="tag">GAMIFICACIÓN</span>
             </div>
 
             <p class="project-lead">
-              Replanteamiento estructural de la app oficial para adaptarla al contexto real de visita y activar la
-              experiencia on-site.
+              Evolución estructural de la aplicación móvil de la Sagrada Família para adaptarla al contexto real de la visita.
+            </p>
+            <p class="copy-intro">
+              La propuesta transforma una aplicación centrada en contenido informativo en una experiencia de producto más útil, contextual y orientada a la acción. La nueva arquitectura reorganiza la navegación, integra la compra dentro del entorno nativo e incorpora herramientas que acompañan al usuario en el espacio físico, como un mapa interactivo y una audioguía más integrada.
             </p>
 
             <div class="project-meta">
               <div class="project-meta__row">
-                <h6 class="project-meta__title">AÑO</h6>
-                <p class="project-meta__value">2025</p>
+                <h6 class="project-meta__title">DURACIÓN</h6>
+                <p class="project-meta__value">12 semanas · 2025</p>
               </div>
 
               <div class="project-meta__row">
-                <h6 class="project-meta__title">TIMELINE</h6>
-                <p class="project-meta__value">4 meses</p>
+                <h6 class="project-meta__title">PLATAFORMA</h6>
+                <p class="project-meta__value">iOS · Android</p>
               </div>
 
               <div class="project-meta__row">
                 <h6 class="project-meta__title">ROL</h6>
-                <p class="project-meta__value">Lead UX/UI Designer · Responsable del equipo de diseño</p>
+                <p class="project-meta__value">Lead UX/UI Designer</p>
               </div>
             </div>
           </div>
 
           <div class="project-hero__media" aria-label="Imagen del proyecto">
-            <img class="project-mockup" src="images/sagrada familia/splash.png" alt="Vista principal del proyecto Sagrada Familia" loading="lazy" decoding="async" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="container">
-      <div class="divider"></div>
-    </div>
-
-    <!-- DESAFÍO -->
-    <section class="section project-challenge" id="desafio">
-      <div class="container project-challenge__grid">
-        <div class="project-challenge__media">
-          <div class="card-media card-media--frameless" aria-label="Bloque de imágenes del desafío">
-            <div class="project-challenge__media-view">
-              <div class="project-challenge__media-images">
-                <div class="project-challenge__media-item">
-                  <img src="images/sagrada familia/desafio1.png" alt="Vista de desafío 1" loading="lazy" decoding="async" />
+            <div class="phones">
+              <div class="hero-compare" id="heroCompare" style="--compare:52%;">
+                <div class="hero-compare__pane hero-compare__pane--before">
+                  <figure class="phone before">
+                    <img src="images/sagrada familia/visita_antes1.png" alt="Versión anterior de la app de Sagrada Família">
+                  </figure>
                 </div>
-                <div class="project-challenge__media-item">
-                  <img src="images/sagrada familia/desafio2.png" alt="Vista de desafío 2" loading="lazy" decoding="async" />
+                <div class="hero-compare__pane hero-compare__pane--after">
+                  <figure class="phone after">
+                    <img src="images/sagrada familia/visita_despues1.png" alt="Nueva versión de la app de Sagrada Família">
+                    <figcaption class="phone-label after">Después</figcaption>
+                  </figure>
                 </div>
+                <div class="hero-compare__divider" aria-hidden="true">
+                  <span class="hero-compare__handle"><span class="hero-compare__handle-icon"><svg class="icon" aria-hidden="true"><use href="#icon-drag"></use></svg></span></span>
+                </div>
+                <input
+                  id="heroCompareRange"
+                  class="hero-compare__range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="52"
+                  step="1"
+                  aria-label="Comparar antes y después"
+                >
               </div>
             </div>
           </div>
-          <p class="project-challenge__caption">La arquitectura priorizaba la entrega de información estática sobre la necesidad operativa del visitante in-situ.</p>
-        </div>
-
-        <div class="project-challenge__content">
-          <div class="section-head project-challenge__head">
-            <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">DESAFÍO</h2>
-          </div>
-
-          <h4 class="project-challenge__title">Repensar la experiencia digital en el contexto real de visita</h4>
-
-          <div class="project-challenge__body">
-            <p>La aplicación funcionaba principalmente como soporte informativo. Parte del contenido redirigía a la web
-              externa y la estructura interna agrupaba normativa, mapas y audioguías sin una jerarquía clara. En
-              momentos clave como la compra o el inicio del recorrido, la experiencia resultaba fragmentada.</p>
-            <p>El problema no era solo visual. La app no estaba organizada en función del momento real del visitante.
-              Planificación y uso on-site compartían la misma lógica, lo que generaba fricción en el espacio físico.</p>
-            <h6 class="project-challenge__subhead">OBJETIVOS DEL PROYECTO</h6>
-
-            <ul class="project-challenge__list">
-              <li>Reorganizar la arquitectura en función del momento de uso (con y sin entrada).</li>
-              <li>Integrar funcionalidades críticas dentro del entorno nativo de la app.</li>
-              <li>Priorizar información operativa durante la visita real.</li>
-              <li>Incorporar herramientas interactivas que activaran la experiencia cultural.</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
 
-    <div class="container">
+     <div class="container">
       <div class="divider"></div>
     </div>
-
-    <!-- PROCESO -->
-    <section class="scroll-lab" id="scrollLab" aria-label="Proceso">
+    
+    <!-- PROBLEMA -->
+    <section class="scroll-lab" id="problemaLab" aria-label="Problema">
   <div class="container">
     <div class="scroll-lab__grid">
 
       <div class="scroll-lab__left">
-        <div class="section-head">
-          <span class="dot" aria-hidden="true"></span>
-          <h2 class="section-title">PROCESO</h2>
-        </div>
-        <h4 class="scroll-lab__heading">Replantear la arquitectura del producto</h4>
-        <div class="scroll-lab__body">
-          <p>El trabajo se centró en analizar la estructura existente, identificar fricciones en momentos clave y redefinir la arquitectura del producto.</p>
-          <p>A partir de este diagnóstico, se reorganizó la aplicación diferenciando planificación y visita activa, integrando funcionalidades críticas dentro del entorno nativo y simplificando el acceso a la información operativa.</p>
-          <p>No fue un rediseño superficial, sino una reestructuración del sistema.</p>
+        <div class="problema-lab__content">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">PROBLEMA</h2>
+          </div>
+          <h3 class="copy-title">La aplicación existente no estaba diseñada para el contexto real de visita</h3>
+          <div class="copy-body">
+            <p>La aplicación cumplía una función informativa, pero no estaba concebida para acompañar al visitante antes y durante la visita. Reunía contenido útil, aunque respondía más a una lógica de consulta que a un uso real en movilidad.</p>
+            <p>El problema no era solo visual, sino estructural: la arquitectura mezclaba planificación y recorrido, dependía de flujos externos en acciones clave y ofrecía una respuesta limitada dentro del contexto físico.</p>
+          </div>
         </div>
       </div>
 
       <div class="scroll-lab__right">
         <div class="scroll-lab__stack">
 
-          <article class="scroll-lab__item scroll-lab__item--red">
+          <article class="scroll-lab__item problem-card">
             <div class="scroll-lab__content">
-              <h5 class="scroll-lab__title">Revisar la arquitectura actual</h5>
-              <p>Se analizó cómo estaban organizadas las secciones y qué ocurría en cada una de ellas.</p>
-              <ul class="scroll-lab__desc">
-                <li>Identificación de redirecciones externas que interrumpían la experiencia.</li>
-                <li>Detección de contenidos mezclados sin jerarquía clara.</li>
-                <li>Revisión del flujo de visita con y sin entrada.</li>
+              <div class="problem-top">
+                <div class="icon-badge">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-stack"></use>
+                  </svg>
+                </div>
+              </div>
+              <h5 class="copy-card-title">Arquitectura poco contextual</h5>
+              <p>La estructura no organizaba la experiencia según el momento real del visitante.</p>
+              <ul class="copy-list">
+                <li>Planificación y recorrido compartían la misma lógica.</li>
+                <li>La información operativa no siempre tenía prioridad.</li>
+                <li>El usuario debía interpretar qué era relevante en cada situación.</li>
               </ul>
-              <p>El objetivo era entender dónde se generaba fricción en el momento real de uso.</p>
             </div>
           </article>
 
-          <article class="scroll-lab__item scroll-lab__item--yellow">
+          <article class="scroll-lab__item problem-card">
             <div class="scroll-lab__content">
-              <h5 class="scroll-lab__title">Reorganizar por contexto</h5>
-              <p>Se analizó cómo estaban organizadas las secciones y qué ocurría en cada una de ellas.</p>
-              <ul class="scroll-lab__desc">
-                <li>Separación entre planificación y experiencia on-site.</li>
-                <li>Priorización de información operativa durante la visita.</li>
-                <li>Simplificación de normativa dentro del flujo principal.</li>
+              <div class="problem-top">
+                <div class="icon-badge">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-external-link"></use>
+                  </svg>
+                </div>
+              </div>
+              <h5 class="copy-card-title">Experiencia fragmentada</h5>
+              <p>Las tareas más importantes no se resolvían de forma continua dentro de la app.</p>
+              <ul class="copy-list">
+                <li>La compra de entradas dependía de redirecciones externas.</li>
+                <li>Consulta, decisión y acción no formaban un mismo flujo.</li>
+                <li>La experiencia perdía consistencia en momentos clave.</li>
               </ul>
-              <p>Esta reorganización permitió reducir carga cognitiva sin eliminar contenido relevante.</p>
             </div>
           </article>
 
-          <article class="scroll-lab__item scroll-lab__item--blue">
+          <article class="scroll-lab__item problem-card">
             <div class="scroll-lab__content">
-              <h5 class="scroll-lab__title">Evolucionar funcionalidades clave</h5>
-              <p>Se analizó cómo estaban organizadas las secciones y qué ocurría en cada una de ellas.</p>
-              <ul class="scroll-lab__desc">
-                <li>Compra integrada dentro del entorno nativo de la app.</li>
-                <li>Rediseño de gestión de entradas y acceso durante la visita.</li>
-                <li>Herramientas interactivas para activar la experiencia cultural.</li>
+              <div class="problem-top">
+                <div class="icon-badge">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#icon-map"></use>
+                  </svg>
+                </div>
+              </div>
+              <h5 class="copy-card-title">Utilidad limitada durante la visita</h5>
+              <p>Dentro del recinto, la app tenía valor informativo, pero poca capacidad de acompañamiento real.</p>
+              <ul class="copy-list">
+                <li>El mapa y la audioguía no funcionaban como un sistema integrado.</li>
+                <li>La experiencia priorizaba contenido frente a orientación.</li>
+                <li>Faltaba una lógica más interactiva y situada en el contexto físico.</li>
               </ul>
-              <p>El foco estuvo en hacer que la app acompañara activamente al visitante.</p>
             </div>
           </article>
 
@@ -365,286 +386,166 @@
       <div class="divider"></div>
     </div>
 
-    <!-- RESULTADO -->
-    <section class="section result-stack" id="resultado" aria-label="Resultado">
+    <!-- APP ORIGINAL -->
+    <section class="section app-original" id="app-original" aria-label="App original">
       <div class="container">
-        <div class="section-head">
-          <span class="dot" aria-hidden="true"></span>
-          <h2 class="section-title">RESULTADO</h2>
+        <div class="app-original__content">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">APP ORIGINAL</h2>
+          </div>
+
+          <h3 class="copy-title">La base funcional existía, pero la experiencia aún no estaba conectada</h3>
+
+          <div class="copy-body">
+            <p>El producto ya incorporaba contenidos y herramientas relevantes para la visita, pero lo hacía desde una construcción más acumulativa que estratégica. La experiencia resolvía necesidades concretas, aunque sin una estructura clara que las conectara entre sí.</p>
+            <p>Este conjunto de pantallas muestra el estado inicial de la app: un producto con activos valiosos, pero con una relación todavía débil entre información, contexto y recorrido de uso.</p>
+          </div>
         </div>
 
-        <div class="result-stack__list">
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h4 class="result-stack__title">Integración de compra dentro de la app</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
-                  En la versión anterior, la aplicación mostraba los tipos de entrada y precios, pero el proceso de compra se completaba
-                  en la web externa. Esto interrumpía la experiencia y generaba una transición fuera del entorno nativo.
-                  <br><br>
-                  La nueva versión incorpora un flujo de compra completo dentro de la aplicación, estructurado en pasos claros:
-                  selección de tipo de visita, fecha y hora, configuración del grupo y pago.
-                  <br><br>
-                  De esta forma, la compra pasa a formar parte de la experiencia digital, manteniendo la continuidad dentro de la app.
-                </p>
-              </div>
-            </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
-            </div>
-          </article>
+        <div class="app-original__media">
+          <div class="app-original__gallery" aria-label="Pantallas originales de la app">
+            <figure class="app-original__item">
+              <img src="images/sagrada familia/visita_antes1.png" alt="Pantalla original de visita de la app Sagrada Familia" loading="lazy" decoding="async" />
+            </figure>
 
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h4 class="result-stack__title">Reestructuración de la experiencia de visita</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
-                  La arquitectura anterior agrupaba normativa, mapas, audioguías y accesos secundarios sin una jerarquía clara.
-                  La información crítica para el día de la visita competía con contenidos secundarios.
-                  <br><br>
-                  La nueva estructura reorganiza la experiencia en función del contexto real del usuario:
-                </p>
-                <ul class="result-stack__bullets">
-                  <li>Para visitantes con entrada: se priorizan “Tus entradas”, horarios específicos y detalles operativos.</li>
-                  <li>Para visitantes sin entrada: se introduce un módulo de planificación con horarios, cómo llegar, transporte y accesibilidad.</li>
-                </ul>
-                <p class="result-stack__desc">
-                  La normativa se mantiene, pero deja de ocupar el centro del flujo. La experiencia se adapta al momento real de uso.
-                </p>
-              </div>
-            </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
-            </div>
-          </article>
+            <figure class="app-original__item">
+              <img src="images/sagrada familia/entradas_antes.png" alt="Pantalla original de compra de entradas de la app Sagrada Familia" loading="lazy" decoding="async" />
+            </figure>
 
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h4 class="result-stack__title">Mapa interactivo como herramienta de orientación</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
-                  El mapa anterior era estático y funcionaba únicamente como referencia visual. No permitía interactuar con los espacios
-                  ni acceder directamente a información contextual durante la visita.
-                  <br><br>
-                  La nueva versión incorpora un mapa interactivo por plantas que permite seleccionar puntos de interés y acceder a su detalle
-                  desde el propio mapa. Esto facilita la navegación sin salir del flujo principal.
-                  <br><br>
-                  Además, el contenido visible se adapta al tipo de visita contratada, mostrando únicamente los espacios relevantes.
-                  El mapa pasa a ser una herramienta activa de orientación dentro del recorrido.
-                </p>
-              </div>
-            </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
-            </div>
-          </article>
+            <figure class="app-original__item">
+              <img src="images/sagrada familia/mapa_antes1.png" alt="Pantalla original del mapa de la app Sagrada Familia" loading="lazy" decoding="async" />
+            </figure>
 
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h4 class="result-stack__title">Evolución de la audioguía</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
-                  La audioguía original presentaba el contenido de forma lineal, con bloques extensos y poca diferenciación visual.
-                  La experiencia estaba centrada en la lectura más que en el acompañamiento durante el recorrido.
-                  <br><br>
-                  La nueva estructura organiza los contenidos en módulos claros, con miniaturas, tiempos estimados y jerarquía tipográfica
-                  más definida. Esto facilita el escaneo rápido y la navegación flexible.
-                  <br><br>
-                  La audioguía se integra dentro del flujo general de visita y se conecta con otros elementos como el mapa.
-                  Deja de ser una sección aislada para formar parte del sistema completo de experiencia.
-                </p>
-              </div>
-            </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
-            </div>
-          </article>
+            <figure class="app-original__item">
+              <img src="images/sagrada familia/visita_antes1.png" alt="Pantalla original de visita de la app Sagrada Familia" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h4 class="result-stack__title">Gamificación y activación on-site</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
-                  Se incorporan dinámicas de interacción vinculadas a elementos arquitectónicos concretos dentro del espacio.
-                  El usuario puede participar en pequeños retos durante el recorrido.
-                  <br><br>
-                  Estas dinámicas fomentan una exploración más activa sin interrumpir la experiencia cultural. La interacción se integra
-                  de forma natural dentro del flujo de la visita.
-                  <br><br>
-                  Además, la participación se conecta con incentivos posteriores, reforzando la continuidad entre experiencia digital
-                  y entorno físico.
-                </p>
-              </div>
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- DESAFÍO -->
+    <section class="section project-challenge" id="desafio" aria-labelledby="desafio-title">
+      <div class="container">
+        <div class="project-challenge__content">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">DESAFÍO</h2>
+          </div>
+          <h3 id="desafio-title" class="copy-title">
+            Redefinir la lógica del producto para convertir contenidos dispersos en una experiencia de visita conectada
+          </h3>
+          <div class="copy-body project-challenge__copy">
+            <p>
+             El reto no consistía en añadir más información, sino en dar estructura y sentido a lo que ya existía. Había que reorganizar la app para que compra, orientación, contenidos y recorrido dejaran de funcionar como piezas aisladas y pasaran a formar parte de una experiencia más clara, útil y coherente.
+            </p>
+          </div>
+        </div>
+
+        <ul class="project-challenge__goals" id="challengeGoals"></ul>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- PROCESO -->
+    <section class="section project-process" id="proceso" aria-labelledby="proceso-title">
+      <div class="container">
+        <div class="project-process__grid">
+          <div class="project-process__content">
+            <div class="section-head">
+              <span class="dot" aria-hidden="true"></span>
+              <h2 class="section-title">PROCESO</h2>
             </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
+            <h3 id="proceso-title" class="copy-title">Replantear la lógica del producto</h3>
+            <div class="copy-body">
+              <p>El trabajo partió de una revisión de la experiencia existente, analizando cómo se distribuían los contenidos y qué ocurría en momentos clave como la compra, el acceso con entrada o el inicio del recorrido.</p>
+              <p>A partir de ahí, el proceso se centró en identificar qué partes del producto no estaban respondiendo con claridad y reorganizar la experiencia para que cada bloque cumpliera una función más precisa dentro del conjunto.</p>
             </div>
-          </article>
+          </div>
+
+          <div class="project-process__timeline" id="processTimeline">
+            <div class="project-process__track" id="timelineTrack" aria-hidden="true"></div>
+            <div class="project-process__progress" id="timelineProgress" aria-hidden="true"></div>
+
+            <ol class="project-process__steps" aria-label="Fases del proyecto">
+              <li class="project-process__step" data-step="1">
+                <div class="project-process__bullet" data-bullet="1" aria-hidden="true"></div>
+                <p class="project-process__phase">Fase 01</p>
+                <h4 class="project-process__step-title">Auditar la experiencia existente</h4>
+                <p class="project-process__step-desc">El proceso comenzó con una revisión de la estructura actual de la app para entender cómo se organizaban contenidos y funcionalidades dentro de la experiencia. Este análisis permitió detectar una lógica construida por acumulación de secciones, con fricciones claras en momentos clave como la compra, el acceso con entrada o el inicio del recorrido.</p>
+              </li>
+
+              <li class="project-process__step" data-step="2">
+                <div class="project-process__bullet" data-bullet="2" aria-hidden="true"></div>
+                <p class="project-process__phase">Fase 02</p>
+                <h4 class="project-process__step-title">Definir una nueva lógica de navegación</h4>
+                <p class="project-process__step-desc">A partir de la auditoría, la propuesta reorganiza la experiencia para separar con claridad planificación y visita activa. La nueva estructura diferencia mejor las necesidades de usuarios con y sin entrada, y prioriza la información más útil en cada momento del recorrido.</p>
+              </li>
+
+              <li class="project-process__step" data-step="3">
+                <div class="project-process__bullet" data-bullet="3" aria-hidden="true"></div>
+                <p class="project-process__phase">Fase 03</p>
+                <h4 class="project-process__step-title">Replantear los flujos y herramientas clave</h4>
+                <p class="project-process__step-desc">Con la nueva arquitectura definida, el trabajo se centró en integrar dentro de la app los flujos y recursos con mayor impacto en la experiencia. La compra dejó de depender de la web externa, la gestión de entradas ganó protagonismo y herramientas como el mapa o la audioguía pasaron a formar parte de una lógica más conectada.</p>
+              </li>
+
+              <li class="project-process__step" data-step="4">
+                <div class="project-process__bullet" data-bullet="4" aria-hidden="true"></div>
+                <p class="project-process__phase">Fase 04</p>
+                <h4 class="project-process__step-title">Aterrizar la propuesta en recorridos de uso</h4>
+                <p class="project-process__step-desc">La fase final traduce esta nueva lógica en flujos concretos de compra, acceso, orientación y consulta de contenidos durante la visita. Este trabajo permitió ajustar jerarquías, puntos de acceso y continuidad entre pantallas para construir una experiencia más clara y coherente.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- RESULTADO -->
+    <section class="section project-result" id="resultado" aria-label="Resultado">
+      <div class="container">
+        <div class="project-result__content">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">RESULTADO</h2>
+          </div>
+
+          <h3 class="copy-title">Una experiencia más clara, conectada y útil para la visita</h3>
+
+          <div class="copy-body">
+            <p>La nueva propuesta reorganiza la aplicación para responder mejor a los distintos momentos del recorrido, integrando dentro del entorno nativo tareas clave como la compra, el acceso a entradas, la orientación y la consulta de contenidos.</p>
+            <p>El resultado es una experiencia más coherente y funcional, donde las distintas piezas del producto dejan de operar por separado y pasan a formar parte de un sistema más claro, continuo y fácil de usar.</p>
+          </div>
+        </div>
+
+        <div class="project-result__gallery" aria-label="Galería de resultados">
+          <figure class="project-result__item">
+            <img src="images/sagrada familia/entradas_despues.png" alt="Pantalla final de compra de entradas integrada en la aplicación de la Sagrada Familia" loading="lazy" decoding="async" />
+          </figure>
+
+          <figure class="project-result__item">
+            <img src="images/sagrada familia/visita_despues1.png" alt="Pantalla final de experiencia de visita reorganizada en la app de la Sagrada Familia" loading="lazy" decoding="async" />
+          </figure>
+
+          <figure class="project-result__item">
+            <img src="images/sagrada familia/mapa_despues1.png" alt="Pantalla final del mapa interactivo de la aplicación de la Sagrada Familia" loading="lazy" decoding="async" />
+          </figure>
+
+          <figure class="project-result__item">
+            <img src="images/sagrada familia/visita_despues3.png" alt="Pantalla final de audioguía y contenidos reorganizados en la app de la Sagrada Familia" loading="lazy" decoding="async" />
+          </figure>
         </div>
       </div>
     </section>
@@ -654,27 +555,141 @@
     </div>
 
     <!-- APRENDIZAJES -->
-    <section class="section section-learnings" id="aprendizajes">
+    <section class="section project-learnings" id="aprendizajes" aria-labelledby="aprendizajes-title">
       <div class="container">
-        <div class="section-head">
-          <span class="dot" aria-hidden="true"></span>
-          <h2 class="section-title">APRENDIZAJES</h2>
+        <div class="project-learnings__content">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">APRENDIZAJES</h2>
+          </div>
+
+          <h3 id="aprendizajes-title" class="copy-title">Cuando el problema es estructural, la solución también debe serlo</h3>
+
+          <div class="copy-body project-learnings__intro">
+            <p>Este proyecto reforzó una idea clave: mejorar una experiencia no siempre consiste en añadir más capas, sino en reorganizar el producto para que cada parte responda con claridad a una necesidad concreta.</p>
+          </div>
         </div>
 
-        <div class="section-learnings__content">
-          <p class="section-learnings__intro">Este proyecto confirmó que actualizar una interfaz no es suficiente cuando
-            el problema es estructural. La mejora real vino de reorganizar el producto en función del momento de uso.
-          </p>
-          <ul class="process-accordion__bullets">
-            <li>Diseñar para contexto físico cambia las prioridades. La claridad operativa pesa más que la riqueza
-              visual.</li>
-            <li>Integrar funcionalidades dentro del entorno nativo simplifica la experiencia más que añadir nuevas
-              capas.</li>
-            <li>Separar planificación y uso on-site permite reducir fricción sin eliminar información.</li>
-            <li>La interacción (mapa, dinámicas, audioguía) tiene sentido cuando responde a un momento real, no cuando
-              se añade como recurso aislado.</li>
-          </ul>
+        <div class="project-learnings__list">
+          <blockquote class="project-learnings__quote">
+            <div class="project-learnings__top">
+              <div class="project-learnings__icon-badge">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-map"></use>
+                </svg>
+              </div>
+            </div>
+            <h6>El contexto cambia la jerarquía</h6>
+            <p class="project-learnings__desc">Diseñar para una visita física obliga a priorizar orientación, accesos e información práctica.</p>
+          </blockquote>
+
+          <blockquote class="project-learnings__quote">
+            <div class="project-learnings__top">
+              <div class="project-learnings__icon-badge">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-stack"></use>
+                </svg>
+              </div>
+            </div>
+            <h6>La arquitectura define la experiencia</h6>
+            <p class="project-learnings__desc">Cuando la estructura falla, incluso las funcionalidades útiles pierden claridad.</p>
+          </blockquote>
+
+          <blockquote class="project-learnings__quote">
+            <div class="project-learnings__top">
+              <div class="project-learnings__icon-badge">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-external-link"></use>
+                </svg>
+              </div>
+            </div>
+            <h6>La continuidad también se diseña</h6>
+            <p class="project-learnings__desc">Integrar tareas clave dentro de la app mejora más que añadir nuevas capas.</p>
+          </blockquote>
+
+          <blockquote class="project-learnings__quote">
+            <div class="project-learnings__top">
+              <div class="project-learnings__icon-badge">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-layers"></use>
+                </svg>
+              </div>
+            </div>
+            <h6>Un sistema claro genera más valor</h6>
+            <p class="project-learnings__desc">Compra, entradas, mapa y contenido funcionan mejor cuando responden a una misma lógica.</p>
+          </blockquote>
         </div>
+      </div>
+    </section>
+
+     <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <section class="project-navigation" aria-label="Navegación de proyectos">
+      <div class="container">
+        <div class="section-head project-navigation__head">
+          <span class="dot" aria-hidden="true"></span>
+          <h2 class="section-title">Otros proyectos</h2>
+        </div>
+        <ul class="project-navigation__grid" aria-label="Lista de proyectos">
+          <li class="project-navigation__item">
+            <a class="portfolio-card" href="case-christies-pulse.html" aria-labelledby="project-nav-christies">
+              <div class="portfolio-media">
+                <img src="images/home/placeholder.png" alt="Proyecto Christie's Pulse" loading="lazy" decoding="async" width="900" height="600">
+                <div class="portfolio-overlay" style="--overlay-accent:rgba(255, 255, 255, 0.1);"></div>
+              </div>
+              <span class="portfolio-arrow" aria-hidden="true">
+                <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+              </span>
+              <div class="portfolio-content">
+                <span class="portfolio-pill">UX/UI</span>
+                <div class="copy-body">
+                  <h3 id="project-nav-christies" class="copy-card-title">Christie's Pulse</h3>
+                  <p class="copy-card-desc">Mejoras de experiencia y navegación para una plataforma de contenido digital.</p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-navigation__item">
+            <a class="portfolio-card" href="case-isocial.html" aria-labelledby="project-nav-isocial">
+              <div class="portfolio-media">
+                <img src="images/home/placeholder.png" alt="Proyecto Fundació iSocial" loading="lazy" decoding="async" width="900" height="600">
+                <div class="portfolio-overlay" style="--overlay-accent:rgba(255, 255, 255, 0.1);"></div>
+              </div>
+              <span class="portfolio-arrow" aria-hidden="true">
+                <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+              </span>
+              <div class="portfolio-content">
+                <span class="portfolio-pill">UX/UI</span>
+                <div class="copy-body">
+                  <h3 id="project-nav-isocial" class="copy-card-title">Fundació iSocial</h3>
+                  <p class="copy-card-desc">Estructura de información y flujos para mejorar tareas clave en producto.</p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-navigation__item">
+            <a class="portfolio-card" href="index.html#contact" aria-labelledby="project-nav-contact">
+              <div class="portfolio-media">
+                <img src="images/home/placeholder.png" alt="Contacto" loading="lazy" decoding="async" width="900" height="600">
+                <div class="portfolio-overlay" style="--overlay-accent:rgba(255, 255, 255, 0.1);"></div>
+              </div>
+              <span class="portfolio-arrow" aria-hidden="true">
+                <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+              </span>
+              <div class="portfolio-content">
+                <span class="portfolio-pill">Contacto</span>
+                <div class="copy-body">
+                  <h3 id="project-nav-contact" class="copy-card-title">Hablemos</h3>
+                  <p class="copy-card-desc">Si necesitas apoyo en UX y producto digital, podemos hablar de tu proyecto.</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -685,32 +700,30 @@
     <div class="container footer-inner">
       <div class="section-head footer-head">
         <span class="dot dot--red" aria-hidden="true"></span>
-        <h6 class="section-title footer-title">Contact</h6>
+        <h6 class="section-title footer-title">Contacto</h6>
       </div>
 
       <h2 class="footer-hero">¿Hablamos?</h2>
-      <p class="footer-intro">
-        Si estás desarrollando un producto digital y necesitas<br />
-        ayuda con UX o diseño de producto, estaré encantado<br />
-        de conocer tu proyecto.
+      <p class="copy-intro">
+        Si estás desarrollando un producto digital y necesitas ayuda con UX o diseño de producto, estaré encantado de conocer tu proyecto.
       </p>
 
       <div class="footer-links">
-        <a href="#" class="button button--footer" onclick="event.preventDefault()">
+        <a href="mailto:toniredondo86@gmail.com" class="button button--footer">
           Envíame un E-mail
           <svg class="icon" aria-hidden="true">
             <use href="#icon-arrow-up-right"></use>
           </svg>
         </a>
 
-        <a href="#" class="button button--footer" onclick="event.preventDefault()">
+        <a href="https://www.linkedin.com/in/toniredondo86/" class="button button--footer" target="_blank" rel="noopener noreferrer">
           Envíame un mensaje a Linkedin
           <svg class="icon" aria-hidden="true">
             <use href="#icon-arrow-up-right"></use>
           </svg>
         </a>
 
-        <a href="#" class="button button--footer" onclick="event.preventDefault()">
+        <a href="index.html#contact" class="button button--footer">
           Descarga mi CV
           <svg class="icon" aria-hidden="true">
             <use href="#icon-download"></use>
@@ -720,7 +733,7 @@
 
       <div class="divider"></div>
 
-      <p class="footer-copy">© 2026 Toni Redondo<br />Diseñado y desarrollado por mí</p>
+      <p class="copy-text">© 2026 Toni Redondo. Diseñado y desarrollado por mí.</p>
     </div>
   </footer>
 

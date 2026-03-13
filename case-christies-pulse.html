@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&amp;display=swap" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=54" />
 </head>
 
 <body class="case-christies-pulse">
@@ -48,6 +48,18 @@
       <path d="M7 17L17 7M17 7L8 7M17 7L17 16"
         stroke="currentColor" stroke-width="2"
         stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-external-link" viewBox="0 0 24 24">
+      <path d="M14 5H19V10"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M10 14L19 5"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M19 14V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H7C6.46957 19 5.96086 18.7893 5.58579 18.4142C5.21071 18.0391 5 17.5304 5 17V7C5 6.46957 5.21071 5.96086 5.58579 5.58579C5.96086 5.21071 6.46957 5 7 5H10"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </symbol>
 
     <symbol id="icon-arrow-down-right" viewBox="0 0 24 24">
@@ -98,6 +110,35 @@
         stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </symbol>
 
+    <symbol id="icon-drag" viewBox="0 0 24 24">
+      <path d="M8.29302 7.29302C8.68354 6.90249 9.31655 6.90249 9.70708 7.29302C10.0975 7.68355 10.0976 8.31659 9.70708 8.70708L6.41411 12L9.70708 15.293C10.0975 15.6835 10.0976 16.3166 9.70708 16.7071C9.31659 17.0976 8.68355 17.0975 8.29302 16.7071L4.29302 12.7071C3.90249 12.3166 3.90249 11.6835 4.29302 11.293L8.29302 7.29302ZM14.293 7.29302C14.6835 6.90249 15.3166 6.90249 15.7071 7.29302L19.7071 11.293L19.7754 11.3692C20.0957 11.762 20.0732 12.341 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6835 17.0975 14.293 16.7071C13.9025 16.3166 13.9025 15.6835 14.293 15.293L17.586 12L14.293 8.70708C13.9025 8.31655 13.9025 7.68354 14.293 7.29302Z"
+        fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-stack" viewBox="0 0 24 24">
+      <path d="M12 4L4 8L12 12L20 8L12 4Z"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M4 12L12 16L20 12"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M4 16L12 20L20 16"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-map" viewBox="0 0 24 24">
+      <path d="M9 4L15 6L21 4V19L15 21L9 19L3 21V6L9 4Z"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M9 4V19"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M15 6V21"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
   </svg>
 
   <!-- ✅ Overlay (necesario para mobile menu) -->
@@ -107,7 +148,7 @@
   <header class="navbar" id="siteNav">
     <div class="navbar-inner container">
       <a href="index.html#top" class="logo" aria-label="Home">
-        <img src="logo_redondo.svg" alt="Logo" class="navbar-logo" />
+        <img src="logo_redondo.svg" alt="Logo Toni Redondo" class="navbar-logo" />
       </a>
 
       <nav class="nav-desktop" aria-label="Primary">
@@ -175,6 +216,48 @@
         <p><a href="index.html#work" style="color: inherit; text-decoration: underline;">← Volver a casos</a></p>
       </section>
     </div>
+
+    <section class="project-navigation" aria-label="Project navigation">
+      <div class="container">
+        <div class="section-head project-navigation__head">
+          <span class="dot" aria-hidden="true"></span>
+          <h2 class="section-title">Otros proyectos</h2>
+        </div>
+        <div class="project-navigation__cards" aria-label="Lista de proyectos">
+          <a href="case-isocial.html" class="project-navigation__card">
+            <span class="project-navigation__card-logo" aria-hidden="true">
+              <img src="images/isocial/logo_isocial.svg" alt="" loading="lazy" decoding="async" />
+            </span>
+            <span class="copy-body">
+              <span class="copy-card-title">Fundació iSocial</span>
+              <span class="copy-card-desc">Rediseño de iSocial para mejorar claridad, accesibilidad y eficiencia del producto.</span>
+            </span>
+            <span class="project-navigation__card-tags" aria-label="Tags Fundació iSocial">
+              <span class="tag project-navigation__tag">APP / PLATAFORMA</span>
+              <span class="tag project-navigation__tag">REDISEÑO</span>
+              <span class="tag project-navigation__tag">ACCESIBILIDAD</span>
+              <span class="tag project-navigation__tag">SISTEMA DE DISEÑO</span>
+            </span>
+          </a>
+          <a href="case-sagrada-familia.html" class="project-navigation__card">
+            <span class="project-navigation__card-logo" aria-hidden="true">
+              <img src="images/sagrada familia/logo_safa.svg" alt="" loading="lazy" decoding="async" />
+            </span>
+            <span class="copy-body">
+              <span class="copy-card-title">Sagrada Familia</span>
+              <span class="copy-card-desc">Replanteamiento estructural de la app para el contexto real de visita on-site.</span>
+            </span>
+            <span class="project-navigation__card-tags" aria-label="Tags Sagrada Familia">
+              <span class="tag project-navigation__tag">APP MÓVIL</span>
+              <span class="tag project-navigation__tag">ARQUITECTURA DE LA INFORMACIÓN</span>
+              <span class="tag project-navigation__tag">EXPERIENCIA ON-SITE</span>
+              <span class="tag project-navigation__tag">ACCESIBILIDAD</span>
+              <span class="tag project-navigation__tag">GAMIFICACIÓN</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ✅ necesario para que el menú funcione -->

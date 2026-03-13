@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&amp;display=swap" />
-  <link rel="stylesheet" href="./styles.css?v=2" />
+  <link rel="stylesheet" href="./styles.css?v=54" />
 
   <!-- Site JS -->
   <script src="./script.js?v=2" defer></script>
@@ -45,6 +45,15 @@
     <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
       <path d="M7 17L17 7M17 7L8 7M17 7L17 16"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-external-link" viewBox="0 0 24 24">
+      <path d="M14 5H19V10"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M10 14L19 5"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M19 14V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H7C6.46957 19 5.96086 18.7893 5.58579 18.4142C5.21071 18.0391 5 17.5304 5 17V7C5 6.46957 5.21071 5.96086 5.58579 5.58579C5.96086 5.21071 6.46957 5 7 5H10"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </symbol>
 
     <symbol id="icon-menu" viewBox="0 0 24 24">
@@ -76,6 +85,29 @@
       <path d="M8 8H16M8 12H14M18 3C18.7956 3 19.5587 3.31607 20.1213 3.87868C20.6839 4.44129 21 5.20435 21 6V14C21 14.7956 20.6839 15.5587 20.1213 16.1213C19.5587 16.6839 18.7956 17 18 17H13L8 20V17H6C5.20435 17 4.44129 16.6839 3.87868 16.1213C3.31607 15.5587 3 14.7956 3 14V6C3 5.20435 3.31607 4.44129 3.87868 3.87868C4.44129 3.31607 5.20435 3 6 3H18Z"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     </symbol>
+
+    <symbol id="icon-drag" viewBox="0 0 24 24">
+      <path d="M8.29302 7.29302C8.68354 6.90249 9.31655 6.90249 9.70708 7.29302C10.0975 7.68355 10.0976 8.31659 9.70708 8.70708L6.41411 12L9.70708 15.293C10.0975 15.6835 10.0976 16.3166 9.70708 16.7071C9.31659 17.0976 8.68355 17.0975 8.29302 16.7071L4.29302 12.7071C3.90249 12.3166 3.90249 11.6835 4.29302 11.293L8.29302 7.29302ZM14.293 7.29302C14.6835 6.90249 15.3166 6.90249 15.7071 7.29302L19.7071 11.293L19.7754 11.3692C20.0957 11.762 20.0732 12.341 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6835 17.0975 14.293 16.7071C13.9025 16.3166 13.9025 15.6835 14.293 15.293L17.586 12L14.293 8.70708C13.9025 8.31655 13.9025 7.68354 14.293 7.29302Z"
+        fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-stack" viewBox="0 0 24 24">
+      <path d="M12 4L4 8L12 12L20 8L12 4Z"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M4 12L12 16L20 12"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M4 16L12 20L20 16"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-map" viewBox="0 0 24 24">
+      <path d="M9 4L15 6L21 4V19L15 21L9 19L3 21V6L9 4Z"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M9 4V19"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M15 6V21"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
   </svg>
 
   <!-- Overlay -->
@@ -88,26 +120,7 @@
 
         <!-- LOGO -->
         <a href="index.html#top" class="logo" aria-label="Home">
-  <span class="logo-box" aria-hidden="true">
-    <svg
-      class="navbar-logo"
-      width="119"
-      height="32"
-      viewBox="-2 -2 123 36"
-      preserveAspectRatio="xMinYMid meet"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-      focusable="false"
-    >
-      <path d="M1.89333 26V11.8933H5.54667L5.68 16.4267L5.04 15.4933C5.25333 14.7644 5.6 14.1067 6.08 13.52C6.56 12.9156 7.12 12.4444 7.76 12.1067C8.41778 11.7689 9.10222 11.6 9.81333 11.6C10.1156 11.6 10.4089 11.6267 10.6933 11.68C10.9778 11.7333 11.2178 11.7956 11.4133 11.8667L10.4 16.0267C10.1867 15.92 9.92889 15.8311 9.62667 15.76C9.32445 15.6711 9.01333 15.6267 8.69333 15.6267C8.26667 15.6267 7.86667 15.7067 7.49333 15.8667C7.13778 16.0089 6.82667 16.2222 6.56 16.5067C6.29333 16.7733 6.08 17.0933 5.92 17.4667C5.77778 17.84 5.70667 18.2489 5.70667 18.6933V26H1.89333ZM19.6804 26.2667C18.1515 26.2667 16.8182 25.9556 15.6804 25.3333C14.5426 24.7111 13.6538 23.8578 13.0138 22.7733C12.3738 21.6889 12.0538 20.4444 12.0538 19.04C12.0538 17.9556 12.2315 16.96 12.5871 16.0533C12.9426 15.1467 13.4404 14.3644 14.0804 13.7067C14.7204 13.0311 15.476 12.5156 16.3471 12.16C17.236 11.7867 18.196 11.6 19.2271 11.6C20.1871 11.6 21.076 11.7778 21.8938 12.1333C22.7115 12.4711 23.4138 12.96 24.0004 13.6C24.6049 14.2222 25.0671 14.96 25.3871 15.8133C25.7071 16.6667 25.8493 17.6 25.8138 18.6133L25.7871 19.7867H14.4538L13.8404 17.4667H22.6671L22.2404 17.9467V17.36C22.2049 16.88 22.0449 16.4444 21.7604 16.0533C21.4938 15.6622 21.1471 15.36 20.7204 15.1467C20.2938 14.9333 19.8138 14.8267 19.2804 14.8267C18.4982 14.8267 17.8315 14.9778 17.2804 15.28C16.7471 15.5822 16.3382 16.0267 16.0538 16.6133C15.7693 17.2 15.6271 17.9111 15.6271 18.7467C15.6271 19.6 15.8049 20.3378 16.1604 20.96C16.5338 21.5822 17.0493 22.0711 17.7071 22.4267C18.3826 22.7644 19.1738 22.9333 20.0804 22.9333C20.7026 22.9333 21.2715 22.8356 21.7871 22.64C22.3026 22.4444 22.8538 22.1067 23.4404 21.6267L25.2538 24.16C24.7382 24.6222 24.1693 25.0133 23.5471 25.3333C22.9249 25.6356 22.2849 25.8667 21.6271 26.0267C20.9693 26.1867 20.3204 26.2667 19.6804 26.2667ZM34.1321 26.2667C32.9054 26.2667 31.8032 25.9556 30.8254 25.3333C29.8476 24.6933 29.0743 23.8311 28.5054 22.7467C27.9543 21.6444 27.6788 20.3733 27.6788 18.9333C27.6788 17.5289 27.9543 16.2756 28.5054 15.1733C29.0743 14.0711 29.8388 13.2 30.7988 12.56C31.7765 11.92 32.8876 11.6 34.1321 11.6C34.7899 11.6 35.421 11.7067 36.0254 11.92C36.6476 12.1156 37.1988 12.3911 37.6788 12.7467C38.1765 13.1022 38.5765 13.5022 38.8788 13.9467C39.181 14.3733 39.3499 14.8267 39.3854 15.3067L38.4254 15.4667V6.26667H42.2121V26H38.6388L38.4788 22.7467L39.2254 22.8267C39.1899 23.2711 39.0299 23.6978 38.7454 24.1067C38.461 24.5156 38.0788 24.8889 37.5988 25.2267C37.1365 25.5467 36.6032 25.8044 35.9988 26C35.4121 26.1778 34.7899 26.2667 34.1321 26.2667ZM34.9854 23.12C35.6965 23.12 36.3188 22.9422 36.8521 22.5867C37.3854 22.2311 37.8032 21.7422 38.1054 21.12C38.4076 20.4978 38.5588 19.7689 38.5588 18.9333C38.5588 18.1156 38.4076 17.3956 38.1054 16.7733C37.8032 16.1333 37.3854 15.6444 36.8521 15.3067C36.3188 14.9511 35.6965 14.7733 34.9854 14.7733C34.2743 14.7733 33.6521 14.9511 33.1188 15.3067C32.6032 15.6444 32.1943 16.1333 31.8921 16.7733C31.6076 17.3956 31.4654 18.1156 31.4654 18.9333C31.4654 19.7689 31.6076 20.4978 31.8921 21.12C32.1943 21.7422 32.6032 22.2311 33.1188 22.5867C33.6521 22.9422 34.2743 23.12 34.9854 23.12Z" fill="black"/>
-
-      <path d="M69.2268 26V11.8933H72.8535L72.9602 14.7733L72.2135 15.0933C72.4091 14.4533 72.7557 13.8756 73.2535 13.36C73.7691 12.8267 74.3824 12.4 75.0935 12.08C75.8046 11.76 76.5513 11.6 77.3335 11.6C78.4002 11.6 79.2891 11.8133 80.0002 12.24C80.7291 12.6667 81.2713 13.3156 81.6268 14.1867C82.0002 15.04 82.1868 16.0978 82.1868 17.36V26H78.4002V17.6533C78.4002 17.0133 78.3113 16.48 78.1335 16.0533C77.9557 15.6267 77.6802 15.3156 77.3068 15.12C76.9513 14.9067 76.5068 14.8178 75.9735 14.8533C75.5468 14.8533 75.1468 14.9244 74.7735 15.0667C74.4179 15.1911 74.1068 15.3778 73.8402 15.6267C73.5913 15.8756 73.3868 16.16 73.2268 16.48C73.0846 16.8 73.0135 17.1467 73.0135 17.52V26H71.1468C70.7379 26 70.3735 26 70.0535 26C69.7335 26 69.4579 26 69.2268 26ZM91.3354 26.2667C90.1087 26.2667 89.0065 25.9556 88.0287 25.3333C87.0509 24.6933 86.2776 23.8311 85.7087 22.7467C85.1576 21.6444 84.882 20.3733 84.882 18.9333C84.882 17.5289 85.1576 16.2756 85.7087 15.1733C86.2776 14.0711 87.042 13.2 88.002 12.56C88.9798 11.92 90.0909 11.6 91.3354 11.6C91.9932 11.6 92.6243 11.7067 93.2287 11.92C93.8509 12.1156 94.402 12.3911 94.882 12.7467C95.3798 13.1022 95.7798 13.5022 96.082 13.9467C96.3843 14.3733 96.5532 14.8267 96.5887 15.3067L95.6287 15.4667V6.26667H99.4154V26H95.842L95.682 22.7467L96.4287 22.8267C96.3932 23.2711 96.2332 23.6978 95.9487 24.1067C95.6643 24.5156 95.282 24.8889 94.802 25.2267C94.3398 25.5467 93.8065 25.8044 93.202 26C92.6154 26.1778 91.9932 26.2667 91.3354 26.2667ZM92.1887 23.12C92.8998 23.12 93.522 22.9422 94.0554 22.5867C94.5887 22.2311 95.0065 21.7422 95.3087 21.12C95.6109 20.4978 95.762 19.7689 95.762 18.9333C95.762 18.1156 95.6109 17.3956 95.3087 16.7733C95.0065 16.1333 94.5887 15.6444 94.0554 15.3067C93.522 14.9511 92.8998 14.7733 92.1887 14.7733C91.4776 14.7733 90.8554 14.9511 90.322 15.3067C89.8065 15.6444 89.3976 16.1333 89.0954 16.7733C88.8109 17.3956 88.6687 18.1156 88.6687 18.9333C88.6687 19.7689 88.8109 20.4978 89.0954 21.12C89.3976 21.7422 89.8065 22.2311 90.322 22.5867C90.8554 22.9422 91.4776 23.12 92.1887 23.12ZM109.667 26.2667C108.227 26.2667 106.938 25.9556 105.8 25.3333C104.68 24.6933 103.791 23.8222 103.134 22.72C102.494 21.6178 102.174 20.3556 102.174 18.9333C102.174 17.5111 102.494 16.2578 103.134 15.1733C103.791 14.0711 104.68 13.2 105.8 12.56C106.938 11.92 108.227 11.6 109.667 11.6C111.089 11.6 112.36 11.92 113.48 12.56C114.618 13.2 115.507 14.0711 116.147 15.1733C116.787 16.2578 117.107 17.5111 117.107 18.9333C117.107 20.3556 116.787 21.6178 116.147 22.72C115.507 23.8222 114.618 24.6933 113.48 25.3333C112.36 25.9556 111.089 26.2667 109.667 26.2667ZM109.667 22.96C110.36 22.96 110.983 22.7911 111.534 22.4533C112.085 22.0978 112.511 21.6178 112.814 21.0133C113.134 20.3911 113.294 19.6978 113.294 18.9333C113.294 18.1511 113.134 17.4578 112.814 16.8533C112.511 16.2311 112.085 15.7511 111.534 15.4133C110.983 15.0578 110.36 14.88 109.667 14.88C108.956 14.88 108.325 15.0578 107.774 15.4133C107.223 15.7689 106.787 16.2489 106.467 16.8533C106.147 17.4578 105.996 18.1511 106.014 18.9333C105.996 19.6978 106.147 20.3911 106.467 21.0133C106.787 21.6178 107.223 22.0978 107.774 22.4533C108.325 22.7911 108.956 22.96 109.667 22.96Z" fill="black"/>
-
-      <rect x="44.6668" y="11.3335" width="22.6667" height="14.6667" rx="7.33333" fill="#E1443B"/>
-      <circle cx="60" cy="18.667" r="6" fill="white"/>
-    </svg>
-  </span>
+  <img src="logo_redondo.svg" alt="Logo Toni Redondo" class="navbar-logo" />
 </a>
 
         <nav class="nav-desktop" aria-label="Primary">
@@ -232,9 +245,9 @@
             <h2 class="section-title">DESAFÍO</h2>
           </div>
 
-          <h4 class="project-challenge__title">Replantear la experiencia de iSocial</h4>
+          <h3 class="copy-title">Replantear la experiencia de iSocial</h3>
 
-          <div class="project-challenge__body">
+          <div class="copy-body">
             <p>
               iSocial necesitaba una experiencia más clara y accesible, reduciendo fricción en tareas frecuentes
               y mejorando la comprensión de la información en flujos críticos.
@@ -286,12 +299,12 @@
 
             <article class="process-accordion__item is-active" data-step="1">
               <button class="process-accordion__trigger" type="button" id="pa-trigger-1" aria-expanded="true" aria-controls="pa-panel-1">
-                <h5 class="process-accordion__title">Investigación y diagnóstico</h5>
+                <h5 class="copy-card-title">Investigación y diagnóstico</h5>
               </button>
 
               <div class="process-accordion__panel" id="pa-panel-1" role="region" aria-labelledby="pa-trigger-1">
                 <div class="process-accordion__panel-inner">
-                  <p class="process-accordion__desc">
+                  <p class="copy-text">
                     Auditoría de la experiencia actual para detectar problemas de usabilidad, consistencia y accesibilidad.
                   </p>
 
@@ -306,12 +319,12 @@
 
             <article class="process-accordion__item" data-step="2">
               <button class="process-accordion__trigger" type="button" id="pa-trigger-2" aria-expanded="false" aria-controls="pa-panel-2">
-                <h5 class="process-accordion__title">Definición de solución</h5>
+                <h5 class="copy-card-title">Definición de solución</h5>
               </button>
 
               <div class="process-accordion__panel" id="pa-panel-2" role="region" aria-labelledby="pa-trigger-2" hidden>
                 <div class="process-accordion__panel-inner">
-                  <p class="process-accordion__desc">
+                  <p class="copy-text">
                     Priorización de mejoras y definición de principios UI/UX para un rediseño coherente y escalable.
                   </p>
 
@@ -326,12 +339,12 @@
 
             <article class="process-accordion__item" data-step="3">
               <button class="process-accordion__trigger" type="button" id="pa-trigger-3" aria-expanded="false" aria-controls="pa-panel-3">
-                <h5 class="process-accordion__title">Diseño UI y validación</h5>
+                <h5 class="copy-card-title">Diseño UI y validación</h5>
               </button>
 
               <div class="process-accordion__panel" id="pa-panel-3" role="region" aria-labelledby="pa-trigger-3" hidden>
                 <div class="process-accordion__panel-inner">
-                  <p class="process-accordion__desc">
+                  <p class="copy-text">
                     Diseño visual, prototipado y validación de flujos para asegurar claridad y eficiencia.
                   </p>
 
@@ -362,9 +375,9 @@
         <div class="result-stack__list">
           <article class="result-stack__block">
             <div class="result-stack__content">
-              <h4 class="result-stack__title">Integración de compra dentro de la app</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
+              <h3 class="copy-title">Integración de compra dentro de la app</h3>
+              <div class="copy-body">
+                <p class="copy-text">
                   En la versión anterior, la aplicación mostraba los tipos de entrada y precios, pero el proceso de compra se completaba
                   en la web externa. Esto interrumpía la experiencia y generaba una transición fuera del entorno nativo.
                   <br><br>
@@ -415,9 +428,9 @@
 
           <article class="result-stack__block">
             <div class="result-stack__content">
-              <h4 class="result-stack__title">Reestructuración de la experiencia de visita</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
+              <h3 class="copy-title">Reestructuración de la experiencia de visita</h3>
+              <div class="copy-body">
+                <p class="copy-text">
                   La arquitectura anterior agrupaba normativa, mapas, audioguías y accesos secundarios sin una jerarquía clara.
                   La información crítica para el día de la visita competía con contenidos secundarios.
                   <br><br>
@@ -427,7 +440,7 @@
                   <li>Para visitantes con entrada: se priorizan “Tus entradas”, horarios específicos y detalles operativos.</li>
                   <li>Para visitantes sin entrada: se introduce un módulo de planificación con horarios, cómo llegar, transporte y accesibilidad.</li>
                 </ul>
-                <p class="result-stack__desc">
+                <p class="copy-text">
                   La normativa se mantiene, pero deja de ocupar el centro del flujo. La experiencia se adapta al momento real de uso.
                 </p>
               </div>
@@ -472,9 +485,9 @@
 
           <article class="result-stack__block">
             <div class="result-stack__content">
-              <h4 class="result-stack__title">Mapa interactivo como herramienta de orientación</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
+              <h3 class="copy-title">Mapa interactivo como herramienta de orientación</h3>
+              <div class="copy-body">
+                <p class="copy-text">
                   El mapa anterior era estático y funcionaba únicamente como referencia visual. No permitía interactuar con los espacios
                   ni acceder directamente a información contextual durante la visita.
                   <br><br>
@@ -526,9 +539,9 @@
 
           <article class="result-stack__block">
             <div class="result-stack__content">
-              <h4 class="result-stack__title">Evolución de la audioguía</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
+              <h3 class="copy-title">Evolución de la audioguía</h3>
+              <div class="copy-body">
+                <p class="copy-text">
                   La audioguía original presentaba el contenido de forma lineal, con bloques extensos y poca diferenciación visual.
                   La experiencia estaba centrada en la lectura más que en el acompañamiento durante el recorrido.
                   <br><br>
@@ -580,9 +593,9 @@
 
           <article class="result-stack__block">
             <div class="result-stack__content">
-              <h4 class="result-stack__title">Gamificación y activación on-site</h4>
-              <div class="result-stack__body">
-                <p class="result-stack__desc">
+              <h3 class="copy-title">Gamificación y activación on-site</h3>
+              <div class="copy-body">
+                <p class="copy-text">
                   Se incorporan dinámicas de interacción vinculadas a elementos arquitectónicos concretos dentro del espacio.
                   El usuario puede participar en pequeños retos durante el recorrido.
                   <br><br>
@@ -666,6 +679,47 @@
       </div>
     </section>
 
+    <section class="project-navigation" aria-label="Project navigation">
+      <div class="container">
+        <div class="section-head project-navigation__head">
+          <span class="dot" aria-hidden="true"></span>
+          <h2 class="section-title">Otros proyectos</h2>
+        </div>
+        <div class="project-navigation__cards" aria-label="Lista de proyectos">
+          <a href="case-christies-pulse.html" class="project-navigation__card">
+            <span class="project-navigation__card-logo" aria-hidden="true">
+              <img src="logo_redondo.svg" alt="" loading="lazy" decoding="async" />
+            </span>
+            <span class="copy-body">
+              <span class="copy-card-title">Christie's Pulse</span>
+              <span class="copy-card-desc">Caso de estudio sobre proceso UX/UI, decisiones de diseño y resultados.</span>
+            </span>
+            <span class="project-navigation__card-tags" aria-label="Tags Christie's Pulse">
+              <span class="tag project-navigation__tag">UX/UI</span>
+              <span class="tag project-navigation__tag">DECISIONES DE DISEÑO</span>
+              <span class="tag project-navigation__tag">RESULTADOS</span>
+            </span>
+          </a>
+          <a href="case-sagrada-familia.html" class="project-navigation__card">
+            <span class="project-navigation__card-logo" aria-hidden="true">
+              <img src="images/sagrada familia/logo_safa.svg" alt="" loading="lazy" decoding="async" />
+            </span>
+            <span class="copy-body">
+              <span class="copy-card-title">Sagrada Familia</span>
+              <span class="copy-card-desc">Replanteamiento estructural de la app para el contexto real de visita on-site.</span>
+            </span>
+            <span class="project-navigation__card-tags" aria-label="Tags Sagrada Familia">
+              <span class="tag project-navigation__tag">APP MÓVIL</span>
+              <span class="tag project-navigation__tag">ARQUITECTURA DE LA INFORMACIÓN</span>
+              <span class="tag project-navigation__tag">EXPERIENCIA ON-SITE</span>
+              <span class="tag project-navigation__tag">ACCESIBILIDAD</span>
+              <span class="tag project-navigation__tag">GAMIFICACIÓN</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
@@ -677,7 +731,7 @@
       </div>
 
       <h2 class="footer-hero">¿Hablamos?</h2>
-      <p class="footer-intro">
+      <p class="copy-intro">
         Si estás desarrollando un producto digital y necesitas<br />
         ayuda con UX o diseño de producto, estaré encantado<br />
         de conocer tu proyecto.
@@ -702,7 +756,7 @@
 
       <div class="divider"></div>
 
-      <p class="footer-copy">© 2026 Toni Redondo<br />Diseñado y desarrollado por mí</p>
+      <p class="copy-text">© 2026 Toni Redondo<br />Diseñado y desarrollado por mí</p>
     </div>
   </footer>
 

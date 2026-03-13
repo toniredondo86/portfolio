@@ -1,5 +1,19 @@
 // script.js
 
+const BREAKPOINTS = {
+  md: 768,
+  lg: 1024,
+};
+
+const MOTION_MEDIA_QUERY = "(prefers-reduced-motion: reduce)";
+const SCROLL_REVEAL_OFFSET = 120;
+const STACK_TRANSITION_MS = 450;
+const HERO_INTRO_REVEAL_MS = 1100;
+const HERO_ROTATION_INTERVAL_MS = 2400;
+const HERO_SCRAMBLE_DURATION_MS = 750;
+
+const prefersReducedMotion = () => window.matchMedia(MOTION_MEDIA_QUERY).matches;
+
 // =========================
 // NAV MOBILE (index + cases)
 // =========================
@@ -89,7 +103,7 @@
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768 && isOpen()) closeMenu();
+    if (window.innerWidth >= BREAKPOINTS.md && isOpen()) closeMenu();
     scheduleSyncNavBottomVar();
   });
 
@@ -117,15 +131,13 @@
 
   const intro = document.getElementById("heroIntro");
   const mount = document.getElementById("heroIntroLogo");
-  const sourceLogo = document.querySelector(".navbar-logo");
   if (!intro) return;
 
   const announceIntroDone = () => {
     window.dispatchEvent(new CustomEvent("home-intro:done"));
   };
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!mount || !sourceLogo || reduceMotion) {
+  if (!mount) {
     intro.remove();
     announceIntroDone();
     return;
@@ -133,79 +145,11 @@
 
   document.body.classList.add("intro-gated");
 
-  const logo = sourceLogo.cloneNode(true);
-  logo.classList.remove("navbar-logo");
-  logo.classList.add("hero-intro__logo-svg");
-  logo.removeAttribute("width");
-  logo.removeAttribute("height");
-  mount.appendChild(logo);
+  // Logo stays purely inline from index.html (no JS manipulation).
 
-  const isBlackFill = (el) => {
-    const fill = (el.getAttribute("fill") || "").trim().toLowerCase();
-    return fill === "black" || fill === "#000" || fill === "#000000" || fill === "rgb(0,0,0)";
-  };
+  const reduceMotion = prefersReducedMotion();
+  const INTRO_OUT_AT = reduceMotion ? 700 : 1500;
 
-  const wordmarkParts = [...logo.querySelectorAll("path")].filter(isBlackFill);
-  const track = logo.querySelector("rect[fill='#E1443B'], rect[fill='#e1443b']");
-  const dot = logo.querySelector("circle[fill='white'], circle[fill='#fff'], circle[fill='#ffffff']");
-  track?.classList.add("hero-intro__toggle-track");
-  dot?.classList.add("hero-intro__toggle-dot");
-
-  if (!wordmarkParts.length) {
-    intro.remove();
-    document.body.classList.remove("intro-gated");
-    announceIntroDone();
-    return;
-  }
-
-  const svgNS = "http://www.w3.org/2000/svg";
-  const uid = `intro-clip-${Date.now().toString(36)}`;
-  const defs = document.createElementNS(svgNS, "defs");
-  const clipPath = document.createElementNS(svgNS, "clipPath");
-  clipPath.setAttribute("id", uid);
-  clipPath.setAttribute("clipPathUnits", "userSpaceOnUse");
-  const clipCircle = document.createElementNS(svgNS, "circle");
-  clipPath.appendChild(clipCircle);
-  defs.appendChild(clipPath);
-  logo.prepend(defs);
-
-  const group = document.createElementNS(svgNS, "g");
-  wordmarkParts.forEach((p) => group.appendChild(p));
-  group.setAttribute("clip-path", `url(#${uid})`);
-  logo.appendChild(group);
-
-  const cx = dot ? parseFloat(dot.getAttribute("cx") || "60") : 60;
-  const cy = dot ? parseFloat(dot.getAttribute("cy") || "18.667") : 18.667;
-  clipCircle.setAttribute("cx", `${cx}`);
-  clipCircle.setAttribute("cy", `${cy}`);
-  clipCircle.setAttribute("r", "0");
-
-  const b = group.getBBox();
-  const maxR = Math.max(
-    Math.hypot(b.x - cx, b.y - cy),
-    Math.hypot(b.x + b.width - cx, b.y - cy),
-    Math.hypot(b.x - cx, b.y + b.height - cy),
-    Math.hypot(b.x + b.width - cx, b.y + b.height - cy)
-  ) + 2;
-
-  const reveal = () => {
-    const duration = 880;
-    const start = performance.now();
-    const step = (now) => {
-      const t = Math.min(1, (now - start) / duration);
-      const eased = 1 - Math.pow(1 - t, 3);
-      clipCircle.setAttribute("r", `${maxR * eased}`);
-      if (t < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  };
-
-  const TOGGLE_ON_AT = 800;
-  const LOGO_VISIBLE_AT = 1300;
-  const INTRO_OUT_AT = LOGO_VISIBLE_AT + 880 + 1000;
-
-  setTimeout(() => intro.classList.add("is-toggle-on"), TOGGLE_ON_AT);
-  setTimeout(reveal, LOGO_VISIBLE_AT);
   setTimeout(() => intro.classList.add("is-out"), INTRO_OUT_AT);
   setTimeout(() => {
     intro.remove();
@@ -214,13 +158,13 @@
     setTimeout(() => {
       document.body.classList.remove("intro-unveiling");
       announceIntroDone();
-    }, 1100);
+    }, HERO_INTRO_REVEAL_MS);
   }, INTRO_OUT_AT + 1000);
 })();
 
 // =========================
-// PROCESS ACCORDION (solo si existe en la página)
-// ✅ Para case-sagrada-familia.html
+// PROCESS ACCORDION
+// Active only on pages that render the media accordion variant.
 // =========================
 (() => {
   const root = document.querySelector(".process-accordion");
@@ -396,295 +340,13 @@
 })();
 
 // =========================
-// SCROLL LAB (CENTER STACK)
-// =========================
-(() => {
-  // Normal scroll behavior: no snap/swipe logic on the right column.
-  // Intentionally left as a no-op for this section.
-})();
-
-// =========================
-// RESULT CAROUSEL (configurable: fade | slide)
-// =========================
-(() => {
-  const initResultCarousel = ({
-    rootSelector,
-    trackSelector,
-    mode,
-    slideSelector,
-    prevBtnSelector,
-    nextBtnSelector,
-    viewportSelector,
-    fadeMs = 450,
-  }) => {
-    const root = document.querySelector(rootSelector);
-    if (!root) return;
-
-    const track = root.querySelector(trackSelector);
-    if (!track) return;
-
-    const prevBtns = Array.from(root.querySelectorAll(prevBtnSelector));
-    const nextBtns = Array.from(root.querySelectorAll(nextBtnSelector));
-    if (prevBtns.length === 0 || nextBtns.length === 0) return;
-
-    if (mode === "fade") {
-      const viewport = viewportSelector ? root.querySelector(viewportSelector) : null;
-      const slides = Array.from(track.querySelectorAll(slideSelector));
-      const total = slides.length;
-      if (!viewport || total === 0) return;
-
-      let index = 0;
-      let transitioning = false;
-
-      const updateMobileNavPosition = () => {
-        if (window.innerWidth > 900) {
-          viewport.style.removeProperty("--result-content-h");
-          return;
-        }
-
-        const active = slides[index];
-        const content = active?.querySelector(".result-compare__content");
-        const h = content ? content.offsetHeight : 0;
-        viewport.style.setProperty("--result-content-h", `${h}px`);
-      };
-
-      const activate = (nextIndex) => {
-        if (transitioning || nextIndex === index) return;
-        transitioning = true;
-
-        const current = slides[index];
-        const next = slides[nextIndex];
-        if (!current || !next) {
-          transitioning = false;
-          return;
-        }
-
-        track.classList.add("is-fading");
-
-        window.setTimeout(() => {
-          current.classList.remove("is-active");
-          next.classList.add("is-active");
-          track.classList.remove("is-fading");
-          index = nextIndex;
-          updateMobileNavPosition();
-          transitioning = false;
-        }, fadeMs);
-      };
-
-      prevBtns.forEach((btn) => btn.addEventListener("click", () => activate((index - 1 + total) % total)));
-      nextBtns.forEach((btn) => btn.addEventListener("click", () => activate((index + 1) % total)));
-
-      slides.forEach((slide, i) => slide.classList.toggle("is-active", i === 0));
-      updateMobileNavPosition();
-      window.addEventListener("resize", updateMobileNavPosition);
-      return;
-    }
-
-    if (mode === "slide") {
-      const slides = Array.from(track.querySelectorAll(slideSelector));
-      const total = slides.length;
-      if (total < 3) return;
-
-      let current = 1; // 1..total
-      let locked = false;
-      const mod = (n) => ((n - 1 + total) % total) + 1;
-
-      const clearStates = () => {
-        slides.forEach((slide) => {
-          slide.hidden = true;
-          slide.classList.remove("is-center");
-        });
-      };
-
-      const getStepPx = () => {
-        const anyVisible = track.querySelector(`${slideSelector}:not([hidden])`);
-        const ref = anyVisible || track.querySelector(slideSelector);
-        if (!ref) return 0;
-
-        const slideW = ref.getBoundingClientRect().width;
-        const styles = getComputedStyle(track);
-        const gap = parseFloat(styles.gap || styles.columnGap || "0") || 0;
-        return slideW + gap;
-      };
-
-      const setTransition = (enabled) => {
-        track.style.transition = enabled ? "transform .35s ease" : "none";
-      };
-
-      const setTransform = (px) => {
-        track.style.transform = `translate3d(${px}px,0,0)`;
-      };
-
-      const waitForTrackTransition = (onEnd) => {
-        const handleTransitionEnd = (e) => {
-          if (e.target !== track) return;
-          track.removeEventListener("transitionend", handleTransitionEnd);
-          onEnd();
-        };
-
-        track.addEventListener("transitionend", handleTransitionEnd);
-      };
-
-      const renderIdle = () => {
-        const prev = mod(current - 1);
-        const next = mod(current + 1);
-
-        clearStates();
-
-        const prevEl = slides[prev - 1];
-        const curEl = slides[current - 1];
-        const nextEl = slides[next - 1];
-
-        prevEl.hidden = false;
-        curEl.hidden = false;
-        nextEl.hidden = false;
-
-        curEl.classList.add("is-center");
-
-        track.appendChild(prevEl);
-        track.appendChild(curEl);
-        track.appendChild(nextEl);
-
-        setTransition(false);
-        setTransform(0);
-        void track.offsetWidth;
-        setTransition(true);
-      };
-
-      const animateNext = () => {
-        if (locked) return;
-        locked = true;
-
-        const prev = mod(current - 1);
-        const next = mod(current + 1);
-        const next2 = mod(current + 2);
-
-        clearStates();
-
-        const prevEl = slides[prev - 1];
-        const curEl = slides[current - 1];
-        const nextEl = slides[next - 1];
-        const next2El = slides[next2 - 1];
-
-        prevEl.hidden = false;
-        curEl.hidden = false;
-        nextEl.hidden = false;
-        next2El.hidden = false;
-
-        nextEl.classList.add("is-center");
-
-        track.appendChild(prevEl);
-        track.appendChild(curEl);
-        track.appendChild(nextEl);
-        track.appendChild(next2El);
-
-        const step = getStepPx();
-
-        setTransition(false);
-        setTransform(0);
-        void track.offsetWidth;
-
-        setTransition(true);
-        requestAnimationFrame(() => setTransform(-step));
-
-        waitForTrackTransition(() => {
-          current = next;
-          renderIdle();
-          locked = false;
-        });
-      };
-
-      const animatePrev = () => {
-        if (locked) return;
-        locked = true;
-
-        const prev2 = mod(current - 2);
-        const prev = mod(current - 1);
-        const next = mod(current + 1);
-
-        clearStates();
-
-        const prev2El = slides[prev2 - 1];
-        const prevEl = slides[prev - 1];
-        const curEl = slides[current - 1];
-        const nextEl = slides[next - 1];
-
-        prev2El.hidden = false;
-        prevEl.hidden = false;
-        curEl.hidden = false;
-        nextEl.hidden = false;
-
-        track.appendChild(prev2El);
-        track.appendChild(prevEl);
-        track.appendChild(curEl);
-        track.appendChild(nextEl);
-
-        const step = getStepPx();
-
-        prevEl.classList.add("is-center");
-
-        setTransition(false);
-        setTransform(-step);
-        void track.offsetWidth;
-
-        setTransition(true);
-        requestAnimationFrame(() => setTransform(0));
-
-        waitForTrackTransition(() => {
-          current = prev;
-          renderIdle();
-          locked = false;
-        });
-      };
-
-      nextBtns.forEach((btn) => {
-        btn.addEventListener("pointerdown", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          animateNext();
-        }, { passive: false });
-      });
-
-      prevBtns.forEach((btn) => {
-        btn.addEventListener("pointerdown", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          animatePrev();
-        }, { passive: false });
-      });
-
-      renderIdle();
-    }
-  };
-
-  initResultCarousel({
-    rootSelector: "#resultado",
-    trackSelector: "#resultCompareTrack",
-    mode: "fade",
-    slideSelector: ".result-compare__slide",
-    prevBtnSelector: ".result-compare__btn--prev",
-    nextBtnSelector: ".result-compare__btn--next",
-    viewportSelector: ".result-compare__viewport",
-  });
-
-  initResultCarousel({
-    rootSelector: "#resultado",
-    trackSelector: "#resultLoop",
-    mode: "slide",
-    slideSelector: ".swiper-slide",
-    prevBtnSelector: ".result-swiper__btn--prev",
-    nextBtnSelector: ".result-swiper__btn--next",
-  });
-})();
-
-// =========================
 // RESULT STACK MEDIA CAROUSEL (iSocial)
 // =========================
 (() => {
   const mediaCarousels = Array.from(document.querySelectorAll("[data-result-media-carousel]"));
   if (!mediaCarousels.length) return;
 
-  const isMobile = window.matchMedia("(max-width: 900px)").matches;
+  const isMobile = window.matchMedia(`(max-width: ${BREAKPOINTS.lg - 1}px)`).matches;
 
   mediaCarousels.forEach((carousel) => {
     const track = carousel.querySelector(".result-stack__track");
@@ -744,7 +406,7 @@
         setActive(nextIndex);
         track.classList.remove("is-fading");
         transitioning = false;
-      }, 450);
+      }, STACK_TRANSITION_MS);
     };
 
     prevBtn?.addEventListener("click", () => activate((index - 1 + total) % total));
@@ -764,7 +426,7 @@
   const blocks = Array.from(resultSection.querySelectorAll(".result-stack__block"));
   if (!blocks.length) return;
 
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReduced = prefersReducedMotion();
   if (prefersReduced) {
     blocks.forEach((block) => block.classList.add("is-visible"));
     return;
@@ -794,7 +456,7 @@
   const countupElements = Array.from(document.querySelectorAll("[data-countup-number]"));
   if (!countupElements.length) return;
 
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReduced = prefersReducedMotion();
 
   const animateNumber = (el, to) => {
     const from = 0;
@@ -928,8 +590,8 @@
   if (!words.length) return;
 
   const CHARS = "!@#$%&/()=?¿*+[]{}|<>";
-  const INTERVAL = 2400;
-  const SCRAMBLE_DURATION = 750;
+  const INTERVAL = HERO_ROTATION_INTERVAL_MS;
+  const SCRAMBLE_DURATION = HERO_SCRAMBLE_DURATION_MS;
   const SCRAMBLE_STEPS = 12;
 
   let current = 0;
@@ -1025,7 +687,7 @@
    REVEAL ON SCROLL (PROCESS)
 ========================= */
 (() => {
-  const items = document.querySelectorAll(".scroll-lab__item");
+  const items = document.querySelectorAll("#problemaLab .scroll-lab__item");
   if (!items.length) return;
 
   const observer = new IntersectionObserver(
@@ -1049,9 +711,212 @@
     },
     {
       threshold: 0.2,
-      rootMargin: "0px 0px -120px 0px"
+      rootMargin: `0px 0px -${SCROLL_REVEAL_OFFSET}px 0px`
     }
   );
 
   items.forEach((item) => observer.observe(item));
+})();
+
+// =========================
+// PROCESS TIMELINE (SAGRADA)
+// =========================
+(() => {
+  const container = document.getElementById("processTimeline");
+  const track = document.getElementById("timelineTrack");
+  const progress = document.getElementById("timelineProgress");
+  if (!container || !track || !progress) return;
+
+  const steps = Array.from(container.querySelectorAll(".project-process__step"));
+  const bullets = Array.from(container.querySelectorAll(".project-process__bullet"));
+  if (steps.length === 0 || bullets.length < 2) return;
+
+  const shouldReduce = prefersReducedMotion();
+  const clamp = (n, min, max) => Math.max(min, Math.min(n, max));
+
+  const measure = () => {
+    const containerRect = container.getBoundingClientRect();
+    const firstRect = bullets[0].getBoundingClientRect();
+    const lastRect = bullets[bullets.length - 1].getBoundingClientRect();
+
+    const top = firstRect.top + firstRect.height / 2 - containerRect.top;
+    const bottom = lastRect.top + lastRect.height / 2 - containerRect.top;
+    const height = Math.max(0, bottom - top);
+
+    track.style.top = `${top}px`;
+    track.style.height = `${height}px`;
+    progress.style.top = `${top}px`;
+    progress.style.height = `${height}px`;
+  };
+
+  const updateProgress = () => {
+    if (shouldReduce) {
+      progress.style.transform = "scaleY(0)";
+      return;
+    }
+
+    const rect = container.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const startOffset = vh * 0.8;
+    const endOffset = vh * 0.3;
+    const distance = rect.height + (startOffset - endOffset);
+    const raw = (startOffset - rect.top) / Math.max(1, distance);
+    const ratio = clamp(raw, 0, 1);
+
+    progress.style.transform = `scaleY(${ratio})`;
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("is-active", entry.isIntersecting);
+    });
+  }, {
+    root: null,
+    rootMargin: "-35% 0px -35% 0px",
+    threshold: 0
+  });
+
+  steps.forEach((step) => observer.observe(step));
+
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      ticking = false;
+      updateProgress();
+    });
+  };
+
+  const onResize = () => {
+    measure();
+    updateProgress();
+  };
+
+  measure();
+  updateProgress();
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onResize);
+  window.addEventListener("load", onResize, { once: true });
+})();
+
+// =========================
+// HERO COMPARE (SAGRADA)
+// =========================
+(() => {
+  const compare = document.getElementById("heroCompare");
+  const range = document.getElementById("heroCompareRange");
+  const phones = document.querySelector(".phones");
+  if (!compare || !range || !phones) return;
+
+  const RATIO = 878 / 1794;
+
+  const clamp = (n, min, max) => Math.max(min, Math.min(n, max));
+  const update = (value) => {
+    const next = clamp(Number(value) || 50, 0, 100);
+    compare.style.setProperty("--compare", next + "%");
+  };
+
+  const syncCompareSize = () => {
+    if (window.innerWidth < BREAKPOINTS.lg) {
+      compare.style.removeProperty("width");
+      compare.style.removeProperty("height");
+      return;
+    }
+
+    const availableHeight = phones.clientHeight;
+    const availableWidth = phones.clientWidth;
+    if (!availableHeight || !availableWidth) return;
+
+    let nextHeight = availableHeight;
+    let nextWidth = nextHeight * RATIO;
+
+    if (nextWidth > availableWidth) {
+      nextWidth = availableWidth;
+      nextHeight = nextWidth / RATIO;
+    }
+
+    compare.style.width = `${Math.round(nextWidth)}px`;
+    compare.style.height = `${Math.round(nextHeight)}px`;
+  };
+
+  update(range.value);
+  range.addEventListener("input", (event) => update(event.target.value));
+  syncCompareSize();
+  window.addEventListener("resize", syncCompareSize, { passive: true });
+  window.addEventListener("load", syncCompareSize);
+})();
+
+// =========================
+// CHALLENGE GOALS (SAGRADA)
+// =========================
+(() => {
+  const section = document.querySelector(".project-challenge");
+  const intro = section?.querySelector(".project-challenge__content");
+  const goalsRoot = document.getElementById("challengeGoals");
+  if (!section || !intro || !goalsRoot) return;
+
+  const OBJECTIVES = [
+    {
+      id: "context",
+      number: "01",
+      title: "Ordenar la experiencia según el momento de uso",
+      description: "Separar planificación y visita para que cada bloque de la app respondiera a una necesidad concreta en el momento adecuado."
+    },
+    {
+      id: "purchase",
+      number: "02",
+      title: "Integrar la compra dentro del flujo principal",
+      description: "Eliminar la salida a web en un punto clave y convertir la compra en una acción continua dentro de la propia experiencia."
+    },
+    {
+      id: "orientation",
+      number: "03",
+      title: "Dar más peso a la utilidad dentro del recinto",
+      description: "Priorizar accesos, orientación e información práctica para que la app respondiera mejor a lo que el visitante necesita una vez ha llegado."
+    },
+    {
+      id: "activation",
+      number: "04",
+      title: "Conectar contenido y navegación en una misma lógica",
+      description: "Hacer que mapa, audioguía y recorrido dejaran de funcionar por separado y pasaran a formar parte de una experiencia más clara y conectada."
+    }
+  ];
+
+  goalsRoot.innerHTML = OBJECTIVES.map((objective, index) => `
+    <li class="project-challenge__goal" data-number="${objective.number}" style="--d:${Math.min(index * 100, 300)}ms;">
+      <div>
+        <span class="project-challenge__goal-num">${objective.number}</span>
+        <h4 class="project-challenge__goal-title">${objective.title}</h4>
+      </div>
+      <p class="project-challenge__goal-desc">${objective.description}</p>
+    </li>
+  `).join("");
+
+  const cards = Array.from(goalsRoot.querySelectorAll(".project-challenge__goal"));
+  const shouldReduce = prefersReducedMotion();
+
+  if (shouldReduce) {
+    intro.classList.add("is-visible");
+    cards.forEach((card) => card.classList.add("is-visible"));
+    return;
+  }
+
+  section.classList.add("is-observed");
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      obs.unobserve(entry.target);
+    });
+  }, {
+    root: null,
+    threshold: 0.2,
+    rootMargin: "0px 0px -8% 0px"
+  });
+
+  observer.observe(intro);
+  cards.forEach((card) => observer.observe(card));
 })();
