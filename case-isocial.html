@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto — iSocial</title>
-  <meta name="description" content="Caso de estudio iSocial: rediseño UX/UI, accesibilidad y sistema de diseño aplicado a producto digital." />
+  <meta name="description"
+    content="Caso de estudio iSocial: rediseño UX/UI, accesibilidad y sistema de diseño aplicado a producto digital." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#f4f4f5" />
   <link rel="canonical" href="/case-isocial.html" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Proyecto — iSocial" />
-  <meta property="og:description" content="Rediseño UX/UI para iSocial con foco en accesibilidad y consistencia de producto." />
+  <meta property="og:description"
+    content="Rediseño UX/UI para iSocial con foco en accesibilidad y consistencia de producto." />
   <meta property="og:url" content="/case-isocial.html" />
   <meta property="og:image" content="/images/isocial/placeholder.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Proyecto — iSocial" />
-  <meta name="twitter:description" content="Rediseño UX/UI para iSocial con foco en accesibilidad y consistencia de producto." />
+  <meta name="twitter:description"
+    content="Rediseño UX/UI para iSocial con foco en accesibilidad y consistencia de producto." />
   <meta name="twitter:image" content="/images/isocial/placeholder.png" />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&amp;display=swap" />
-  <link rel="stylesheet" href="./styles.css?v=54" />
-
-  <!-- Site JS -->
-  <script src="./script.js?v=2" defer></script>
+  <link rel="stylesheet" href="./src/styles.css" />
+  <script src="./src/script.js" type="module" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Proyecto Fundació iSocial — Case Study",
+    "description": "Caso de estudio iSocial: rediseño UX/UI, accesibilidad y sistema de diseño aplicado a producto digital.",
+    "url": "/case-isocial.html",
+    "author": {
+      "@type": "Person",
+      "name": "Toni Redondo",
+      "url": "/index.html"
+    },
+    "genre": "UX/UI Design"
+  }
+  </script>
 </head>
 
 <body class="case case-isocial">
@@ -33,80 +50,86 @@
   <!-- SVG SPRITE INLINE (GLOBAL) -->
   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="icon-arrow-left" viewBox="0 0 24 24">
-      <path d="M19 12L5 12M5 12L11 6M5 12L11 18"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    </symbol>
-
-    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
-      <path d="M5 12H19M19 12L13 18M19 12L13 6"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M19 12L5 12M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
-      <path d="M7 17L17 7M17 7L8 7M17 7L17 16"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M7 17L17 7M17 7L8 7M17 7L17 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        fill="none" />
     </symbol>
 
     <symbol id="icon-external-link" viewBox="0 0 24 24">
-      <path d="M14 5H19V10"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M10 14L19 5"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M19 14V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H7C6.46957 19 5.96086 18.7893 5.58579 18.4142C5.21071 18.0391 5 17.5304 5 17V7C5 6.46957 5.21071 5.96086 5.58579 5.58579C5.96086 5.21071 6.46957 5 7 5H10"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M14 5H19V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" />
+      <path d="M10 14L19 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" />
+      <path
+        d="M19 14V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H7C6.46957 19 5.96086 18.7893 5.58579 18.4142C5.21071 18.0391 5 17.5304 5 17V7C5 6.46957 5.21071 5.96086 5.58579 5.58579C5.96086 5.21071 6.46957 5 7 5H10"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-menu" viewBox="0 0 24 24">
-      <path d="M3 8H21M3 16H21"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M3 8H21M3 16H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
     </symbol>
 
     <symbol id="icon-close" viewBox="0 0 24 24">
-      <path d="M18 6L6 18M6 6L18 18"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-download" viewBox="0 0 24 24">
-      <path d="M4 17V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H18C18.5304 21 19.0391 20.7893 19.4142 20.4142C19.7893 20.0391 20 19.5304 20 19V17M7 11L12 16M12 16L17 11M12 16V4"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path
+        d="M4 17V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H18C18.5304 21 19.0391 20.7893 19.4142 20.4142C19.7893 20.0391 20 19.5304 20 19V17M7 11L12 16M12 16L17 11M12 16V4"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-folder" viewBox="0 0 24 24">
-      <path d="M5 4H9L12 7H19C19.5304 7 20.0391 7.21071 20.4142 7.58579C20.7893 7.96086 21 8.46957 21 9V17C21 17.5304 20.7893 18.0391 20.4142 18.4142C20.0391 18.7893 19.5304 19 19 19H5C4.46957 19 3.96086 18.7893 3.58579 18.4142C3.21071 18.0391 3 17.5304 3 17V6C3 5.46957 3.21071 4.96086 3.58579 4.58579C3.96086 4.21071 4.46957 4 5 4Z"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path
+        d="M5 4H9L12 7H19C19.5304 7 20.0391 7.21071 20.4142 7.58579C20.7893 7.96086 21 8.46957 21 9V17C21 17.5304 20.7893 18.0391 20.4142 18.4142C20.0391 18.7893 19.5304 19 19 19H5C4.46957 19 3.96086 18.7893 3.58579 18.4142C3.21071 18.0391 3 17.5304 3 17V6C3 5.46957 3.21071 4.96086 3.58579 4.58579C3.96086 4.21071 4.46957 4 5 4Z"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-profile" viewBox="0 0 24 24">
-      <path d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 15.4217 18 17.9391 18 19V21M8 7C8 8.06087 8.42143 9.07828 9.17157 9.82843C9.92172 10.5786 10.9391 11 12 11C13.0609 11 14.0783 10.5786 14.8284 9.82843C15.5786 9.07828 16 8.06087 16 7C16 5.93913 15.5786 4.92172 14.8284 4.17157C14.0783 3.42143 13.0609 3 12 3C10.9391 3 9.92172 3.42143 9.17157 4.17157C8.42143 4.92172 8 5.93913 8 7Z"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path
+        d="M6 21V19C6 17.9391 6.42143 16.9217 7.17157 16.1716C7.92172 15.4214 8.93913 15 10 15H14C15.0609 15 16.0783 15.4214 16.8284 16.1716C17.5786 15.4217 18 17.9391 18 19V21M8 7C8 8.06087 8.42143 9.07828 9.17157 9.82843C9.92172 10.5786 10.9391 11 12 11C13.0609 11 14.0783 10.5786 14.8284 9.82843C15.5786 9.07828 16 8.06087 16 7C16 5.93913 15.5786 4.92172 14.8284 4.17157C14.0783 3.42143 13.0609 3 12 3C10.9391 3 9.92172 3.42143 9.17157 4.17157C8.42143 4.92172 8 5.93913 8 7Z"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-contact" viewBox="0 0 24 24">
-      <path d="M8 8H16M8 12H14M18 3C18.7956 3 19.5587 3.31607 20.1213 3.87868C20.6839 4.44129 21 5.20435 21 6V14C21 14.7956 20.6839 15.5587 20.1213 16.1213C19.5587 16.6839 18.7956 17 18 17H13L8 20V17H6C5.20435 17 4.44129 16.6839 3.87868 16.1213C3.31607 15.5587 3 14.7956 3 14V6C3 5.20435 3.31607 4.44129 3.87868 3.87868C4.44129 3.31607 5.20435 3 6 3H18Z"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path
+        d="M8 8H16M8 12H14M18 3C18.7956 3 19.5587 3.31607 20.1213 3.87868C20.6839 4.44129 21 5.20435 21 6V14C21 14.7956 20.6839 15.5587 20.1213 16.1213C19.5587 16.6839 18.7956 17 18 17H13L8 20V17H6C5.20435 17 4.44129 16.6839 3.87868 16.1213C3.31607 15.5587 3 14.7956 3 14V6C3 5.20435 3.31607 4.44129 3.87868 3.87868C4.44129 3.31607 5.20435 3 6 3H18Z"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-drag" viewBox="0 0 24 24">
-      <path d="M8.29302 7.29302C8.68354 6.90249 9.31655 6.90249 9.70708 7.29302C10.0975 7.68355 10.0976 8.31659 9.70708 8.70708L6.41411 12L9.70708 15.293C10.0975 15.6835 10.0976 16.3166 9.70708 16.7071C9.31659 17.0976 8.68355 17.0975 8.29302 16.7071L4.29302 12.7071C3.90249 12.3166 3.90249 11.6835 4.29302 11.293L8.29302 7.29302ZM14.293 7.29302C14.6835 6.90249 15.3166 6.90249 15.7071 7.29302L19.7071 11.293L19.7754 11.3692C20.0957 11.762 20.0732 12.341 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6835 17.0975 14.293 16.7071C13.9025 16.3166 13.9025 15.6835 14.293 15.293L17.586 12L14.293 8.70708C13.9025 8.31655 13.9025 7.68354 14.293 7.29302Z"
-        fill="currentColor"/>
+      <path
+        d="M8.29302 7.29302C8.68354 6.90249 9.31655 6.90249 9.70708 7.29302C10.0975 7.68355 10.0976 8.31659 9.70708 8.70708L6.41411 12L9.70708 15.293C10.0975 15.6835 10.0976 16.3166 9.70708 16.7071C9.31659 17.0976 8.68355 17.0975 8.29302 16.7071L4.29302 12.7071C3.90249 12.3166 3.90249 11.6835 4.29302 11.293L8.29302 7.29302ZM14.293 7.29302C14.6835 6.90249 15.3166 6.90249 15.7071 7.29302L19.7071 11.293L19.7754 11.3692C20.0957 11.762 20.0732 12.341 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6835 17.0975 14.293 16.7071C13.9025 16.3166 13.9025 15.6835 14.293 15.293L17.586 12L14.293 8.70708C13.9025 8.31655 13.9025 7.68354 14.293 7.29302Z"
+        fill="currentColor" />
     </symbol>
 
     <symbol id="icon-stack" viewBox="0 0 24 24">
-      <path d="M12 4L4 8L12 12L20 8L12 4Z"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M4 12L12 16L20 12"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M4 16L12 20L20 16"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M12 4L4 8L12 12L20 8L12 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" fill="none" />
+      <path d="M4 12L12 16L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" fill="none" />
+      <path d="M4 16L12 20L20 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-map" viewBox="0 0 24 24">
-      <path d="M9 4L15 6L21 4V19L15 21L9 19L3 21V6L9 4Z"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M9 4V19"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <path d="M15 6V21"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M9 4L15 6L21 4V19L15 21L9 19L3 21V6L9 4Z" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <path d="M9 4V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" />
+      <path d="M15 6V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" />
+    </symbol>
+
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path d="M12 3L3 8L12 13L21 8L12 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <path d="M3 12L12 17L21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <path d="M3 16L12 21L21 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
   </svg>
 
@@ -118,10 +141,9 @@
     <div class="container">
       <div class="navbar-inner">
 
-        <!-- LOGO -->
         <a href="index.html#top" class="logo" aria-label="Home">
-  <img src="logo_redondo.svg" alt="Logo Toni Redondo" class="navbar-logo" />
-</a>
+          <img src="logo_redondo.svg" alt="Logo Toni Redondo" class="navbar-logo" />
+        </a>
 
         <nav class="nav-desktop" aria-label="Primary">
           <ul class="nav-links">
@@ -131,41 +153,56 @@
           </ul>
         </nav>
 
-        <a href="#" class="button button--primary desktop-only" onclick="event.preventDefault()">
+        <a href="index.html#contact" class="button button--primary desktop-only">
           Descargar CV
-          <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+          <svg class="icon" aria-hidden="true">
+            <use href="#icon-download"></use>
+          </svg>
         </a>
 
-        <button class="hamburger mobile-only" type="button" aria-label="Open menu" aria-controls="navDropdown" aria-expanded="false">
-          <svg class="icon icon-menu" aria-hidden="true"><use href="#icon-menu"></use></svg>
-          <svg class="icon icon-close" aria-hidden="true"><use href="#icon-close"></use></svg>
+        <button class="hamburger mobile-only" type="button" aria-label="Open menu" aria-controls="navDropdown"
+          aria-expanded="false">
+          <svg class="icon icon-menu" aria-hidden="true">
+            <use href="#icon-menu"></use>
+          </svg>
+          <svg class="icon icon-close" aria-hidden="true">
+            <use href="#icon-close"></use>
+          </svg>
         </button>
 
         <div class="nav-dropdown" id="navDropdown" aria-hidden="true" hidden>
           <ul class="nav-links nav-links--mobile">
             <li>
               <a href="index.html#work">
-                <svg class="icon" aria-hidden="true"><use href="#icon-folder"></use></svg>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-folder"></use>
+                </svg>
                 Proyectos
               </a>
             </li>
             <li>
               <a href="index.html#about">
-                <svg class="icon" aria-hidden="true"><use href="#icon-profile"></use></svg>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-profile"></use>
+                </svg>
                 Sobre mí
               </a>
             </li>
             <li>
               <a href="index.html#contact">
-                <svg class="icon" aria-hidden="true"><use href="#icon-contact"></use></svg>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-contact"></use>
+                </svg>
                 Contacto
               </a>
             </li>
           </ul>
 
-          <a href="#" class="button button--primary nav-dropdown-cta" onclick="event.preventDefault()">
+          <a href="index.html#contact" class="button button--primary nav-dropdown-cta">
             Descargar CV
-            <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+            <svg class="icon" aria-hidden="true">
+              <use href="#icon-download"></use>
+            </svg>
           </a>
         </div>
 
@@ -179,13 +216,14 @@
     <section class="project-hero" id="top">
       <div class="container project-hero__inner">
         <a class="button button--tertiary project-back" href="index.html#work">
-          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+          <svg class="icon" aria-hidden="true">
+            <use href="#icon-arrow-left"></use>
+          </svg>
           Volver a Proyectos
         </a>
 
         <div class="project-hero__grid">
           <div class="project-hero__content">
-
             <div class="project-app-logo">
               <img src="images/isocial/logo_isocial.svg" alt="Logo iSocial" />
             </div>
@@ -193,530 +231,296 @@
             <h1 class="project-title">Fundació iSocial</h1>
 
             <div class="project-tags" aria-label="Tags del proyecto">
-              <span class="tag">APP / PLATAFORMA</span>
-              <span class="tag">REDISEÑO</span>
-              <span class="tag">ACCESIBILIDAD</span>
-              <span class="tag">SISTEMA DE DISEÑO</span>
+              <span class="tag">DISEÑO UX/UI</span>
+              <span class="tag">2024</span>
+              <span class="tag">FIGMA</span>
             </div>
 
             <p class="project-lead">
-              Rediseño de iSocial para mejorar claridad, accesibilidad y eficiencia, y sentar las bases
-              de una evolución escalable del producto.
+              Dos apps para un mismo ecosistema. Dos perfiles que no podrían ser más distintos.
+            </p>
+            <p class="copy-intro">
+              NIDUS es la app para personas en situación de exclusión social: un espacio seguro donde guardar documentos críticos, comunicarse con profesionales y acceder a recursos de apoyo.
+              <br><br>
+              iSocialPro es la herramienta para los trabajadores sociales: una plataforma para gestionar usuarios, documentación y comunicación de forma eficiente y centralizada.
+              <br><br>
+              Dos productos con necesidades opuestas. Un mismo sistema construido desde cero.
             </p>
 
             <div class="project-meta">
               <div class="project-meta__row">
-                <h6 class="project-meta__title">AÑO</h6>
-                <p class="project-meta__value">2025</p>
+                <h6 class="project-meta__title">DURACIÓN</h6>
+                <p class="project-meta__value">6 meses · 2024</p>
               </div>
 
               <div class="project-meta__row">
-                <h6 class="project-meta__title">TIMELINE</h6>
-                <p class="project-meta__value">X meses</p>
+                <h6 class="project-meta__title">PLATAFORMA</h6>
+                <p class="project-meta__value">iOS · Android · Figma</p>
               </div>
 
               <div class="project-meta__row">
                 <h6 class="project-meta__title">ROL</h6>
-                <p class="project-meta__value">UX/UI Designer · (ajusta aquí)</p>
+                <p class="project-meta__value">Lead Product Designer</p>
               </div>
             </div>
           </div>
 
           <div class="project-hero__media" aria-label="Imagen del proyecto">
-            <img class="project-mockup" src="images/isocial/placeholder.png" alt="Pantalla del proyecto iSocial" fetchpriority="high" decoding="async" />
+            <div class="phones">
+              <img src="images/isocial/placeholder.png" alt="Pantalla del proyecto iSocial" fetchpriority="high" decoding="async" />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="container"><div class="divider"></div></div>
+    <div class="container">
+      <div class="divider"></div>
+    </div>
 
-    <!-- DESAFÍO -->
-    <section class="section project-challenge" id="desafio">
-      <div class="container project-challenge__grid">
+    <!-- PUNTO DE PARTIDA -->
+    <section class="section project-challenge" id="punto-de-partida" aria-label="Punto de partida">
+      <div class="container">
+        <div class="project-challenge__content reveal-up">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">PUNTO DE PARTIDA</h2>
+          </div>
+          <h3 class="copy-title">Sin sistema, sin guías, desde cero</h3>
+          <div class="copy-body project-challenge__copy">
+            <p>La Fundació iSocial necesitaba dos productos digitales simultáneos: una app para personas en situación de exclusión social y una herramienta para los profesionales que las acompañan. El encargo llegó sin sistema de diseño, sin componentes definidos y sin ninguna base visual sobre la que construir.</p>
+            <p>Todo lo que ves aquí se diseñó desde cero.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="project-challenge__image card-media">
-          <img src="images/isocial/placeholder.png" alt="Contexto del proyecto iSocial" loading="lazy" decoding="async" />
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- DOS MUNDOS -->
+    <section class="section" id="dos-mundos" aria-labelledby="dos-mundos-title">
+      <div class="container">
+        <div class="project-challenge__content reveal-up">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">DOS MUNDOS</h2>
+          </div>
+          <h3 id="dos-mundos-title" class="copy-title">El mismo ecosistema, dos realidades opuestas</h3>
+          <div class="copy-body project-challenge__copy">
+            <p>NIDUS y iSocialPro comparten arquitectura e información, pero hablan a personas completamente distintas.</p>
+          </div>
         </div>
 
-        <div class="project-challenge__content">
-          <div class="section-head project-challenge__head">
-            <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">DESAFÍO</h2>
+        <div class="project-learnings__list reveal-up" style="--d: 0.1s">
+          <blockquote class="project-learnings__quote">
+            <div class="project-learnings__top">
+              <div class="project-learnings__icon-badge">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-profile"></use>
+                </svg>
+              </div>
+            </div>
+            <h6>NIDUS</h6>
+            <p class="project-learnings__desc">Usuario en situación de exclusión social. Puede tener poca experiencia con la tecnología. Cada paso de más es una barrera real.</p>
+          </blockquote>
+
+          <blockquote class="project-learnings__quote">
+            <div class="project-learnings__top">
+              <div class="project-learnings__icon-badge">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#icon-stack"></use>
+                </svg>
+              </div>
+            </div>
+            <h6>iSocialPro</h6>
+            <p class="project-learnings__desc">Trabajador social. Gestiona múltiples casos a la vez. Necesita velocidad, densidad de información y control.</p>
+          </blockquote>
+        </div>
+
+        <div class="copy-body reveal-up" style="--d: 0.2s; margin-top: var(--s40)">
+          <p>Diseñar los dos productos en paralelo significaba tomar cada decisión dos veces: una por cada mundo.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- DECISIONES DE DISEÑO -->
+    <section class="section project-process" id="decisiones" aria-labelledby="decisiones-title">
+      <div class="container">
+        <div class="project-process__grid">
+          <div class="project-process__content reveal-up">
+            <div class="section-head">
+              <span class="dot" aria-hidden="true"></span>
+              <h2 class="section-title">DECISIONES DE DISEÑO</h2>
+            </div>
+            <h3 id="decisiones-title" class="copy-title">Las decisiones que definieron el producto</h3>
+            <div class="copy-body">
+              <p>Tres momentos donde el diseño no fue solo una solución visual, sino una toma de posición sobre cómo debía funcionar el producto para cada perfil.</p>
+            </div>
           </div>
 
-          <h3 class="copy-title">Replantear la experiencia de iSocial</h3>
+          <div class="project-process__timeline" id="processTimeline">
+            <div class="project-process__track" id="timelineTrack" aria-hidden="true"></div>
+            <div class="project-process__progress" id="timelineProgress" aria-hidden="true"></div>
+
+            <ol class="project-process__steps" aria-label="Decisiones de diseño">
+              <li class="project-process__step reveal-up" style="--d: 0.1s" data-step="1">
+                <div class="project-process__bullet" data-bullet="1" aria-hidden="true"></div>
+                <p class="project-process__phase">Decisión 01</p>
+                <h4 class="project-process__step-title">Cuestionar antes de diseñar</h4>
+                <p class="project-process__step-desc">La primera versión de la selección de tipo de documento en NIDUS era un listado largo. Funcional, pero problemático para el perfil de usuario. Antes de resolver la interacción, se cuestionó el contenido: ¿son necesarios todos estos documentos? ¿Cuáles son realmente relevantes para este perfil? El resultado fue una cuadrícula de pictogramas con etiqueta corta. Menos opciones, reconocimiento visual en lugar de lectura, interacción más directa.</p>
+              </li>
+
+              <li class="project-process__step reveal-up" style="--d: 0.2s" data-step="2">
+                <div class="project-process__bullet" data-bullet="2" aria-hidden="true"></div>
+                <p class="project-process__phase">Decisión 02</p>
+                <h4 class="project-process__step-title">Mismo contenido, distinta interacción</h4>
+                <p class="project-process__step-desc">La selección de tipo de documento existe en las dos apps. En iSocialPro es un dropdown de texto: el profesional conoce la terminología y necesita velocidad. En NIDUS es la cuadrícula de pictogramas: el usuario necesita reconocer, no leer. Mismo contenido. Dos modelos de interacción. Un principio que se repite a lo largo de todo el proyecto.</p>
+              </li>
+
+              <li class="project-process__step reveal-up" style="--d: 0.3s" data-step="3">
+                <div class="project-process__bullet" data-bullet="3" aria-hidden="true"></div>
+                <p class="project-process__phase">Decisión 03</p>
+                <h4 class="project-process__step-title">Coherencia sin uniformidad</h4>
+                <p class="project-process__step-desc">Las dos apps comparten estructura base: mismas secciones, misma arquitectura de información, mismos flujos principales. Pero el lenguaje visual es deliberadamente distinto. NIDUS usa naranja, botones grandes, jerarquía simplificada. iSocialPro usa púrpura, mayor densidad de información, navegación orientada a la gestión. La coherencia no está en que parezcan iguales, sino en que pertenecen al mismo sistema.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- EL SISTEMA DE DISEÑO -->
+    <section class="section project-result" id="sistema" aria-label="El sistema de diseño">
+      <div class="container">
+        <div class="project-result__content reveal-up">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">EL SISTEMA DE DISEÑO</h2>
+          </div>
+
+          <h3 class="copy-title">De cero a sistema</h3>
 
           <div class="copy-body">
-            <p>
-              iSocial necesitaba una experiencia más clara y accesible, reduciendo fricción en tareas frecuentes
-              y mejorando la comprensión de la información en flujos críticos.
-            </p>
-            <p>
-              El reto consistía en modernizar la interfaz sin perder consistencia, y definir una base de
-              componentes que permitiera escalar el producto.
-            </p>
-
-            <h6 class="project-challenge__subhead">OBJETIVOS DEL PROYECTO</h6>
-
-            <ul class="project-challenge__list">
-              <li>Mejorar claridad visual y jerarquía de información</li>
-              <li>Reducir fricción en flujos clave</li>
-              <li>Mejorar accesibilidad (contrastes, tamaños, estados)</li>
-              <li>Definir base de componentes / sistema reutilizable</li>
-            </ul>
+            <p>El cliente llegó sin sistema de diseño ni guías visuales. Estas son las bases que construimos para cada producto.</p>
           </div>
         </div>
 
+        <div class="project-result__gallery" aria-label="Sistema de diseño">
+          <figure class="project-result__item reveal-up">
+            <img src="images/isocial/placeholder.png" alt="Sistema de diseño NIDUS — colores y tipografía" loading="lazy" decoding="async" />
+            <figcaption>NIDUS</figcaption>
+          </figure>
+
+          <figure class="project-result__item reveal-up">
+            <img src="images/isocial/placeholder.png" alt="Sistema de diseño iSocialPro — colores y tipografía" loading="lazy" decoding="async" />
+            <figcaption>iSocialPro</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <div class="container"><div class="divider"></div></div>
+    <div class="container">
+      <div class="divider"></div>
+    </div>
 
-    <!-- PROCESO -->
-    <section class="section process-accordion" id="process-accordion" aria-label="Process">
+    <!-- REFLEXIÓN FINAL -->
+    <section class="section project-learnings" id="reflexion" aria-labelledby="reflexion-title">
       <div class="container">
-        <div class="section-head">
-          <span class="dot" aria-hidden="true"></span>
-          <h2 class="section-title">PROCESO</h2>
-        </div>
-
-        <div class="process-accordion__wrap">
-
-          <div class="process-accordion__media">
-            <div class="process-accordion__media-item is-active" data-step="1">
-              <img src="images/isocial/placeholder.png" alt="Research phase iSocial" loading="lazy" decoding="async" />
-            </div>
-            <div class="process-accordion__media-item" data-step="2">
-              <img src="images/isocial/placeholder.png" alt="Definition phase iSocial" loading="lazy" decoding="async" />
-            </div>
-            <div class="process-accordion__media-item" data-step="3">
-              <img src="images/isocial/placeholder.png" alt="Design phase iSocial" loading="lazy" decoding="async" />
-            </div>
+        <div class="project-learnings__content reveal-up">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="section-title">REFLEXIÓN</h2>
           </div>
 
-          <div class="process-accordion__list" aria-label="Process list">
+          <h3 id="reflexion-title" class="copy-title">El diseño real ocurre dentro de restricciones</h3>
 
-            <article class="process-accordion__item is-active" data-step="1">
-              <button class="process-accordion__trigger" type="button" id="pa-trigger-1" aria-expanded="true" aria-controls="pa-panel-1">
-                <h5 class="copy-card-title">Investigación y diagnóstico</h5>
-              </button>
-
-              <div class="process-accordion__panel" id="pa-panel-1" role="region" aria-labelledby="pa-trigger-1">
-                <div class="process-accordion__panel-inner">
-                  <p class="copy-text">
-                    Auditoría de la experiencia actual para detectar problemas de usabilidad, consistencia y accesibilidad.
-                  </p>
-
-                  <ul class="process-accordion__bullets">
-                    <li>Revisión de arquitectura de información y navegación</li>
-                    <li>Detección de fricciones y puntos críticos</li>
-                    <li>Heurísticas + accesibilidad</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            <article class="process-accordion__item" data-step="2">
-              <button class="process-accordion__trigger" type="button" id="pa-trigger-2" aria-expanded="false" aria-controls="pa-panel-2">
-                <h5 class="copy-card-title">Definición de solución</h5>
-              </button>
-
-              <div class="process-accordion__panel" id="pa-panel-2" role="region" aria-labelledby="pa-trigger-2" hidden>
-                <div class="process-accordion__panel-inner">
-                  <p class="copy-text">
-                    Priorización de mejoras y definición de principios UI/UX para un rediseño coherente y escalable.
-                  </p>
-
-                  <ul class="process-accordion__bullets">
-                    <li>Principios de diseño y reglas de sistema</li>
-                    <li>Wireframes / arquitectura revisada</li>
-                    <li>Definición de componentes clave</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            <article class="process-accordion__item" data-step="3">
-              <button class="process-accordion__trigger" type="button" id="pa-trigger-3" aria-expanded="false" aria-controls="pa-panel-3">
-                <h5 class="copy-card-title">Diseño UI y validación</h5>
-              </button>
-
-              <div class="process-accordion__panel" id="pa-panel-3" role="region" aria-labelledby="pa-trigger-3" hidden>
-                <div class="process-accordion__panel-inner">
-                  <p class="copy-text">
-                    Diseño visual, prototipado y validación de flujos para asegurar claridad y eficiencia.
-                  </p>
-
-                  <ul class="process-accordion__bullets">
-                    <li>Rediseño de pantallas y estados</li>
-                    <li>Prototipo interactivo</li>
-                    <li>Ajustes tras feedback</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
+          <div class="copy-body project-learnings__intro">
+            <p>Diseñar para perfiles vulnerables obliga a tomar partido: cada decisión tiene una consecuencia directa para alguien que quizás no ha usado nunca una app como esta.</p>
+            <p>Pero el diseño no ocurre en el vacío. Ocurre dentro de negociaciones, restricciones y decisiones que no siempre son tuyas. La diferencia entre un buen diseñador y uno excelente no está solo en las soluciones que propone, sino en saber cuándo defender una decisión y cuándo aceptar una limitación sin perder el criterio.</p>
+            <p>Algunas batallas se ganan. Otras definen mejor el territorio donde puedes actuar.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="container"><div class="divider"></div></div>
+    <div class="container">
+      <div class="divider"></div>
+    </div>
 
-    <!-- RESULTADO -->
-    <section class="section result-stack" id="resultado" aria-label="Resultado">
+    <section class="project-navigation" aria-label="Navegación de proyectos">
       <div class="container">
-        <div class="section-head">
-          <span class="dot" aria-hidden="true"></span>
-          <h2 class="section-title">RESULTADO</h2>
-        </div>
-
-        <div class="result-stack__list">
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h3 class="copy-title">Integración de compra dentro de la app</h3>
-              <div class="copy-body">
-                <p class="copy-text">
-                  En la versión anterior, la aplicación mostraba los tipos de entrada y precios, pero el proceso de compra se completaba
-                  en la web externa. Esto interrumpía la experiencia y generaba una transición fuera del entorno nativo.
-                  <br><br>
-                  La nueva versión incorpora un flujo de compra completo dentro de la aplicación, estructurado en pasos claros:
-                  selección de tipo de visita, fecha y hora, configuración del grupo y pago.
-                  <br><br>
-                  De esta forma, la compra pasa a formar parte de la experiencia digital, manteniendo la continuidad dentro de la app.
-                </p>
-              </div>
-            </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h3 class="copy-title">Reestructuración de la experiencia de visita</h3>
-              <div class="copy-body">
-                <p class="copy-text">
-                  La arquitectura anterior agrupaba normativa, mapas, audioguías y accesos secundarios sin una jerarquía clara.
-                  La información crítica para el día de la visita competía con contenidos secundarios.
-                  <br><br>
-                  La nueva estructura reorganiza la experiencia en función del contexto real del usuario:
-                </p>
-                <ul class="result-stack__bullets">
-                  <li>Para visitantes con entrada: se priorizan “Tus entradas”, horarios específicos y detalles operativos.</li>
-                  <li>Para visitantes sin entrada: se introduce un módulo de planificación con horarios, cómo llegar, transporte y accesibilidad.</li>
-                </ul>
-                <p class="copy-text">
-                  La normativa se mantiene, pero deja de ocupar el centro del flujo. La experiencia se adapta al momento real de uso.
-                </p>
-              </div>
-            </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h3 class="copy-title">Mapa interactivo como herramienta de orientación</h3>
-              <div class="copy-body">
-                <p class="copy-text">
-                  El mapa anterior era estático y funcionaba únicamente como referencia visual. No permitía interactuar con los espacios
-                  ni acceder directamente a información contextual durante la visita.
-                  <br><br>
-                  La nueva versión incorpora un mapa interactivo por plantas que permite seleccionar puntos de interés y acceder a su detalle
-                  desde el propio mapa. Esto facilita la navegación sin salir del flujo principal.
-                  <br><br>
-                  Además, el contenido visible se adapta al tipo de visita contratada, mostrando únicamente los espacios relevantes.
-                  El mapa pasa a ser una herramienta activa de orientación dentro del recorrido.
-                </p>
-              </div>
-            </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h3 class="copy-title">Evolución de la audioguía</h3>
-              <div class="copy-body">
-                <p class="copy-text">
-                  La audioguía original presentaba el contenido de forma lineal, con bloques extensos y poca diferenciación visual.
-                  La experiencia estaba centrada en la lectura más que en el acompañamiento durante el recorrido.
-                  <br><br>
-                  La nueva estructura organiza los contenidos en módulos claros, con miniaturas, tiempos estimados y jerarquía tipográfica
-                  más definida. Esto facilita el escaneo rápido y la navegación flexible.
-                  <br><br>
-                  La audioguía se integra dentro del flujo general de visita y se conecta con otros elementos como el mapa.
-                  Deja de ser una sección aislada para formar parte del sistema completo de experiencia.
-                </p>
-              </div>
-            </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <article class="result-stack__block">
-            <div class="result-stack__content">
-              <h3 class="copy-title">Gamificación y activación on-site</h3>
-              <div class="copy-body">
-                <p class="copy-text">
-                  Se incorporan dinámicas de interacción vinculadas a elementos arquitectónicos concretos dentro del espacio.
-                  El usuario puede participar en pequeños retos durante el recorrido.
-                  <br><br>
-                  Estas dinámicas fomentan una exploración más activa sin interrumpir la experiencia cultural. La interacción se integra
-                  de forma natural dentro del flujo de la visita.
-                  <br><br>
-                  Además, la participación se conecta con incentivos posteriores, reforzando la continuidad entre experiencia digital
-                  y entorno físico.
-                </p>
-              </div>
-            </div>
-            <div class="result-stack__media" data-result-media-carousel aria-label="Imágenes de resultado">
-              <div class="result-stack__track">
-                <div class="result-stack__slide is-active">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio1.png" alt="Imagen resultado 1" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/desafio2.png" alt="Imagen resultado 2" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="result-stack__slide">
-                  <div class="result-stack__media-grid">
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_antes.png" alt="Imagen resultado 3" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">ANTES</h6>
-                    </div>
-                    <div class="result-stack__media-item">
-                      <img src="images/sagrada familia/visita_despues.png" alt="Imagen resultado 4" loading="lazy" decoding="async" />
-                      <h6 class="result-stack__media-label">DESPUÉS</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="result-stack__nav" aria-label="Controles de imágenes">
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--prev" type="button" aria-label="Anterior">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
-                </button>
-                <button class="button button--icon button--secondary result-stack__btn result-stack__btn--next" type="button" aria-label="Siguiente">
-                  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="container"><div class="divider"></div></div>
-
-    <!-- IMPACTO -->
-    <section class="section" id="impacto">
-      <div class="container">
-        <div class="section-head">
-          <span class="dot" aria-hidden="true"></span>
-          <h2 class="section-title">RESULTADOS</h2>
-        </div>
-
-        <h3>Impacto del rediseño</h3>
-
-        <div class="results-grid">
-          <div class="result-item">
-            <h4>+X%</h4>
-            <p>Mejora en (métrica 1)</p>
-          </div>
-
-          <div class="result-item">
-            <h4>-X%</h4>
-            <p>Reducción en (métrica 2)</p>
-          </div>
-
-          <div class="result-item">
-            <h4>+X%</h4>
-            <p>Aumento en (métrica 3)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-navigation" aria-label="Project navigation">
-      <div class="container">
-        <div class="section-head project-navigation__head">
+        <div class="section-head project-navigation__head reveal-up">
           <span class="dot" aria-hidden="true"></span>
           <h2 class="section-title">Otros proyectos</h2>
         </div>
-        <div class="project-navigation__cards" aria-label="Lista de proyectos">
-          <a href="case-christies-pulse.html" class="project-navigation__card">
-            <span class="project-navigation__card-logo" aria-hidden="true">
-              <img src="logo_redondo.svg" alt="" loading="lazy" decoding="async" />
-            </span>
-            <span class="copy-body">
-              <span class="copy-card-title">Christie's Pulse</span>
-              <span class="copy-card-desc">Caso de estudio sobre proceso UX/UI, decisiones de diseño y resultados.</span>
-            </span>
-            <span class="project-navigation__card-tags" aria-label="Tags Christie's Pulse">
-              <span class="tag project-navigation__tag">UX/UI</span>
-              <span class="tag project-navigation__tag">DECISIONES DE DISEÑO</span>
-              <span class="tag project-navigation__tag">RESULTADOS</span>
-            </span>
-          </a>
-          <a href="case-sagrada-familia.html" class="project-navigation__card">
-            <span class="project-navigation__card-logo" aria-hidden="true">
-              <img src="images/sagrada familia/logo_safa.svg" alt="" loading="lazy" decoding="async" />
-            </span>
-            <span class="copy-body">
-              <span class="copy-card-title">Sagrada Familia</span>
-              <span class="copy-card-desc">Replanteamiento estructural de la app para el contexto real de visita on-site.</span>
-            </span>
-            <span class="project-navigation__card-tags" aria-label="Tags Sagrada Familia">
-              <span class="tag project-navigation__tag">APP MÓVIL</span>
-              <span class="tag project-navigation__tag">ARQUITECTURA DE LA INFORMACIÓN</span>
-              <span class="tag project-navigation__tag">EXPERIENCIA ON-SITE</span>
-              <span class="tag project-navigation__tag">ACCESIBILIDAD</span>
-              <span class="tag project-navigation__tag">GAMIFICACIÓN</span>
-            </span>
-          </a>
-        </div>
+        <ul class="project-navigation__grid" aria-label="Lista de proyectos">
+          <li class="project-navigation__item reveal-up" style="--d: 0.1s">
+            <a class="portfolio-card" href="case-christies-pulse.html" aria-labelledby="project-nav-christies">
+              <div class="portfolio-media">
+                <img src="images/home/placeholder.png" alt="Proyecto Christie's Pulse" loading="lazy" decoding="async" width="900" height="600">
+                <div class="portfolio-overlay" style="--overlay-accent:rgba(255, 255, 255, 0.1);"></div>
+              </div>
+              <span class="portfolio-arrow" aria-hidden="true">
+                <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+              </span>
+              <div class="portfolio-content">
+                <span class="portfolio-pill">UX/UI</span>
+                <div class="copy-body">
+                  <h3 id="project-nav-christies" class="copy-card-title">Christie's Pulse</h3>
+                  <p class="copy-card-desc">Mejoras de experiencia y navegación para una plataforma de contenido digital.</p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-navigation__item reveal-up" style="--d: 0.2s">
+            <a class="portfolio-card" href="case-sagrada-familia.html" aria-labelledby="project-nav-safa">
+              <div class="portfolio-media">
+                <img src="images/home/placeholder.png" alt="Proyecto Sagrada Família" loading="lazy" decoding="async" width="900" height="600">
+                <div class="portfolio-overlay" style="--overlay-accent:rgba(255, 255, 255, 0.1);"></div>
+              </div>
+              <span class="portfolio-arrow" aria-hidden="true">
+                <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+              </span>
+              <div class="portfolio-content">
+                <span class="portfolio-pill">UX/UI</span>
+                <div class="copy-body">
+                  <h3 id="project-nav-safa" class="copy-card-title">Sagrada Família</h3>
+                  <p class="copy-card-desc">Replanteamiento estructural de la app para el contexto real de visita on-site.</p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-navigation__item reveal-up" style="--d: 0.3s">
+            <a class="portfolio-card" href="index.html#contact" aria-labelledby="project-nav-contact">
+              <div class="portfolio-media">
+                <img src="images/home/placeholder.png" alt="TerraWay" loading="lazy" decoding="async" width="900" height="600">
+                <div class="portfolio-overlay" style="--overlay-accent:rgba(255, 255, 255, 0.1);"></div>
+              </div>
+              <span class="portfolio-arrow" aria-hidden="true">
+                <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+              </span>
+              <div class="portfolio-content">
+                <span class="portfolio-pill">Contacto</span>
+                <div class="copy-body">
+                  <h3 id="project-nav-contact" class="copy-card-title">TerraWay</h3>
+                  <p class="copy-card-desc">Si necesitas apoyo en UX y producto digital, podemos hablar de tu proyecto.</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -727,38 +531,43 @@
     <div class="container footer-inner">
       <div class="section-head footer-head">
         <span class="dot dot--red" aria-hidden="true"></span>
-        <h6 class="section-title footer-title">Contact</h6>
+        <h6 class="section-title footer-title">Contacto</h6>
       </div>
 
       <h2 class="footer-hero">¿Hablamos?</h2>
       <p class="copy-intro">
-        Si estás desarrollando un producto digital y necesitas<br />
-        ayuda con UX o diseño de producto, estaré encantado<br />
-        de conocer tu proyecto.
+        Si estás desarrollando un producto digital y necesitas ayuda con UX o diseño de producto, estaré encantado de conocer tu proyecto.
       </p>
 
       <div class="footer-links">
-        <a href="#" class="button button--footer" onclick="event.preventDefault()">
+        <a href="mailto:toniredondo86@gmail.com" class="button button--footer">
           Envíame un E-mail
-          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+          <svg class="icon" aria-hidden="true">
+            <use href="#icon-arrow-up-right"></use>
+          </svg>
         </a>
 
-        <a href="#" class="button button--footer" onclick="event.preventDefault()">
+        <a href="https://www.linkedin.com/in/toniredondo86/" class="button button--footer" target="_blank" rel="noopener noreferrer">
           Envíame un mensaje a Linkedin
-          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+          <svg class="icon" aria-hidden="true">
+            <use href="#icon-arrow-up-right"></use>
+          </svg>
         </a>
 
-        <a href="#" class="button button--footer" onclick="event.preventDefault()">
+        <a href="index.html#contact" class="button button--footer">
           Descarga mi CV
-          <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+          <svg class="icon" aria-hidden="true">
+            <use href="#icon-download"></use>
+          </svg>
         </a>
       </div>
 
       <div class="divider"></div>
 
-      <p class="copy-text">© 2026 Toni Redondo<br />Diseñado y desarrollado por mí</p>
+      <p class="copy-text">© 2026 Toni Redondo. Diseñado y desarrollado por mí.</p>
     </div>
   </footer>
 
 </body>
+
 </html>

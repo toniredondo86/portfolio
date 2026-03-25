@@ -21,7 +21,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&amp;display=swap" />
-  <link rel="stylesheet" href="./styles.css?v=54" />
+  <link rel="stylesheet" href="./src/styles.css" />
+  <script src="./src/script.js" type="module" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Case Study — Christie's Pulse",
+    "description": "Caso de estudio Christie's Pulse: proceso UX/UI, decisiones de diseño y aprendizajes del proyecto.",
+    "url": "/case-christies-pulse.html",
+    "author": {
+      "@type": "Person",
+      "name": "Toni Redondo",
+      "url": "/index.html"
+    },
+    "genre": "UX/UI Design"
+  }
+  </script>
 </head>
 
 <body class="case-christies-pulse">
@@ -160,7 +176,7 @@
       </nav>
 
       <!-- SOLO desktop -->
-      <a href="#" class="button button--primary desktop-only" onclick="event.preventDefault()">
+      <a href="index.html#contact" class="button button--primary desktop-only">
         Descargar CV
         <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
       </a>
@@ -200,7 +216,7 @@
           </li>
         </ul>
 
-        <a href="#" class="button button--primary nav-dropdown-cta" onclick="event.preventDefault()">
+        <a href="index.html#contact" class="button button--primary nav-dropdown-cta">
           Descargar CV
           <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
         </a>
@@ -260,7 +276,6 @@
     </section>
   </main>
 
-  <!-- ✅ necesario para que el menú funcione -->
-  <script src="script.js" defer></script>
+  <script src="./src/script.js" type="module" defer></script>
 </body>
 </html>

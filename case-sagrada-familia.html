@@ -25,10 +25,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&amp;display=swap" />
-  <link rel="stylesheet" href="./styles.css?v=54" />
-
-  <!-- Site JS (defer) -->
-  <script src="./script.js?v=16" defer></script>
+  <link rel="stylesheet" href="./src/styles.css" />
+  <script src="./src/script.js" type="module" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Proyecto Sagrada Familia — Case Study",
+    "description": "Caso de estudio Sagrada Familia: investigación, definición y diseño UX/UI para mejorar la experiencia digital.",
+    "url": "/case-sagrada-familia.html",
+    "author": {
+      "@type": "Person",
+      "name": "Toni Redondo",
+      "url": "/index.html"
+    },
+    "genre": "UX/UI Design"
+  }
+  </script>
 </head>
 
 <body class="case case-sagrada-familia">
@@ -263,12 +276,12 @@
               <div class="hero-compare" id="heroCompare" style="--compare:52%;">
                 <div class="hero-compare__pane hero-compare__pane--before">
                   <figure class="phone before">
-                    <img src="images/sagrada familia/visita_antes1.png" alt="Versión anterior de la app de Sagrada Família">
+                    <img src="images/sagrada familia/visita_antes.webp" alt="Versión anterior de la app de Sagrada Família">
                   </figure>
                 </div>
                 <div class="hero-compare__pane hero-compare__pane--after">
                   <figure class="phone after">
-                    <img src="images/sagrada familia/visita_despues1.png" alt="Nueva versión de la app de Sagrada Família">
+                    <img src="images/sagrada familia/visita_despues.webp" alt="Nueva versión de la app de Sagrada Família">
                     <figcaption class="phone-label after">Después</figcaption>
                   </figure>
                 </div>
@@ -389,7 +402,7 @@
     <!-- APP ORIGINAL -->
     <section class="section app-original" id="app-original" aria-label="App original">
       <div class="container">
-        <div class="app-original__content">
+        <div class="app-original__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
             <h2 class="section-title">APP ORIGINAL</h2>
@@ -405,20 +418,20 @@
 
         <div class="app-original__media">
           <div class="app-original__gallery" aria-label="Pantallas originales de la app">
-            <figure class="app-original__item">
-              <img src="images/sagrada familia/visita_antes1.png" alt="Pantalla original de visita de la app Sagrada Familia" loading="lazy" decoding="async" />
+            <figure class="app-original__item reveal-up">
+              <img src="images/sagrada familia/visita_antes.webp" alt="Pantalla original de visita de la app Sagrada Familia" loading="lazy" decoding="async" />
             </figure>
 
-            <figure class="app-original__item">
-              <img src="images/sagrada familia/entradas_antes.png" alt="Pantalla original de compra de entradas de la app Sagrada Familia" loading="lazy" decoding="async" />
+            <figure class="app-original__item reveal-up">
+              <img src="images/sagrada familia/entradas_antes.webp" alt="Pantalla original de compra de entradas de la app Sagrada Familia" loading="lazy" decoding="async" />
             </figure>
 
-            <figure class="app-original__item">
-              <img src="images/sagrada familia/mapa_antes1.png" alt="Pantalla original del mapa de la app Sagrada Familia" loading="lazy" decoding="async" />
+            <figure class="app-original__item reveal-up">
+              <img src="images/sagrada familia/mapa_antes.webp" alt="Pantalla original del mapa de la app Sagrada Familia" loading="lazy" decoding="async" />
             </figure>
 
-            <figure class="app-original__item">
-              <img src="images/sagrada familia/visita_antes1.png" alt="Pantalla original de visita de la app Sagrada Familia" loading="lazy" decoding="async" />
+            <figure class="app-original__item reveal-up">
+              <img src="images/sagrada familia/audioguia_antes.webp" alt="Pantalla original de la audioguía de la app Sagrada Familia" loading="lazy" decoding="async" />
             </figure>
           </div>
         </div>
@@ -432,7 +445,7 @@
     <!-- DESAFÍO -->
     <section class="section project-challenge" id="desafio" aria-labelledby="desafio-title">
       <div class="container">
-        <div class="project-challenge__content">
+        <div class="project-challenge__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
             <h2 class="section-title">DESAFÍO</h2>
@@ -447,7 +460,7 @@
           </div>
         </div>
 
-        <ul class="project-challenge__goals" id="challengeGoals"></ul>
+        <ul class="project-challenge__goals reveal-up" style="--d: 0.2s" id="challengeGoals"></ul>
       </div>
     </section>
 
@@ -459,7 +472,7 @@
     <section class="section project-process" id="proceso" aria-labelledby="proceso-title">
       <div class="container">
         <div class="project-process__grid">
-          <div class="project-process__content">
+          <div class="project-process__content reveal-up">
             <div class="section-head">
               <span class="dot" aria-hidden="true"></span>
               <h2 class="section-title">PROCESO</h2>
@@ -476,28 +489,28 @@
             <div class="project-process__progress" id="timelineProgress" aria-hidden="true"></div>
 
             <ol class="project-process__steps" aria-label="Fases del proyecto">
-              <li class="project-process__step" data-step="1">
+              <li class="project-process__step reveal-up" style="--d: 0.1s" data-step="1">
                 <div class="project-process__bullet" data-bullet="1" aria-hidden="true"></div>
                 <p class="project-process__phase">Fase 01</p>
                 <h4 class="project-process__step-title">Auditar la experiencia existente</h4>
                 <p class="project-process__step-desc">El proceso comenzó con una revisión de la estructura actual de la app para entender cómo se organizaban contenidos y funcionalidades dentro de la experiencia. Este análisis permitió detectar una lógica construida por acumulación de secciones, con fricciones claras en momentos clave como la compra, el acceso con entrada o el inicio del recorrido.</p>
               </li>
 
-              <li class="project-process__step" data-step="2">
+              <li class="project-process__step reveal-up" style="--d: 0.2s" data-step="2">
                 <div class="project-process__bullet" data-bullet="2" aria-hidden="true"></div>
                 <p class="project-process__phase">Fase 02</p>
                 <h4 class="project-process__step-title">Definir una nueva lógica de navegación</h4>
                 <p class="project-process__step-desc">A partir de la auditoría, la propuesta reorganiza la experiencia para separar con claridad planificación y visita activa. La nueva estructura diferencia mejor las necesidades de usuarios con y sin entrada, y prioriza la información más útil en cada momento del recorrido.</p>
               </li>
 
-              <li class="project-process__step" data-step="3">
+              <li class="project-process__step reveal-up" style="--d: 0.3s" data-step="3">
                 <div class="project-process__bullet" data-bullet="3" aria-hidden="true"></div>
                 <p class="project-process__phase">Fase 03</p>
                 <h4 class="project-process__step-title">Replantear los flujos y herramientas clave</h4>
                 <p class="project-process__step-desc">Con la nueva arquitectura definida, el trabajo se centró en integrar dentro de la app los flujos y recursos con mayor impacto en la experiencia. La compra dejó de depender de la web externa, la gestión de entradas ganó protagonismo y herramientas como el mapa o la audioguía pasaron a formar parte de una lógica más conectada.</p>
               </li>
 
-              <li class="project-process__step" data-step="4">
+              <li class="project-process__step reveal-up" style="--d: 0.4s" data-step="4">
                 <div class="project-process__bullet" data-bullet="4" aria-hidden="true"></div>
                 <p class="project-process__phase">Fase 04</p>
                 <h4 class="project-process__step-title">Aterrizar la propuesta en recorridos de uso</h4>
@@ -516,7 +529,7 @@
     <!-- RESULTADO -->
     <section class="section project-result" id="resultado" aria-label="Resultado">
       <div class="container">
-        <div class="project-result__content">
+        <div class="project-result__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
             <h2 class="section-title">RESULTADO</h2>
@@ -531,20 +544,20 @@
         </div>
 
         <div class="project-result__gallery" aria-label="Galería de resultados">
-          <figure class="project-result__item">
-            <img src="images/sagrada familia/entradas_despues.png" alt="Pantalla final de compra de entradas integrada en la aplicación de la Sagrada Familia" loading="lazy" decoding="async" />
+          <figure class="project-result__item reveal-up">
+            <img src="images/sagrada familia/visita_despues.webp" alt="Pantalla final de experiencia de visita reorganizada en la app de la Sagrada Familia" loading="lazy" decoding="async" />
           </figure>
 
-          <figure class="project-result__item">
-            <img src="images/sagrada familia/visita_despues1.png" alt="Pantalla final de experiencia de visita reorganizada en la app de la Sagrada Familia" loading="lazy" decoding="async" />
+          <figure class="project-result__item reveal-up">
+            <img src="images/sagrada familia/entradas_despues.webp" alt="Pantalla final de compra de entradas integrada en la aplicación de la Sagrada Familia" loading="lazy" decoding="async" />
           </figure>
 
-          <figure class="project-result__item">
-            <img src="images/sagrada familia/mapa_despues1.png" alt="Pantalla final del mapa interactivo de la aplicación de la Sagrada Familia" loading="lazy" decoding="async" />
+          <figure class="project-result__item reveal-up">
+            <img src="images/sagrada familia/mapa_despues.webp" alt="Pantalla final del mapa interactivo de la aplicación de la Sagrada Familia" loading="lazy" decoding="async" />
           </figure>
 
-          <figure class="project-result__item">
-            <img src="images/sagrada familia/visita_despues3.png" alt="Pantalla final de audioguía y contenidos reorganizados en la app de la Sagrada Familia" loading="lazy" decoding="async" />
+          <figure class="project-result__item reveal-up">
+            <img src="images/sagrada familia/audioguia_despues.webp" alt="Pantalla final de la audioguía reorganizada en la app de la Sagrada Familia" loading="lazy" decoding="async" />
           </figure>
         </div>
       </div>
@@ -557,7 +570,7 @@
     <!-- APRENDIZAJES -->
     <section class="section project-learnings" id="aprendizajes" aria-labelledby="aprendizajes-title">
       <div class="container">
-        <div class="project-learnings__content">
+        <div class="project-learnings__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
             <h2 class="section-title">APRENDIZAJES</h2>
@@ -571,7 +584,7 @@
         </div>
 
         <div class="project-learnings__list">
-          <blockquote class="project-learnings__quote">
+          <blockquote class="project-learnings__quote reveal-up" style="--d: 0.1s">
             <div class="project-learnings__top">
               <div class="project-learnings__icon-badge">
                 <svg class="icon" aria-hidden="true">
@@ -583,7 +596,7 @@
             <p class="project-learnings__desc">Diseñar para una visita física obliga a priorizar orientación, accesos e información práctica.</p>
           </blockquote>
 
-          <blockquote class="project-learnings__quote">
+          <blockquote class="project-learnings__quote reveal-up" style="--d: 0.2s">
             <div class="project-learnings__top">
               <div class="project-learnings__icon-badge">
                 <svg class="icon" aria-hidden="true">
@@ -595,7 +608,7 @@
             <p class="project-learnings__desc">Cuando la estructura falla, incluso las funcionalidades útiles pierden claridad.</p>
           </blockquote>
 
-          <blockquote class="project-learnings__quote">
+          <blockquote class="project-learnings__quote reveal-up" style="--d: 0.3s">
             <div class="project-learnings__top">
               <div class="project-learnings__icon-badge">
                 <svg class="icon" aria-hidden="true">
@@ -607,7 +620,7 @@
             <p class="project-learnings__desc">Integrar tareas clave dentro de la app mejora más que añadir nuevas capas.</p>
           </blockquote>
 
-          <blockquote class="project-learnings__quote">
+          <blockquote class="project-learnings__quote reveal-up" style="--d: 0.4s">
             <div class="project-learnings__top">
               <div class="project-learnings__icon-badge">
                 <svg class="icon" aria-hidden="true">
@@ -628,12 +641,12 @@
 
     <section class="project-navigation" aria-label="Navegación de proyectos">
       <div class="container">
-        <div class="section-head project-navigation__head">
+        <div class="section-head project-navigation__head reveal-up">
           <span class="dot" aria-hidden="true"></span>
           <h2 class="section-title">Otros proyectos</h2>
         </div>
         <ul class="project-navigation__grid" aria-label="Lista de proyectos">
-          <li class="project-navigation__item">
+          <li class="project-navigation__item reveal-up" style="--d: 0.1s">
             <a class="portfolio-card" href="case-christies-pulse.html" aria-labelledby="project-nav-christies">
               <div class="portfolio-media">
                 <img src="images/home/placeholder.png" alt="Proyecto Christie's Pulse" loading="lazy" decoding="async" width="900" height="600">
@@ -652,7 +665,7 @@
             </a>
           </li>
 
-          <li class="project-navigation__item">
+          <li class="project-navigation__item reveal-up" style="--d: 0.2s">
             <a class="portfolio-card" href="case-isocial.html" aria-labelledby="project-nav-isocial">
               <div class="portfolio-media">
                 <img src="images/home/placeholder.png" alt="Proyecto Fundació iSocial" loading="lazy" decoding="async" width="900" height="600">
@@ -671,10 +684,10 @@
             </a>
           </li>
 
-          <li class="project-navigation__item">
+          <li class="project-navigation__item reveal-up" style="--d: 0.3s">
             <a class="portfolio-card" href="index.html#contact" aria-labelledby="project-nav-contact">
               <div class="portfolio-media">
-                <img src="images/home/placeholder.png" alt="Contacto" loading="lazy" decoding="async" width="900" height="600">
+                <img src="images/home/placeholder.png" alt="TerraWay" loading="lazy" decoding="async" width="900" height="600">
                 <div class="portfolio-overlay" style="--overlay-accent:rgba(255, 255, 255, 0.1);"></div>
               </div>
               <span class="portfolio-arrow" aria-hidden="true">
@@ -683,7 +696,7 @@
               <div class="portfolio-content">
                 <span class="portfolio-pill">Contacto</span>
                 <div class="copy-body">
-                  <h3 id="project-nav-contact" class="copy-card-title">Hablemos</h3>
+                  <h3 id="project-nav-contact" class="copy-card-title">TerraWay</h3>
                   <p class="copy-card-desc">Si necesitas apoyo en UX y producto digital, podemos hablar de tu proyecto.</p>
                 </div>
               </div>
