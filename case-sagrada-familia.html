@@ -4,26 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyecto — Sagrada Familia</title>
+  <title>Sagrada Família App · Toni Redondo, Product Designer</title>
   <meta name="description"
     content="Caso de estudio Sagrada Familia: investigación, definición y diseño UX/UI para mejorar la experiencia digital." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#f4f4f5" />
+  <!-- TODO: reemplazar con URL absoluta cuando haya dominio (ej: https://toniredondo.com/case-sagrada-familia.html) -->
   <link rel="canonical" href="/case-sagrada-familia.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Proyecto — Sagrada Familia" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="Sagrada Família App · Toni Redondo" />
   <meta property="og:description"
     content="Proceso UX/UI en Sagrada Familia: investigación, oportunidades y diseño de producto." />
+  <!-- TODO: reemplazar con URL absoluta cuando haya dominio -->
   <meta property="og:url" content="/case-sagrada-familia.html" />
   <meta property="og:image" content="/images/sagrada%20familia/splash.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Proyecto — Sagrada Familia" />
+  <meta name="twitter:title" content="Sagrada Família App · Toni Redondo" />
   <meta name="twitter:description"
     content="Proceso UX/UI en Sagrada Familia: investigación, oportunidades y diseño de producto." />
   <meta name="twitter:image" content="/images/sagrada%20familia/splash.png" />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap" as="style" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&amp;display=swap" />
   <link rel="stylesheet" href="./src/styles.css" />
   <script src="./src/script.js" type="module" defer></script>
@@ -108,16 +112,6 @@
         fill="currentColor" />
     </symbol>
 
-    <symbol id="icon-chevron" viewBox="0 0 24 24">
-      <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        fill="none" />
-    </symbol>
-
-    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
-      <path d="M5 12H19M19 12L13 18M19 12L13 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round" fill="none" />
-    </symbol>
-
     <symbol id="icon-stack" viewBox="0 0 24 24">
       <path d="M12 4L4 8L12 12L20 8L12 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
         stroke-linejoin="round" fill="none" />
@@ -140,6 +134,22 @@
       <path d="M3 12L12 17L21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
       <path d="M3 16L12 21L21 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
+
+    <symbol id="icon-route" viewBox="0 0 24 24">
+      <path d="M5 16C5.79565 16 6.55849 16.3163 7.12109 16.8789C7.6837 17.4415 8 18.2044 8 19C8 19.7956 7.6837 20.5585 7.12109 21.1211C6.55849 21.6837 5.79565 22 5 22C4.20435 22 3.44152 21.6837 2.87891 21.1211C2.3163 20.5585 2 19.7956 2 19C2 18.2044 2.3163 17.4415 2.87891 16.8789C3.44152 16.3163 4.20435 16 5 16ZM5 18C4.73478 18 4.48051 18.1054 4.29297 18.293C4.10543 18.4805 4 18.7348 4 19C4 19.2652 4.10543 19.5195 4.29297 19.707C4.48051 19.8946 4.73478 20 5 20C5.26522 20 5.51949 19.8946 5.70703 19.707C5.89457 19.5195 6 19.2652 6 19C6 18.7348 5.89457 18.4805 5.70703 18.293C5.51949 18.1054 5.26522 18 5 18ZM13 4C13.5523 4 14 4.44772 14 5C14 5.55228 13.5523 6 13 6H8.5C7.83696 6 7.20126 6.26358 6.73242 6.73242C6.26358 7.20126 6 7.83696 6 8.5C6 9.16304 6.26358 9.79874 6.73242 10.2676C7.20126 10.7364 7.83696 11 8.5 11H16.5C17.6935 11 18.8377 11.4744 19.6816 12.3184C20.5256 13.1623 21 14.3065 21 15.5C21 16.6935 20.5256 17.8377 19.6816 18.6816C18.8377 19.5256 17.6935 20 16.5 20H11C10.4477 20 10 19.5523 10 19C10 18.4477 10.4477 18 11 18H16.5C17.163 18 17.7987 17.7364 18.2676 17.2676C18.7364 16.7987 19 16.163 19 15.5C19 14.837 18.7364 14.2013 18.2676 13.7324C17.7987 13.2636 17.163 13 16.5 13H8.5C7.30653 13 6.16227 12.5256 5.31836 11.6816C4.47445 10.8377 4 9.69347 4 8.5C4 7.30653 4.47445 6.16227 5.31836 5.31836C6.16227 4.47445 7.30653 4 8.5 4H13ZM19 2C19.7956 2 20.5585 2.3163 21.1211 2.87891C21.6837 3.44152 22 4.20435 22 5C22 5.79565 21.6837 6.55849 21.1211 7.12109C20.5585 7.6837 19.7956 8 19 8C18.2044 8 17.4415 7.6837 16.8789 7.12109C16.3163 6.55849 16 5.79565 16 5C16 4.20435 16.3163 3.44152 16.8789 2.87891C17.4415 2.3163 18.2044 2 19 2ZM19 4C18.7348 4 18.4805 4.10543 18.293 4.29297C18.1054 4.48051 18 4.73478 18 5C18 5.26522 18.1054 5.51949 18.293 5.70703C18.4805 5.89457 18.7348 6 19 6C19.2652 6 19.5195 5.89457 19.707 5.70703C19.8946 5.51949 20 5.26522 20 5C20 4.73478 19.8946 4.48051 19.707 4.29297C19.5195 4.10543 19.2652 4 19 4Z" fill="currentColor" />
+    </symbol>
+
+    <symbol id="icon-sitemap" viewBox="0 0 24 24">
+      <path d="M13 2C13.7956 2 14.5585 2.3163 15.1211 2.87891C15.6837 3.44152 16 4.20435 16 5V7C16 7.79565 15.6837 8.55849 15.1211 9.12109C14.5585 9.6837 13.7957 10 13 10V11H16C16.7957 11 17.5585 11.3163 18.1211 11.8789C18.6837 12.4415 19 13.2043 19 14C19.7957 14 20.5585 14.3163 21.1211 14.8789C21.6837 15.4415 22 16.2043 22 17V19C22 19.7957 21.6837 20.5585 21.1211 21.1211C20.5585 21.6837 19.7957 22 19 22H17C16.2043 22 15.4415 21.6837 14.8789 21.1211C14.3163 20.5585 14 19.7957 14 19V17C14 16.2043 14.3163 15.4415 14.8789 14.8789C15.4415 14.3163 16.2043 14 17 14C17 13.7348 16.8946 13.4805 16.707 13.293C16.5195 13.1054 16.2652 13 16 13H8C7.73478 13 7.48051 13.1054 7.29297 13.293C7.10543 13.4805 7 13.7348 7 14C7.79565 14 8.55849 14.3163 9.12109 14.8789C9.6837 15.4415 10 16.2043 10 17V19C10 19.7957 9.6837 20.5585 9.12109 21.1211C8.55849 21.6837 7.79565 22 7 22H5C4.20435 22 3.44152 21.6837 2.87891 21.1211C2.3163 20.5585 2 19.7956 2 19V17C2 16.2044 2.3163 15.4415 2.87891 14.8789C3.44152 14.3163 4.20435 14 5 14C5 13.2044 5.3163 12.4415 5.87891 11.8789C6.44152 11.3163 7.20435 11 8 11H11V10C10.2043 10 9.44151 9.6837 8.87891 9.12109C8.3163 8.55849 8 7.79565 8 7V5C8 4.20435 8.3163 3.44152 8.87891 2.87891C9.44152 2.3163 10.2044 2 11 2H13ZM5 16C4.73478 16 4.48051 16.1054 4.29297 16.293C4.10543 16.4805 4 16.7348 4 17V19C4 19.2652 4.10543 19.5195 4.29297 19.707C4.48051 19.8946 4.73478 20 5 20H7C7.26522 20 7.51949 19.8946 7.70703 19.707C7.89457 19.5195 8 19.2652 8 19V17C8 16.7348 7.89457 16.4805 7.70703 16.293C7.51949 16.1054 7.26522 16 7 16H5ZM17 16C16.7348 16 16.4805 16.1054 16.293 16.293C16.1054 16.4805 16 16.7348 16 17V19C16 19.2652 16.1054 19.5195 16.293 19.707C16.4805 19.8946 16.7348 20 17 20H19C19.2652 20 19.5195 19.8946 19.707 19.707C19.8946 19.5195 20 19.2652 20 19V17C20 16.7348 19.8946 16.4805 19.707 16.293C19.5195 16.1054 19.2652 16 19 16H17ZM11 4C10.7348 4 10.4805 4.10543 10.293 4.29297C10.1054 4.48051 10 4.73478 10 5V7C10 7.26522 10.1054 7.51949 10.293 7.70703C10.4805 7.89457 10.7348 8 11 8H13C13.2652 8 13.5195 7.89457 13.707 7.70703C13.8946 7.51949 14 7.26522 14 7V5C14 4.73478 13.8946 4.48051 13.707 4.29297C13.5195 4.10543 13.2652 4 13 4H11Z" fill="currentColor" />
+    </symbol>
+
+    <symbol id="icon-compass" viewBox="0 0 24 24">
+      <path d="M12 2C13.3132 2 14.6139 2.2582 15.8271 2.76074C17.0404 3.26329 18.1427 4.00015 19.0713 4.92871C19.9998 5.85727 20.7367 6.95964 21.2393 8.17285C21.7418 9.38611 22 10.6868 22 12C22 13.3132 21.7418 14.6139 21.2393 15.8271C20.7367 17.0404 19.9998 18.1427 19.0713 19.0713C18.1427 19.9998 17.0404 20.7367 15.8271 21.2393C14.6139 21.7418 13.3132 22 12 22C10.6868 22 9.38611 21.7418 8.17285 21.2393C6.95964 20.7367 5.85727 19.9998 4.92871 19.0713C4.00015 18.1427 3.26329 17.0404 2.76074 15.8271C2.2582 14.6139 2 13.3132 2 12C2 10.6868 2.2582 9.38611 2.76074 8.17285C3.26329 6.95964 4.00015 5.85727 4.92871 4.92871C5.85727 4.00015 6.95964 3.26329 8.17285 2.76074C9.38611 2.2582 10.6868 2 12 2ZM13 5C13 5.55228 12.5523 6 12 6C11.4477 6 11 5.55228 11 5V4.06543C10.2931 4.15464 9.59947 4.33558 8.93848 4.60938C7.96795 5.01141 7.08559 5.59995 6.34277 6.34277C5.59995 7.08559 5.01141 7.96795 4.60938 8.93848C4.33558 9.59947 4.15464 10.2931 4.06543 11H5C5.55228 11 6 11.4477 6 12C6 12.5523 5.55228 13 5 13H4.06543C4.15464 13.7069 4.33558 14.4005 4.60938 15.0615C5.01141 16.0321 5.59995 16.9144 6.34277 17.6572C7.08559 18.4 7.96795 18.9886 8.93848 19.3906C9.59943 19.6644 10.2932 19.8444 11 19.9336V19C11 18.4477 11.4477 18 12 18C12.5523 18 13 18.4477 13 19V19.9336C13.7068 19.8444 14.4006 19.6644 15.0615 19.3906C16.0321 18.9886 16.9144 18.4 17.6572 17.6572C18.4 16.9144 18.9886 16.0321 19.3906 15.0615C19.6644 14.4005 19.8454 13.7069 19.9346 13H19C18.4477 13 18 12.5523 18 12C18 11.4477 18.4477 11 19 11H19.9346C19.8454 10.2931 19.6644 9.59947 19.3906 8.93848C18.9886 7.96795 18.4 7.08559 17.6572 6.34277C16.9144 5.59995 16.0321 5.01141 15.0615 4.60938C14.4005 4.33558 13.7069 4.15464 13 4.06543V5ZM15.6836 7.05176C16.0429 6.93198 16.4392 7.02514 16.707 7.29297C16.9749 7.5608 17.068 7.95707 16.9482 8.31641L14.9482 14.3164C14.8487 14.6148 14.6148 14.8487 14.3164 14.9482L8.31641 16.9482C7.95707 17.068 7.5608 16.9749 7.29297 16.707C7.02514 16.4392 6.93198 16.0429 7.05176 15.6836L9.05176 9.68359L9.09473 9.5752C9.21027 9.32892 9.42236 9.13892 9.68359 9.05176L15.6836 7.05176ZM10.79 10.79L9.58008 14.4189L13.209 13.209L14.4189 9.58008L10.79 10.79Z" fill="currentColor" />
+    </symbol>
+
+    <symbol id="icon-network" viewBox="0 0 24 24">
+      <path d="M18 2C18.7956 2 19.5585 2.3163 20.1211 2.87891C20.6837 3.44151 21 4.20435 21 5C21 5.79565 20.6837 6.55849 20.1211 7.12109C19.5585 7.6837 18.7956 8 18 8C17.5483 8 17.1089 7.89423 16.709 7.70312L11.3896 13.0234C11.3624 13.0507 11.3341 13.0762 11.3047 13.0996C11.7547 13.8127 12 14.6434 12 15.5C12 15.6037 11.9944 15.7068 11.9873 15.8096C12.0247 15.8163 12.0623 15.8248 12.0996 15.8359L16.3506 17.1104C16.4367 17.1362 16.5168 17.1736 16.5898 17.2188C16.6779 17.0997 16.7729 16.9849 16.8789 16.8789C17.4415 16.3163 18.2043 16 19 16C19.7957 16 20.5585 16.3163 21.1211 16.8789C21.6837 17.4415 22 18.2043 22 19C22 19.7957 21.6837 20.5585 21.1211 21.1211C20.5585 21.6837 19.7957 22 19 22C18.2043 22 17.4415 21.6837 16.8789 21.1211C16.332 20.5742 16.02 19.838 16.0029 19.0664C15.9278 19.0618 15.8516 19.0489 15.7764 19.0264L11.5254 17.751C11.488 17.7397 11.452 17.726 11.417 17.7109C11.2182 18.0631 10.9726 18.3906 10.6816 18.6816C9.83773 19.5256 8.69347 20 7.5 20C6.30653 20 5.16227 19.5256 4.31836 18.6816C3.47445 17.8377 3 16.6935 3 15.5C3 14.3065 3.47445 13.1623 4.31836 12.3184C4.60927 12.0275 4.93609 11.7808 5.28809 11.582C5.27283 11.5467 5.25939 11.5095 5.24805 11.4717L4.16992 7.88086C4.06217 7.84982 3.95552 7.81455 3.85156 7.77148C3.48774 7.62072 3.15738 7.39957 2.87891 7.12109C2.60043 6.84262 2.37928 6.51226 2.22852 6.14844C2.07775 5.78446 2 5.39397 2 5C2 4.60603 2.07775 4.21554 2.22852 3.85156C2.37928 3.48774 2.60043 3.15738 2.87891 2.87891C3.15738 2.60043 3.48774 2.37928 3.85156 2.22852C4.21554 2.07775 4.60603 2 5 2C5.39397 2 5.78446 2.07775 6.14844 2.22852C6.51226 2.37928 6.84262 2.60043 7.12109 2.87891C7.39957 3.15738 7.62072 3.48774 7.77148 3.85156C7.92225 4.21554 8 4.60603 8 5C8 5.39397 7.92225 5.78446 7.77148 6.14844C7.62072 6.51226 7.39957 6.84262 7.12109 7.12109C6.86023 7.38196 6.5526 7.58974 6.21582 7.73926L7.16309 10.8975C7.17441 10.9352 7.18272 10.9738 7.18945 11.0117C7.29251 11.0046 7.39603 11 7.5 11C8.35617 11 9.18662 11.2448 9.89941 11.6943C9.92284 11.6649 9.94836 11.6366 9.97559 11.6094L15.2949 6.28906C15.1045 5.88974 15 5.45085 15 5C15 4.20435 15.3163 3.44151 15.8789 2.87891C16.4415 2.3163 17.2044 2 18 2ZM19 18C18.7348 18 18.4805 18.1054 18.293 18.293C18.1054 18.4805 18 18.7348 18 19C18 19.2652 18.1054 19.5195 18.293 19.707C18.4805 19.8946 18.7348 20 19 20C19.2652 20 19.5195 19.8946 19.707 19.707C19.8946 19.5195 20 19.2652 20 19C20 18.7348 19.8946 18.4805 19.707 18.293C19.5195 18.1054 19.2652 18 19 18ZM7.5 13C6.83696 13 6.20126 13.2636 5.73242 13.7324C5.26358 14.2013 5 14.837 5 15.5C5 16.163 5.26358 16.7987 5.73242 17.2676C6.20126 17.7364 6.83696 18 7.5 18C8.16304 18 8.79874 17.7364 9.26758 17.2676C9.73642 16.7987 10 16.163 10 15.5C10 14.837 9.73642 14.2013 9.26758 13.7324C8.79874 13.2636 8.16304 13 7.5 13ZM18 4C17.7348 4 17.4805 4.10543 17.293 4.29297C17.1054 4.48051 17 4.73479 17 5C17 5.26522 17.1054 5.51949 17.293 5.70703C17.4805 5.89457 17.7348 6 18 6C18.2652 6 18.5195 5.89457 18.707 5.70703C18.8946 5.51949 19 5.26522 19 5C19 4.73479 18.8946 4.48051 18.707 4.29297C18.5195 4.10543 18.2652 4 18 4ZM5 4C4.86868 4 4.73851 4.02592 4.61719 4.07617C4.49591 4.12643 4.38579 4.20014 4.29297 4.29297C4.20014 4.38579 4.12643 4.49591 4.07617 4.61719C4.02592 4.73851 4 4.86868 4 5C4 5.13132 4.02592 5.26149 4.07617 5.38281C4.12643 5.50409 4.20014 5.61421 4.29297 5.70703C4.38579 5.79986 4.49591 5.87357 4.61719 5.92383C4.65009 5.93745 4.68373 5.94897 4.71777 5.95898C4.88556 5.92219 5.05393 5.931 5.20996 5.97656C5.26888 5.96389 5.3269 5.94699 5.38281 5.92383C5.50409 5.87357 5.61421 5.79986 5.70703 5.70703C5.79986 5.61421 5.87357 5.50409 5.92383 5.38281C5.97408 5.26149 6 5.13132 6 5C6 4.86868 5.97408 4.73851 5.92383 4.61719C5.87357 4.49591 5.79986 4.38579 5.70703 4.29297C5.61421 4.20014 5.50409 4.12643 5.38281 4.07617C5.26149 4.02592 5.13132 4 5 4Z" fill="currentColor" />
+    </symbol>
   </svg>
 
   <!-- Overlay -->
@@ -151,7 +161,7 @@
       <div class="navbar-inner">
 
         <a href="index.html#top" class="logo" aria-label="Home">
-  <img src="logo_redondo.svg" alt="Logo Toni Redondo" class="navbar-logo" />
+  <img src="logo_redondo.svg" alt="Logo Toni Redondo" class="navbar-logo" width="120" height="32" />
 </a>
 
 
@@ -235,7 +245,7 @@
         <div class="project-hero__grid">
           <div class="project-hero__content">
             <div class="project-app-logo">
-              <img src="images/sagrada familia/logo_safa.svg" alt="Logo Sagrada Familia" />
+              <img src="images/sagrada familia/logo_safa.svg" alt="Logo Sagrada Familia" width="400" height="400" />
             </div>
 
             <h1 class="project-title">Sagrada Familia</h1>
@@ -249,23 +259,24 @@
             <p class="project-lead">
               Evolución estructural de la aplicación móvil de la Sagrada Família para adaptarla al contexto real de la visita.
             </p>
-            <p class="copy-intro">
-              La propuesta transforma una aplicación centrada en contenido informativo en una experiencia de producto más útil, contextual y orientada a la acción. La nueva arquitectura reorganiza la navegación, integra la compra dentro del entorno nativo e incorpora herramientas que acompañan al usuario en el espacio físico, como un mapa interactivo y una audioguía más integrada.
-            </p>
+            <div class="copy-body">
+              <p>La propuesta transforma una aplicación centrada en contenido informativo en una experiencia de producto más útil, contextual y orientada a la acción.</p>
+              <p>La nueva arquitectura reorganiza la navegación, integra la compra dentro del entorno nativo e incorpora herramientas que acompañan al usuario en el espacio físico, como un mapa interactivo y una audioguía más integrada.</p>
+            </div>
 
             <div class="project-meta">
               <div class="project-meta__row">
-                <h6 class="project-meta__title">DURACIÓN</h6>
+                <p class="project-meta__title">DURACIÓN</p>
                 <p class="project-meta__value">12 semanas · 2025</p>
               </div>
 
               <div class="project-meta__row">
-                <h6 class="project-meta__title">PLATAFORMA</h6>
+                <p class="project-meta__title">PLATAFORMA</p>
                 <p class="project-meta__value">iOS · Android</p>
               </div>
 
               <div class="project-meta__row">
-                <h6 class="project-meta__title">ROL</h6>
+                <p class="project-meta__title">ROL</p>
                 <p class="project-meta__value">Lead UX/UI Designer</p>
               </div>
             </div>
@@ -276,12 +287,12 @@
               <div class="hero-compare" id="heroCompare" style="--compare:52%;">
                 <div class="hero-compare__pane hero-compare__pane--before">
                   <figure class="phone before">
-                    <img src="images/sagrada familia/visita_antes.webp" alt="Versión anterior de la app de Sagrada Família">
+                    <img src="images/sagrada familia/visita_antes.webp" alt="Versión anterior de la app de Sagrada Família" width="878" height="1794">
                   </figure>
                 </div>
                 <div class="hero-compare__pane hero-compare__pane--after">
                   <figure class="phone after">
-                    <img src="images/sagrada familia/visita_despues.webp" alt="Nueva versión de la app de Sagrada Família">
+                    <img src="images/sagrada familia/visita_despues.webp" alt="Nueva versión de la app de Sagrada Família" width="878" height="1794">
                     <figcaption class="phone-label after">Después</figcaption>
                   </figure>
                 </div>
@@ -318,9 +329,9 @@
         <div class="problema-lab__content">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">PROBLEMA</h2>
+            <h2 class="type-kicker">PROBLEMA</h2>
           </div>
-          <h3 class="copy-title">La aplicación existente no estaba diseñada para el contexto real de visita</h3>
+          <h3 class="type-heading-lg">La aplicación existente no estaba diseñada para el contexto real de visita</h3>
           <div class="copy-body">
             <p>La aplicación cumplía una función informativa, pero no estaba concebida para acompañar al visitante antes y durante la visita. Reunía contenido útil, aunque respondía más a una lógica de consulta que a un uso real en movilidad.</p>
             <p>El problema no era solo visual, sino estructural: la arquitectura mezclaba planificación y recorrido, dependía de flujos externos en acciones clave y ofrecía una respuesta limitada dentro del contexto físico.</p>
@@ -340,7 +351,7 @@
                   </svg>
                 </div>
               </div>
-              <h5 class="copy-card-title">Arquitectura poco contextual</h5>
+              <h4 class="type-heading-md">Arquitectura poco contextual</h4>
               <p>La estructura no organizaba la experiencia según el momento real del visitante.</p>
               <ul class="copy-list">
                 <li>Planificación y recorrido compartían la misma lógica.</li>
@@ -359,7 +370,7 @@
                   </svg>
                 </div>
               </div>
-              <h5 class="copy-card-title">Experiencia fragmentada</h5>
+              <h4 class="type-heading-md">Experiencia fragmentada</h4>
               <p>Las tareas más importantes no se resolvían de forma continua dentro de la app.</p>
               <ul class="copy-list">
                 <li>La compra de entradas dependía de redirecciones externas.</li>
@@ -378,7 +389,7 @@
                   </svg>
                 </div>
               </div>
-              <h5 class="copy-card-title">Utilidad limitada durante la visita</h5>
+              <h4 class="type-heading-md">Utilidad limitada durante la visita</h4>
               <p>Dentro del recinto, la app tenía valor informativo, pero poca capacidad de acompañamiento real.</p>
               <ul class="copy-list">
                 <li>El mapa y la audioguía no funcionaban como un sistema integrado.</li>
@@ -405,10 +416,10 @@
         <div class="app-original__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">APP ORIGINAL</h2>
+            <h2 class="type-kicker">APP ORIGINAL</h2>
           </div>
 
-          <h3 class="copy-title">La base funcional existía, pero la experiencia aún no estaba conectada</h3>
+          <h3 class="type-heading-lg">La base funcional existía, pero la experiencia aún no estaba conectada</h3>
 
           <div class="copy-body">
             <p>El producto ya incorporaba contenidos y herramientas relevantes para la visita, pero lo hacía desde una construcción más acumulativa que estratégica. La experiencia resolvía necesidades concretas, aunque sin una estructura clara que las conectara entre sí.</p>
@@ -419,19 +430,19 @@
         <div class="app-original__media">
           <div class="app-original__gallery" aria-label="Pantallas originales de la app">
             <figure class="app-original__item reveal-up">
-              <img src="images/sagrada familia/visita_antes.webp" alt="Pantalla original de visita de la app Sagrada Familia" loading="lazy" decoding="async" />
+              <img src="images/sagrada familia/visita_antes.webp" alt="Pantalla original de visita de la app Sagrada Familia" loading="lazy" decoding="async" width="878" height="1794" />
             </figure>
 
             <figure class="app-original__item reveal-up">
-              <img src="images/sagrada familia/entradas_antes.webp" alt="Pantalla original de compra de entradas de la app Sagrada Familia" loading="lazy" decoding="async" />
+              <img src="images/sagrada familia/entradas_antes.webp" alt="Pantalla original de compra de entradas de la app Sagrada Familia" loading="lazy" decoding="async" width="498" height="1017" />
             </figure>
 
             <figure class="app-original__item reveal-up">
-              <img src="images/sagrada familia/mapa_antes.webp" alt="Pantalla original del mapa de la app Sagrada Familia" loading="lazy" decoding="async" />
+              <img src="images/sagrada familia/mapa_antes.webp" alt="Pantalla original del mapa de la app Sagrada Familia" loading="lazy" decoding="async" width="878" height="1794" />
             </figure>
 
             <figure class="app-original__item reveal-up">
-              <img src="images/sagrada familia/audioguia_antes.webp" alt="Pantalla original de la audioguía de la app Sagrada Familia" loading="lazy" decoding="async" />
+              <img src="images/sagrada familia/audioguia_antes.webp" alt="Pantalla original de la audioguía de la app Sagrada Familia" loading="lazy" decoding="async" width="878" height="1794" />
             </figure>
           </div>
         </div>
@@ -448,9 +459,9 @@
         <div class="project-challenge__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">DESAFÍO</h2>
+            <h2 class="type-kicker">DESAFÍO</h2>
           </div>
-          <h3 id="desafio-title" class="copy-title">
+          <h3 id="desafio-title" class="type-heading-lg">
             Redefinir la lógica del producto para convertir contenidos dispersos en una experiencia de visita conectada
           </h3>
           <div class="copy-body project-challenge__copy">
@@ -460,7 +471,36 @@
           </div>
         </div>
 
-        <ul class="project-challenge__goals reveal-up" style="--d: 0.2s" id="challengeGoals"></ul>
+        <ul class="project-challenge__goals reveal-up" style="--d: 0.2s" id="challengeGoals">
+          <li class="project-challenge__goal" data-number="01" style="--d: 0ms">
+            <div>
+              <span class="project-challenge__goal-num">01</span>
+              <h4 class="project-challenge__goal-title">Ordenar la experiencia según el momento de uso</h4>
+            </div>
+            <p class="project-challenge__goal-desc">Separar planificación y visita para que cada bloque de la app respondiera a una necesidad concreta en el momento adecuado.</p>
+          </li>
+          <li class="project-challenge__goal" data-number="02" style="--d: 100ms">
+            <div>
+              <span class="project-challenge__goal-num">02</span>
+              <h4 class="project-challenge__goal-title">Integrar la compra dentro del flujo principal</h4>
+            </div>
+            <p class="project-challenge__goal-desc">Eliminar la salida a web en un punto clave y convertir la compra en una acción continua dentro de la propia experiencia.</p>
+          </li>
+          <li class="project-challenge__goal" data-number="03" style="--d: 200ms">
+            <div>
+              <span class="project-challenge__goal-num">03</span>
+              <h4 class="project-challenge__goal-title">Dar más peso a la utilidad dentro del recinto</h4>
+            </div>
+            <p class="project-challenge__goal-desc">Priorizar accesos, orientación e información práctica para que la app respondiera mejor a lo que el visitante necesita una vez ha llegado.</p>
+          </li>
+          <li class="project-challenge__goal" data-number="04" style="--d: 300ms">
+            <div>
+              <span class="project-challenge__goal-num">04</span>
+              <h4 class="project-challenge__goal-title">Conectar contenido y navegación en una misma lógica</h4>
+            </div>
+            <p class="project-challenge__goal-desc">Hacer que mapa, audioguía y recorrido dejaran de funcionar por separado y pasaran a formar parte de una experiencia más clara y conectada.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -475,9 +515,9 @@
           <div class="project-process__content reveal-up">
             <div class="section-head">
               <span class="dot" aria-hidden="true"></span>
-              <h2 class="section-title">PROCESO</h2>
+              <h2 class="type-kicker">PROCESO</h2>
             </div>
-            <h3 id="proceso-title" class="copy-title">Replantear la lógica del producto</h3>
+            <h3 id="proceso-title" class="type-heading-lg">Replantear la lógica del producto</h3>
             <div class="copy-body">
               <p>El trabajo partió de una revisión de la experiencia existente, analizando cómo se distribuían los contenidos y qué ocurría en momentos clave como la compra, el acceso con entrada o el inicio del recorrido.</p>
               <p>A partir de ahí, el proceso se centró en identificar qué partes del producto no estaban respondiendo con claridad y reorganizar la experiencia para que cada bloque cumpliera una función más precisa dentro del conjunto.</p>
@@ -532,10 +572,10 @@
         <div class="project-result__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">RESULTADO</h2>
+            <h2 class="type-kicker">RESULTADO</h2>
           </div>
 
-          <h3 class="copy-title">Una experiencia más clara, conectada y útil para la visita</h3>
+          <h3 class="type-heading-lg">Una experiencia más clara, conectada y útil para la visita</h3>
 
           <div class="copy-body">
             <p>La nueva propuesta reorganiza la aplicación para responder mejor a los distintos momentos del recorrido, integrando dentro del entorno nativo tareas clave como la compra, el acceso a entradas, la orientación y la consulta de contenidos.</p>
@@ -545,19 +585,19 @@
 
         <div class="project-result__gallery" aria-label="Galería de resultados">
           <figure class="project-result__item reveal-up">
-            <img src="images/sagrada familia/visita_despues.webp" alt="Pantalla final de experiencia de visita reorganizada en la app de la Sagrada Familia" loading="lazy" decoding="async" />
+            <img src="images/sagrada familia/visita_despues.webp" alt="Pantalla final de experiencia de visita reorganizada en la app de la Sagrada Familia" loading="lazy" decoding="async" width="878" height="1794" />
           </figure>
 
           <figure class="project-result__item reveal-up">
-            <img src="images/sagrada familia/entradas_despues.webp" alt="Pantalla final de compra de entradas integrada en la aplicación de la Sagrada Familia" loading="lazy" decoding="async" />
+            <img src="images/sagrada familia/entradas_despues.webp" alt="Pantalla final de compra de entradas integrada en la aplicación de la Sagrada Familia" loading="lazy" decoding="async" width="878" height="1794" />
           </figure>
 
           <figure class="project-result__item reveal-up">
-            <img src="images/sagrada familia/mapa_despues.webp" alt="Pantalla final del mapa interactivo de la aplicación de la Sagrada Familia" loading="lazy" decoding="async" />
+            <img src="images/sagrada familia/mapa_despues.webp" alt="Pantalla final del mapa interactivo de la aplicación de la Sagrada Familia" loading="lazy" decoding="async" width="878" height="1794" />
           </figure>
 
           <figure class="project-result__item reveal-up">
-            <img src="images/sagrada familia/audioguia_despues.webp" alt="Pantalla final de la audioguía reorganizada en la app de la Sagrada Familia" loading="lazy" decoding="async" />
+            <img src="images/sagrada familia/audioguia_despues.webp" alt="Pantalla final de la audioguía reorganizada en la app de la Sagrada Familia" loading="lazy" decoding="async" width="878" height="1794" />
           </figure>
         </div>
       </div>
@@ -573,10 +613,10 @@
         <div class="project-learnings__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">APRENDIZAJES</h2>
+            <h2 class="type-kicker">APRENDIZAJES</h2>
           </div>
 
-          <h3 id="aprendizajes-title" class="copy-title">Cuando el problema es estructural, la solución también debe serlo</h3>
+          <h3 id="aprendizajes-title" class="type-heading-lg">Cuando el problema es estructural, la solución también debe serlo</h3>
 
           <div class="copy-body project-learnings__intro">
             <p>Este proyecto reforzó una idea clave: mejorar una experiencia no siempre consiste en añadir más capas, sino en reorganizar el producto para que cada parte responda con claridad a una necesidad concreta.</p>
@@ -588,11 +628,11 @@
             <div class="project-learnings__top">
               <div class="project-learnings__icon-badge">
                 <svg class="icon" aria-hidden="true">
-                  <use href="#icon-map"></use>
+                  <use href="#icon-compass"></use>
                 </svg>
               </div>
             </div>
-            <h6>El contexto cambia la jerarquía</h6>
+            <h4>El contexto cambia la jerarquía</h4>
             <p class="project-learnings__desc">Diseñar para una visita física obliga a priorizar orientación, accesos e información práctica.</p>
           </blockquote>
 
@@ -600,11 +640,11 @@
             <div class="project-learnings__top">
               <div class="project-learnings__icon-badge">
                 <svg class="icon" aria-hidden="true">
-                  <use href="#icon-stack"></use>
+                  <use href="#icon-sitemap"></use>
                 </svg>
               </div>
             </div>
-            <h6>La arquitectura define la experiencia</h6>
+            <h4>La arquitectura define la experiencia</h4>
             <p class="project-learnings__desc">Cuando la estructura falla, incluso las funcionalidades útiles pierden claridad.</p>
           </blockquote>
 
@@ -612,11 +652,11 @@
             <div class="project-learnings__top">
               <div class="project-learnings__icon-badge">
                 <svg class="icon" aria-hidden="true">
-                  <use href="#icon-external-link"></use>
+                  <use href="#icon-route"></use>
                 </svg>
               </div>
             </div>
-            <h6>La continuidad también se diseña</h6>
+            <h4>La continuidad también se diseña</h4>
             <p class="project-learnings__desc">Integrar tareas clave dentro de la app mejora más que añadir nuevas capas.</p>
           </blockquote>
 
@@ -624,11 +664,11 @@
             <div class="project-learnings__top">
               <div class="project-learnings__icon-badge">
                 <svg class="icon" aria-hidden="true">
-                  <use href="#i-layers"></use>
+                  <use href="#icon-network"></use>
                 </svg>
               </div>
             </div>
-            <h6>Un sistema claro genera más valor</h6>
+            <h4>Un sistema claro genera más valor</h4>
             <p class="project-learnings__desc">Compra, entradas, mapa y contenido funcionan mejor cuando responden a una misma lógica.</p>
           </blockquote>
         </div>
@@ -643,7 +683,7 @@
       <div class="container">
         <div class="section-head project-navigation__head reveal-up">
           <span class="dot" aria-hidden="true"></span>
-          <h2 class="section-title">Otros proyectos</h2>
+          <h2 class="type-kicker">Otros proyectos</h2>
         </div>
         <ul class="project-navigation__grid" aria-label="Lista de proyectos">
           <li class="project-navigation__item reveal-up" style="--d: 0.1s">
@@ -658,8 +698,8 @@
               <div class="portfolio-content">
                 <span class="portfolio-pill">UX/UI</span>
                 <div class="copy-body">
-                  <h3 id="project-nav-christies" class="copy-card-title">Christie's Pulse</h3>
-                  <p class="copy-card-desc">Mejoras de experiencia y navegación para una plataforma de contenido digital.</p>
+                  <h3 id="project-nav-christies" class="type-heading-md">Christie's Pulse</h3>
+                  <p class="type-body">Mejoras de experiencia y navegación para una plataforma de contenido digital.</p>
                 </div>
               </div>
             </a>
@@ -677,8 +717,8 @@
               <div class="portfolio-content">
                 <span class="portfolio-pill">UX/UI</span>
                 <div class="copy-body">
-                  <h3 id="project-nav-isocial" class="copy-card-title">Fundació iSocial</h3>
-                  <p class="copy-card-desc">Estructura de información y flujos para mejorar tareas clave en producto.</p>
+                  <h3 id="project-nav-isocial" class="type-heading-md">Fundació iSocial</h3>
+                  <p class="type-body">Estructura de información y flujos para mejorar tareas clave en producto.</p>
                 </div>
               </div>
             </a>
@@ -696,8 +736,8 @@
               <div class="portfolio-content">
                 <span class="portfolio-pill">Contacto</span>
                 <div class="copy-body">
-                  <h3 id="project-nav-contact" class="copy-card-title">TerraWay</h3>
-                  <p class="copy-card-desc">Si necesitas apoyo en UX y producto digital, podemos hablar de tu proyecto.</p>
+                  <h3 id="project-nav-contact" class="type-heading-md">TerraWay</h3>
+                  <p class="type-body">Si necesitas apoyo en UX y producto digital, podemos hablar de tu proyecto.</p>
                 </div>
               </div>
             </a>
@@ -712,17 +752,17 @@
   <footer class="footer" id="contact">
     <div class="container footer-inner">
       <div class="section-head footer-head">
-        <span class="dot dot--red" aria-hidden="true"></span>
-        <h6 class="section-title footer-title">Contacto</h6>
+        <span class="dot" aria-hidden="true"></span>
+        <p class="type-kicker footer-title">Contacto</p>
       </div>
 
       <h2 class="footer-hero">¿Hablamos?</h2>
-      <p class="copy-intro">
+      <p class="type-body">
         Si estás desarrollando un producto digital y necesitas ayuda con UX o diseño de producto, estaré encantado de conocer tu proyecto.
       </p>
 
       <div class="footer-links">
-        <a href="mailto:toniredondo86@gmail.com" class="button button--footer">
+        <a href="#" class="button button--footer" data-email-user="toniredondo86" data-email-domain="gmail.com">
           Envíame un E-mail
           <svg class="icon" aria-hidden="true">
             <use href="#icon-arrow-up-right"></use>
@@ -746,7 +786,7 @@
 
       <div class="divider"></div>
 
-      <p class="copy-text">© 2026 Toni Redondo. Diseñado y desarrollado por mí.</p>
+      <p class="type-body footer-note">© 2026 Toni Redondo. Diseñado y desarrollado por mí.</p>
     </div>
   </footer>
 

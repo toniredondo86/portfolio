@@ -4,27 +4,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyecto — iSocial</title>
+  <title>iSocial Design System · Toni Redondo, Product Designer</title>
   <meta name="description"
-    content="Caso de estudio iSocial: rediseño UX/UI, accesibilidad y sistema de diseño aplicado a producto digital." />
+    content="Caso de estudio iSocial: creación de un design system para un ecosistema de productos digitales con foco en coherencia, accesibilidad y escalabilidad." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#f4f4f5" />
+  <!-- TODO: reemplazar con URL absoluta cuando haya dominio (ej: https://toniredondo.com/case-isocial.html) -->
   <link rel="canonical" href="/case-isocial.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Proyecto — iSocial" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="iSocial Design System · Toni Redondo" />
   <meta property="og:description"
-    content="Rediseño UX/UI para iSocial con foco en accesibilidad y consistencia de producto." />
+    content="Creación de un design system para NIDUS e iSocialPro, con foco en coherencia, accesibilidad y escalabilidad." />
+  <!-- TODO: reemplazar con URL absoluta cuando haya dominio -->
   <meta property="og:url" content="/case-isocial.html" />
+  <!-- TODO: reemplazar placeholder con imagen real del caso (1200×630px) -->
   <meta property="og:image" content="/images/isocial/placeholder.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Proyecto — iSocial" />
+  <meta name="twitter:title" content="iSocial Design System · Toni Redondo" />
   <meta name="twitter:description"
-    content="Rediseño UX/UI para iSocial con foco en accesibilidad y consistencia de producto." />
+    content="Creación de un design system para NIDUS e iSocialPro, con foco en coherencia, accesibilidad y escalabilidad." />
+  <!-- TODO: reemplazar placeholder con imagen real del caso (1200×630px) -->
   <meta name="twitter:image" content="/images/isocial/placeholder.png" />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" sizes="any" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap" as="style" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&amp;display=swap" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" />
   <link rel="stylesheet" href="./src/styles.css" />
   <script src="./src/script.js" type="module" defer></script>
   <script type="application/ld+json">
@@ -32,14 +42,14 @@
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     "name": "Proyecto Fundació iSocial — Case Study",
-    "description": "Caso de estudio iSocial: rediseño UX/UI, accesibilidad y sistema de diseño aplicado a producto digital.",
+    "description": "Caso de estudio sobre la creación de un design system para un ecosistema de productos digitales sociales.",
     "url": "/case-isocial.html",
     "author": {
       "@type": "Person",
       "name": "Toni Redondo",
       "url": "/index.html"
     },
-    "genre": "UX/UI Design"
+    "genre": "Product Design"
   }
   </script>
 </head>
@@ -59,14 +69,9 @@
         fill="none" />
     </symbol>
 
-    <symbol id="icon-external-link" viewBox="0 0 24 24">
-      <path d="M14 5H19V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        fill="none" />
-      <path d="M10 14L19 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        fill="none" />
-      <path
-        d="M19 14V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H7C6.46957 19 5.96086 18.7893 5.58579 18.4142C5.21071 18.0391 5 17.5304 5 17V7C5 6.46957 5.21071 5.96086 5.58579 5.58579C5.96086 5.21071 6.46957 5 7 5H10"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" fill="none" />
     </symbol>
 
     <symbol id="icon-menu" viewBox="0 0 24 24">
@@ -101,48 +106,16 @@
         d="M8 8H16M8 12H14M18 3C18.7956 3 19.5587 3.31607 20.1213 3.87868C20.6839 4.44129 21 5.20435 21 6V14C21 14.7956 20.6839 15.5587 20.1213 16.1213C19.5587 16.6839 18.7956 17 18 17H13L8 20V17H6C5.20435 17 4.44129 16.6839 3.87868 16.1213C3.31607 15.5587 3 14.7956 3 14V6C3 5.20435 3.31607 4.44129 3.87868 3.87868C4.44129 3.31607 5.20435 3 6 3H18Z"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
     </symbol>
-
-    <symbol id="icon-drag" viewBox="0 0 24 24">
-      <path
-        d="M8.29302 7.29302C8.68354 6.90249 9.31655 6.90249 9.70708 7.29302C10.0975 7.68355 10.0976 8.31659 9.70708 8.70708L6.41411 12L9.70708 15.293C10.0975 15.6835 10.0976 16.3166 9.70708 16.7071C9.31659 17.0976 8.68355 17.0975 8.29302 16.7071L4.29302 12.7071C3.90249 12.3166 3.90249 11.6835 4.29302 11.293L8.29302 7.29302ZM14.293 7.29302C14.6835 6.90249 15.3166 6.90249 15.7071 7.29302L19.7071 11.293L19.7754 11.3692C20.0957 11.762 20.0732 12.341 19.7071 12.7071L15.7071 16.7071C15.3166 17.0976 14.6835 17.0975 14.293 16.7071C13.9025 16.3166 13.9025 15.6835 14.293 15.293L17.586 12L14.293 8.70708C13.9025 8.31655 13.9025 7.68354 14.293 7.29302Z"
-        fill="currentColor" />
-    </symbol>
-
-    <symbol id="icon-stack" viewBox="0 0 24 24">
-      <path d="M12 4L4 8L12 12L20 8L12 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round" fill="none" />
-      <path d="M4 12L12 16L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round" fill="none" />
-      <path d="M4 16L12 20L20 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round" fill="none" />
-    </symbol>
-
-    <symbol id="icon-map" viewBox="0 0 24 24">
-      <path d="M9 4L15 6L21 4V19L15 21L9 19L3 21V6L9 4Z" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" fill="none" />
-      <path d="M9 4V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        fill="none" />
-      <path d="M15 6V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        fill="none" />
-    </symbol>
-
-    <symbol id="i-layers" viewBox="0 0 24 24">
-      <path d="M12 3L3 8L12 13L21 8L12 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-      <path d="M3 12L12 17L21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-      <path d="M3 16L12 21L21 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-    </symbol>
   </svg>
 
-  <!-- Overlay -->
   <div class="nav-overlay" id="navOverlay" aria-hidden="true" hidden></div>
 
-  <!-- NAVBAR -->
   <header class="navbar" id="siteNav">
     <div class="container">
       <div class="navbar-inner">
 
         <a href="index.html#top" class="logo" aria-label="Home">
-          <img src="logo_redondo.svg" alt="Logo Toni Redondo" class="navbar-logo" />
+          <img src="logo_redondo.svg" alt="Logo Toni Redondo" class="navbar-logo" width="120" height="32" />
         </a>
 
         <nav class="nav-desktop" aria-label="Primary">
@@ -225,50 +198,42 @@
         <div class="project-hero__grid">
           <div class="project-hero__content">
             <div class="project-app-logo">
-              <img src="images/isocial/logo_isocial.svg" alt="Logo iSocial" />
+              <img src="images/isocial/logo_isocial.webp" alt="Logo iSocial" width="480" height="480" style="background: #89266c" />
             </div>
 
             <h1 class="project-title">Fundació iSocial</h1>
 
             <div class="project-tags" aria-label="Tags del proyecto">
-              <span class="tag">DISEÑO UX/UI</span>
-              <span class="tag">2024</span>
-              <span class="tag">FIGMA</span>
+              <span class="tag">DESIGN SYSTEM</span>
+              <span class="tag">ESCALABILIDAD</span>
+              <span class="tag">ACCESIBILIDAD</span>
             </div>
 
-            <p class="project-lead">
-              Dos apps para un mismo ecosistema. Dos perfiles que no podrían ser más distintos.
-            </p>
-            <p class="copy-intro">
-              NIDUS es la app para personas en situación de exclusión social: un espacio seguro donde guardar documentos críticos, comunicarse con profesionales y acceder a recursos de apoyo.
-              <br><br>
-              iSocialPro es la herramienta para los trabajadores sociales: una plataforma para gestionar usuarios, documentación y comunicación de forma eficiente y centralizada.
-              <br><br>
-              Dos productos con necesidades opuestas. Un mismo sistema construido desde cero.
-            </p>
+            <p class="project-lead">Dos apps para un mismo ecosistema. Dos perfiles que no podrían ser más distintos.</p>
+
+            <div class="copy-body">
+              <p>iSocial reúne dos productos con necesidades opuestas: Nidus, una app orientada a personas en situación de exclusión social, e iSocialPro, una plataforma para trabajadores sociales centrada en la gestión de casos, documentación y comunicación.</p>
+              <p>El desafío no estaba en diseñarlos como si fueran uno solo, sino en construir un sistema capaz de conectar ambos sin borrar las diferencias que cada contexto exigía.</p>
+            </div>
 
             <div class="project-meta">
               <div class="project-meta__row">
-                <h6 class="project-meta__title">DURACIÓN</h6>
-                <p class="project-meta__value">6 meses · 2024</p>
+                <p class="project-meta__title">DURACIÓN</p>
+                <p class="project-meta__value">6 meses · 2023</p>
               </div>
-
               <div class="project-meta__row">
-                <h6 class="project-meta__title">PLATAFORMA</h6>
-                <p class="project-meta__value">iOS · Android · Figma</p>
+                <p class="project-meta__title">ALCANCE</p>
+                <p class="project-meta__value">Nidus e iSocialPro</p>
               </div>
-
               <div class="project-meta__row">
-                <h6 class="project-meta__title">ROL</h6>
+                <p class="project-meta__title">ROL</p>
                 <p class="project-meta__value">Lead Product Designer</p>
               </div>
             </div>
           </div>
 
           <div class="project-hero__media" aria-label="Imagen del proyecto">
-            <div class="phones">
-              <img src="images/isocial/placeholder.png" alt="Pantalla del proyecto iSocial" fetchpriority="high" decoding="async" />
-            </div>
+            <img src="images/isocial/placeholder.png" alt="Sistema de diseño del ecosistema iSocial" fetchpriority="high" decoding="async" width="361" height="320" />
           </div>
         </div>
       </div>
@@ -277,21 +242,85 @@
     <div class="container">
       <div class="divider"></div>
     </div>
+
 
     <!-- PUNTO DE PARTIDA -->
     <section class="section project-challenge" id="punto-de-partida" aria-label="Punto de partida">
       <div class="container">
+
         <div class="project-challenge__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">PUNTO DE PARTIDA</h2>
+            <h2 class="type-kicker">PUNTO DE PARTIDA</h2>
           </div>
-          <h3 class="copy-title">Sin sistema, sin guías, desde cero</h3>
+          <h3 class="type-heading-lg">La identidad existía. El sistema de diseño, no</h3>
           <div class="copy-body project-challenge__copy">
-            <p>La Fundació iSocial necesitaba dos productos digitales simultáneos: una app para personas en situación de exclusión social y una herramienta para los profesionales que las acompañan. El encargo llegó sin sistema de diseño, sin componentes definidos y sin ninguna base visual sobre la que construir.</p>
-            <p>Todo lo que ves aquí se diseñó desde cero.</p>
+            <p>El proyecto partía de referencias visuales ya definidas en ambos productos. iSocial contaba con una web corporativa consolidada y NIDUS tenía un branding inicial propio, pero en ninguno de los dos casos existía una estructura de diseño preparada para producto digital. El trabajo consistió en transformar esas bases visuales en un sistema coherente y escalable para dos productos con necesidades muy distintas.</p>
           </div>
         </div>
+
+        <div class="brand-audit reveal-up" style="--d: 0.15s">
+
+          <!-- NIDUS -->
+          <div class="brand-audit__col">
+            <div class="brand-audit__header">
+              <img class="brand-audit__app-icon" src="images/isocial/logo_nidus.webp" alt="Icono app NIDUS" loading="lazy" decoding="async" width="240" height="240" style="background: rgb(51,51,51)" />
+              <div class="brand-audit__name-group">
+                <h4 class="brand-audit__product-name">Nidus</h4>
+                <h6 class="brand-audit__subtitle">Usuarios finales</h6>
+              </div>
+            </div>
+
+            <p class="brand-audit__desc type-caption">Una app para personas en situación de exclusión social. Un lugar donde guardar documentos importantes, compartirlos con los profesionales que les acompañan y mantener el contacto con los servicios de apoyo. Diseñarla bien significaba que cualquier persona pudiera usarla, independientemente de su experiencia con la tecnología.</p>
+
+            <div class="brand-audit__block">
+              <h6 class="brand-audit__label">Paleta de colores</h6>
+              <div class="brand-audit__swatches" aria-label="Paleta de colores NIDUS">
+                
+                <span class="brand-audit__swatch" style="background: #EB7828" aria-label="Naranja"></span>
+                <span class="brand-audit__swatch" style="background: #AFB17F" aria-label="Verde oliva"></span>
+                <span class="brand-audit__swatch" style="background: #B4B4B4" aria-label="Gris claro"></span>
+                <span class="brand-audit__swatch" style="background: #333333" aria-label="Gris oscuro"></span>
+              </div>
+            </div>
+
+            <div class="brand-audit__block">
+              <h6 class="brand-audit__label">Tipografía</h6>
+              <h5 class="brand-audit__font-name">Work Sans</h5>
+              <p class="brand-audit__alphabet" aria-label="Muestra tipográfica Work Sans">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 0 1 2 3 4 5 6 7 8 9</p>
+            </div>
+          </div>
+
+          <!-- iSocialPro -->
+          <div class="brand-audit__col">
+            <div class="brand-audit__header">
+              <img class="brand-audit__app-icon" src="images/isocial/logo_isocial_pro.webp" alt="Icono app iSocialPro" loading="lazy" decoding="async" width="480" height="480" style="background: #89266c" />
+              <div class="brand-audit__name-group">
+                <h4 class="brand-audit__product-name">iSocialPro</h4>
+                <h6 class="brand-audit__subtitle">Profesionales</h6>
+              </div>
+            </div>
+
+            <p class="brand-audit__desc type-caption">Herramienta dirigida a profesionales del ámbito social. Permite dar de alta usuarios, vincularlos a su red profesional, conversar por chat y compartir documentación desde una única plataforma. Aquí la prioridad no era simplificar al máximo, sino facilitar rapidez, control y operatividad en tareas de seguimiento continuado.</p>
+
+            <div class="brand-audit__block">
+              <h6 class="brand-audit__label">Paleta de colores</h6>
+              <div class="brand-audit__swatches" aria-label="Paleta de colores iSocialPro">
+                <span class="brand-audit__swatch" style="background: #89266c" aria-label="Púrpura"></span>
+                <span class="brand-audit__swatch" style="background: #F9B600" aria-label="Amarillo"></span>
+                <span class="brand-audit__swatch" style="background: #B4B4B4" aria-label="Gris claro"></span>
+                <span class="brand-audit__swatch" style="background: #333333" aria-label="Gris oscuro"></span>
+              </div>
+            </div>
+
+            <div class="brand-audit__block">
+              <h6 class="brand-audit__label">Tipografía</h6>
+              <h5 class="brand-audit__font-name">Work Sans</h5>
+              <p class="brand-audit__alphabet" aria-label="Muestra tipográfica Work Sans">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz 0 1 2 3 4 5 6 7 8 9</p>
+            </div>
+          </div>
+
+        </div><!-- /brand-audit -->
       </div>
     </section>
 
@@ -299,48 +328,702 @@
       <div class="divider"></div>
     </div>
 
-    <!-- DOS MUNDOS -->
-    <section class="section" id="dos-mundos" aria-labelledby="dos-mundos-title">
+    <!-- PRINCIPIOS DEL SISTEMA -->
+    <section class="section project-principles" id="principios" aria-labelledby="principios-title">
       <div class="container">
-        <div class="project-challenge__content reveal-up">
+        <div class="project-principles__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">DOS MUNDOS</h2>
+            <h2 class="type-kicker">PRINCIPIOS DEL SISTEMA</h2>
           </div>
-          <h3 id="dos-mundos-title" class="copy-title">El mismo ecosistema, dos realidades opuestas</h3>
-          <div class="copy-body project-challenge__copy">
-            <p>NIDUS y iSocialPro comparten arquitectura e información, pero hablan a personas completamente distintas.</p>
+          <h3 id="principios-title" class="type-heading-lg">Los criterios que guiaron cada decisión</h3>
+          <div class="copy-body">
+            <p>Diseñar para dos productos a la vez obliga a tomar partido desde el principio. Estos principios no surgieron de un ejercicio teórico, sino de las restricciones reales del proyecto.</p>
           </div>
         </div>
 
-        <div class="project-learnings__list reveal-up" style="--d: 0.1s">
-          <blockquote class="project-learnings__quote">
-            <div class="project-learnings__top">
-              <div class="project-learnings__icon-badge">
-                <svg class="icon" aria-hidden="true">
-                  <use href="#icon-profile"></use>
-                </svg>
-              </div>
+        <ul class="project-principles__list reveal-up" style="--d: 0.2s" id="principlesGoals">
+          <li class="project-principles__item" data-number="01" style="--d: 0ms">
+            <div>
+              <span class="project-principles__item-num">01</span>
+              <h4 class="project-principles__item-title">Accesibilidad como punto de partida</h4>
             </div>
-            <h6>NIDUS</h6>
-            <p class="project-learnings__desc">Usuario en situación de exclusión social. Puede tener poca experiencia con la tecnología. Cada paso de más es una barrera real.</p>
-          </blockquote>
+            <p class="project-principles__item-desc">La accesibilidad no se trató como una capa posterior. Contraste, jerarquía, tamaño de texto y estados visibles se definieron desde el inicio para garantizar una experiencia clara y usable para cualquier perfil de usuario.</p>
+          </li>
+          <li class="project-principles__item" data-number="02" style="--d: 100ms">
+            <div>
+              <span class="project-principles__item-num">02</span>
+              <h4 class="project-principles__item-title">Coherencia sin hacer todo igual</h4>
+            </div>
+            <p class="project-principles__item-desc">Ambos productos debían compartir una misma lógica de interacción, pero sin imponer la misma expresión visual ni el mismo nivel de complejidad. El sistema tenía que resultar reconocible en ambos contextos sin volverse idéntico.</p>
+          </li>
+          <li class="project-principles__item" data-number="03" style="--d: 200ms">
+            <div>
+              <span class="project-principles__item-num">03</span>
+              <h4 class="project-principles__item-title">Claridad por encima de expresión</h4>
+            </div>
+            <p class="project-principles__item-desc">Las acciones más importantes debían reconocerse de un vistazo. En este contexto, el sistema priorizó comprensión inmediata, jerarquía clara y lectura rápida por encima de cualquier gesto visual innecesario.</p>
+          </li>
+          <li class="project-principles__item" data-number="04" style="--d: 300ms">
+            <div>
+              <span class="project-principles__item-num">04</span>
+              <h4 class="project-principles__item-title">Eficiencia donde la gestión lo exige</h4>
+            </div>
+            <p class="project-principles__item-desc">El sistema debía adaptarse a distintos niveles de densidad de información según el contexto de uso, permitiendo recorridos más directos y eficientes sin perder orden ni legibilidad.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-          <blockquote class="project-learnings__quote">
-            <div class="project-learnings__top">
-              <div class="project-learnings__icon-badge">
-                <svg class="icon" aria-hidden="true">
-                  <use href="#icon-stack"></use>
-                </svg>
-              </div>
-            </div>
-            <h6>iSocialPro</h6>
-            <p class="project-learnings__desc">Trabajador social. Gestiona múltiples casos a la vez. Necesita velocidad, densidad de información y control.</p>
-          </blockquote>
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- FOUNDATIONS -->
+    <section class="section project-result" id="foundations" aria-labelledby="foundations-title">
+      <div class="container">
+        <div class="project-result__content reveal-up">
+          <div class="section-head">
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="type-kicker">FOUNDATIONS</h2>
+          </div>
+          <h3 id="foundations-title" class="type-heading-lg">Una estructura compartida para dos productos</h3>
+          <div class="copy-body">
+            <p>Reglas, criterios y decisiones daban coherencia al sistema y permitían adaptarlo a ambos productos. Más que una colección de estilos, era una lógica compartida preparada para sostener necesidades de uso distintas.</p>
+          </div>
         </div>
 
-        <div class="copy-body reveal-up" style="--d: 0.2s; margin-top: var(--s40)">
-          <p>Diseñar los dos productos en paralelo significaba tomar cada decisión dos veces: una por cada mundo.</p>
+        <div class="foundations-editorial reveal-up" style="--d: 0.1s" aria-label="Resumen editorial de foundations">
+
+          <!-- COLOR — columna izquierda -->
+          <article class="foundation-panel foundation-panel--color">
+            <div class="foundation-panel__head">
+              <h4 class="foundation-panel__title">Sistema de color</h4>
+            </div>
+            <div class="foundation-color-brand">
+              <h5 class="foundation-color-brand__name">Nidus</h5>
+              <div class="foundation-color-brand__palettes">
+                <div class="foundation-color-palette">
+                  <span class="foundation-color-palette__label">Primary</span>
+                  <div class="foundation-color__bars" aria-label="NIDUS Primary">
+                    <div class="foundation-color__bar" style="background:#FDE8D7; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">100</span>
+                      <span class="foundation-color__bar-hex">#FDE8D7</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#F6AB7B; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">300</span>
+                      <span class="foundation-color__bar-hex">#F6AB7B</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#ED5D22; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">500</span>
+                      <span class="foundation-color__bar-hex">#ED5D22</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#932919; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">800</span>
+                      <span class="foundation-color__bar-hex">#DE4518</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="foundation-color-palette">
+                  <span class="foundation-color-palette__label">Secondary</span>
+                  <div class="foundation-color__bars" aria-label="NIDUS Secondary">
+                    <div class="foundation-color__bar" style="background:#E9EADA; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">100</span>
+                      <span class="foundation-color__bar-hex">#E9EADA</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#BEBF8E; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">300</span>
+                      <span class="foundation-color__bar-hex">#BEBF8E</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#949356; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">500</span>
+                      <span class="foundation-color__bar-hex">#949356</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#514E32; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">800</span>
+                      <span class="foundation-color__bar-hex">#514E32</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- iSocialPro -->
+            <div class="foundation-color-brand">
+              <h5 class="foundation-color-brand__name">iSocialPro</h5>
+              <div class="foundation-color-brand__palettes">
+                <div class="foundation-color-palette">
+                  <span class="foundation-color-palette__label">Primary</span>
+                  <div class="foundation-color__bars" aria-label="iSocialPro Primary">
+                    <div class="foundation-color__bar" style="background:#FDEAFA; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">100</span>
+                      <span class="foundation-color__bar-hex">#FDEAFA</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#F4B3E6; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">300</span>
+                      <span class="foundation-color__bar-hex">#F4B3E6</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#89266C; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">800</span>
+                      <span class="foundation-color__bar-hex">#89266C</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#6C2355; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">900</span>
+                      <span class="foundation-color__bar-hex">#6C2355</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="foundation-color-palette">
+                  <span class="foundation-color-palette__label">Secondary</span>
+                  <div class="foundation-color__bars" aria-label="iSocialPro Secondary">
+                    <div class="foundation-color__bar" style="background:#fff9c5; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">100</span>
+                      <span class="foundation-color__bar-hex">#FFF9C5</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#ffe746; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">300</span>
+                      <span class="foundation-color__bar-hex">#FFE746</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#F9B600; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">500</span>
+                      <span class="foundation-color__bar-hex">#F9B600</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#984d08; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">800</span>
+                      <span class="foundation-color__bar-hex">#984d08</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Compartidos -->
+            <div class="foundation-color-brand">
+              <h5 class="foundation-color-brand__name">Compartidos</h5>
+              <div class="foundation-color-brand__palettes">
+                <div class="foundation-color-palette">
+                  <span class="foundation-color-palette__label">Neutros</span>
+                  <div class="foundation-color__bars" aria-label="Neutros compartidos">
+                    <div class="foundation-color__bar" style="background:#F5F5F5; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">100</span>
+                      <span class="foundation-color__bar-hex">#F5F5F5</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#D3D3D3; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">300</span>
+                      <span class="foundation-color__bar-hex">#D3D3D3</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#727272; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">500</span>
+                      <span class="foundation-color__bar-hex">#727272</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#272727; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">800</span>
+                      <span class="foundation-color__bar-hex">#272727</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="foundation-color-palette">
+                  <span class="foundation-color-palette__label">Estados</span>
+                  <div class="foundation-color__bars" aria-label="Estados compartidos">
+                    <div class="foundation-color__bar" style="background:#36B37E; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">Success</span>
+                      <span class="foundation-color__bar-hex">#36B37E</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#FFAB00; --swatch-text: var(--neutral-900)">
+                      <span class="foundation-color__bar-step">Warning</span>
+                      <span class="foundation-color__bar-hex">#FFAB00</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#D82C0D; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">Danger</span>
+                      <span class="foundation-color__bar-hex">#D82C0D</span>
+                    </div>
+                    <div class="foundation-color__bar" style="background:#2E72D2; --swatch-text: var(--neutral-00)">
+                      <span class="foundation-color__bar-step">Info</span>
+                      <span class="foundation-color__bar-hex">#2E72D2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- TIPOGRAFÍA + ESPACIADO — columna derecha -->
+          <div class="foundations-right-col">
+
+            <!-- TIPOGRAFÍA -->
+            <article class="foundation-panel foundation-panel--type">
+              <div class="foundation-panel__head">
+                <h4 class="foundation-panel__title">Tipografía · Work Sans</h4>
+              </div>
+              <div class="foundation-type">
+                <div class="foundation-type__scale">
+                  <div class="foundation-type__row">
+                    <div class="foundation-type__meta">
+                      <span class="foundation-type__role">H1</span>
+                      <span class="foundation-type__specs">32px · Semibold</span>
+                    </div>
+                    <span class="foundation-type__sample foundation-type__sample--heading">The quick brown fox jumps over the lazy dog.</span>
+                  </div>
+                  <div class="foundation-type__row">
+                    <div class="foundation-type__meta">
+                      <span class="foundation-type__role">Body</span>
+                      <span class="foundation-type__specs">16px · Regular</span>
+                    </div>
+                    <span class="foundation-type__sample foundation-type__sample--body">The quick brown fox jumps over the lazy dog.</span>
+                  </div>
+                  <div class="foundation-type__row">
+                    <div class="foundation-type__meta">
+                      <span class="foundation-type__role">Caption</span>
+                      <span class="foundation-type__specs">14px · Regular</span>
+                    </div>
+                    <span class="foundation-type__sample foundation-type__sample--caption">The quick brown fox jumps over the lazy dog.</span>
+                  </div>
+                  <div class="foundation-type__row">
+                    <div class="foundation-type__meta">
+                      <span class="foundation-type__role">Footnote</span>
+                      <span class="foundation-type__specs">12px · Regular</span>
+                    </div>
+                    <span class="foundation-type__sample foundation-type__sample--footnote">The quick brown fox jumps over the lazy dog.</span>
+                  </div>
+                  <div class="foundation-type__row">
+                    <div class="foundation-type__meta">
+                      <span class="foundation-type__role">Button</span>
+                      <span class="foundation-type__specs">14px · Medium</span>
+                    </div>
+                    <span class="foundation-type__sample foundation-type__sample--button">The quick brown fox jumps over the lazy dog.</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ESPACIADO -->
+            <article class="foundation-panel foundation-panel--spacing">
+              <div class="foundation-panel__head">
+                <h4 class="foundation-panel__title">Espaciado · Base 4</h4>
+              </div>
+              <div class="foundation-spacing" aria-label="Escala base 4">
+                <div class="foundation-spacing__item">
+                  <span class="foundation-spacing__label">space-4</span>
+                  <span class="foundation-spacing__bar foundation-spacing__bar--s4"></span>
+                  <span class="foundation-spacing__value">4px</span>
+                </div>
+                <div class="foundation-spacing__item">
+                  <span class="foundation-spacing__label">space-8</span>
+                  <span class="foundation-spacing__bar foundation-spacing__bar--s8"></span>
+                  <span class="foundation-spacing__value">8px</span>
+                </div>
+                <div class="foundation-spacing__item">
+                  <span class="foundation-spacing__label">space-12</span>
+                  <span class="foundation-spacing__bar foundation-spacing__bar--s12"></span>
+                  <span class="foundation-spacing__value">12px</span>
+                </div>
+                <div class="foundation-spacing__item">
+                  <span class="foundation-spacing__label">space-16</span>
+                  <span class="foundation-spacing__bar foundation-spacing__bar--s16"></span>
+                  <span class="foundation-spacing__value">16px</span>
+                </div>
+                <div class="foundation-spacing__item">
+                  <span class="foundation-spacing__label">space-20</span>
+                  <span class="foundation-spacing__bar foundation-spacing__bar--s20"></span>
+                  <span class="foundation-spacing__value">20px</span>
+                </div>
+                <div class="foundation-spacing__item">
+                  <span class="foundation-spacing__label">space-24</span>
+                  <span class="foundation-spacing__bar foundation-spacing__bar--s24"></span>
+                  <span class="foundation-spacing__value">24px</span>
+                </div>
+                <div class="foundation-spacing__item">
+                  <span class="foundation-spacing__label">space-32</span>
+                  <span class="foundation-spacing__bar foundation-spacing__bar--s32"></span>
+                  <span class="foundation-spacing__value">32px</span>
+                </div>
+                <div class="foundation-spacing__item">
+                  <span class="foundation-spacing__label">space-40</span>
+                  <span class="foundation-spacing__bar foundation-spacing__bar--s40"></span>
+                  <span class="foundation-spacing__value">40px</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- ARQUITECTURA DE TOKENS -->
+          <article class="foundation-panel foundation-panel--tokens foundation-panel--full token-arch token-arch--flat">
+            <div class="foundation-panel__head">
+              <h4 class="foundation-panel__title">Arquitectura de tokens</h4>
+            </div>
+
+            <div class="token-arch__layers">
+              <article class="token-arch__card">
+                <div class="token-arch__card-head">
+                  <h6 class="token-arch__card-label">Primitivo</h6>
+                  <p class="token-arch__card-sublabel type-caption">Valores base sin semántica</p>
+                </div>
+
+                <div class="token-arch__stack">
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">orange-400</code>
+                    <code class="token-arch__pill-value">#F0783C</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">green-400</code>
+                    <code class="token-arch__pill-value">#B4B47D</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">purple-500</code>
+                    <code class="token-arch__pill-value">#89266C</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">yellow-500</code>
+                    <code class="token-arch__pill-value">#F9B600</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">neutral-800</code>
+                    <code class="token-arch__pill-value">#272727</code>
+                  </div>
+                </div>
+              </article>
+
+              <article class="token-arch__card">
+                <div class="token-arch__card-head">
+                  <h6 class="token-arch__card-label">Semántico</h6>
+                  <p class="token-arch__card-sublabel type-caption">Significado de uso</p>
+                </div>
+
+                <div class="token-arch__stack">
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">nidus.brand-primary</code>
+                    <code class="token-arch__pill-value">orange-400</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">nidus.brand-secondary</code>
+                    <code class="token-arch__pill-value">green-400</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">isocialpro.brand-primary</code>
+                    <code class="token-arch__pill-value">purple-500</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">isocialpro.brand-secondary</code>
+                    <code class="token-arch__pill-value">yellow-500</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">shared.neutral-default</code>
+                    <code class="token-arch__pill-value">neutral-800</code>
+                  </div>
+                </div>
+              </article>
+
+              <article class="token-arch__card">
+                <div class="token-arch__card-head">
+                  <h6 class="token-arch__card-label">Componente</h6>
+                  <p class="token-arch__card-sublabel type-caption">Aplicación en interfaz</p>
+                </div>
+
+                <div class="token-arch__stack">
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">btn-primary-bg</code>
+                    <code class="token-arch__pill-value">nidus.brand-primary</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">btn-secondary-bg</code>
+                    <code class="token-arch__pill-value">nidus.brand-secondary</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">btn-primary-text</code>
+                    <code class="token-arch__pill-value">shared.text-inverse</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">input-text</code>
+                    <code class="token-arch__pill-value">shared.text-default</code>
+                  </div>
+                  <div class="token-arch__pill-row">
+                    <code class="token-arch__pill-name">input-border</code>
+                    <code class="token-arch__pill-value">shared.border-subtle</code>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <p class="token-arch__footer">
+              <span>Primitivo</span>
+              <svg class="token-arch__footer-icon" aria-hidden="true">
+                <use href="#icon-arrow-right"></use>
+              </svg>
+              <span>Semántico</span>
+              <svg class="token-arch__footer-icon" aria-hidden="true">
+                <use href="#icon-arrow-right"></use>
+              </svg>
+              <span>Componente</span>
+              <span>· una misma base, dos identidades de producto</span>
+            </p>
+          </article>
+
+        </div>
+
+      </div><!-- /container -->
+    </section><!-- /#foundations -->
+
+    <div class="container">
+      <div class="divider"></div>
+    </div>
+
+    <!-- COMPONENTES -->
+    <section class="section case-components" id="componentes" aria-labelledby="componentes-title">
+      <div class="container">
+        <div class="case-components__inner">
+          <header class="case-components__header reveal-up">
+            <div class="section-head">
+              <span class="dot" aria-hidden="true"></span>
+              <h2 class="type-kicker">COMPONENTES</h2>
+            </div>
+            <h3 id="componentes-title" class="type-heading-lg">Una biblioteca compartida que cambia de identidad según el producto</h3>
+            <div class="copy-body case-components__intro">
+              <p>Los componentes mantienen una misma lógica de construcción, estados y comportamiento. Lo que cambia entre NIDUS e iSocialPro no es el sistema base, sino su expresión visual, su densidad y el modo en que prioriza la información.</p>
+            </div>
+          </header>
+
+          <div class="case-components__switcher reveal-up" style="--d: 0.1s">
+            <div class="component-tabs" role="tablist" aria-label="Seleccionar producto">
+              <button class="component-tabs__tab is-active" type="button" role="tab" id="tab-nidus" aria-selected="true" aria-controls="panel-nidus" data-product-tab="nidus">
+                Nidus
+              </button>
+              <button class="component-tabs__tab" type="button" role="tab" id="tab-isocialpro" aria-selected="false" aria-controls="panel-isocialpro" data-product-tab="isocialpro" tabindex="-1">
+                iSocialPro
+              </button>
+            </div>
+          </div>
+
+          <div class="case-components__panels">
+            <div class="component-panel is-active" id="panel-nidus" role="tabpanel" aria-labelledby="tab-nidus" data-product-panel="nidus">
+              <div class="component-stack">
+                <article class="component-card component-card--hero reveal-up" style="--d: 0.15s">
+                  <div class="component-card__head">
+                    <div class="component-card__head-main">
+                      <h4 class="component-card__title">Botones</h4>
+                    </div>
+                    <ul class="component-card__meta" aria-label="Especificaciones del componente">
+                      <li>5 variantes</li>
+                      <li>3 tamaños</li>
+                      <li>hover, focus-visible, disabled</li>
+                    </ul>
+                  </div>
+                  <div class="component-card__preview component-card__preview--cards">
+                    <div class="component-preview component-preview--buttons">
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Primary</p>
+                        <button class="component-demo__button component-demo__button--primary" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--primary is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--primary" type="button" disabled>Disabled</button>
+                      </div>
+
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Secondary</p>
+                        <button class="component-demo__button component-demo__button--secondary" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--secondary is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--secondary" type="button" disabled>Disabled</button>
+                      </div>
+
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Ghost</p>
+                        <button class="component-demo__button component-demo__button--ghost" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--ghost is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--ghost" type="button" disabled>Disabled</button>
+                      </div>
+
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Success</p>
+                        <button class="component-demo__button component-demo__button--success" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--success is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--success" type="button" disabled>Disabled</button>
+                      </div>
+
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Critical</p>
+                        <button class="component-demo__button component-demo__button--critical" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--critical is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--critical" type="button" disabled>Disabled</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="component-card reveal-up" style="--d: 0.2s">
+                  <div class="component-card__head">
+                    <div class="component-card__head-main">
+                      <h4 class="component-card__title">Inputs</h4>
+                    </div>
+                    <ul class="component-card__meta" aria-label="Especificaciones del componente">
+                      <li>4 variantes</li>
+                      <li>3 tamaños</li>
+                      <li>focus, error, disabled</li>
+                    </ul>
+                  </div>
+                  <div class="component-card__preview component-card__preview--cards">
+                    <div class="component-preview component-preview--input">
+                      <label class="component-demo__field component-demo__field--input-state">
+                        <span class="component-demo__label component-demo__label--default">Email <span class="component-demo__label-info component-demo__label-info--default">(Info)</span></span>
+                        <span class="component-demo__input component-demo__input--default">nombre@ejemplo.com</span>
+                        <span class="component-demo__supporting component-demo__supporting--default">Te escribiremos aquí</span>
+                      </label>
+                      <label class="component-demo__field component-demo__field--input-state">
+                        <span class="component-demo__label component-demo__label--focus">Email <span class="component-demo__label-info component-demo__label-info--focus">(Info)</span></span>
+                        <span class="component-demo__input component-demo__input--focus">nombre@ejemplo.com</span>
+                        <span class="component-demo__supporting component-demo__supporting--focus">Te escribiremos aquí</span>
+                      </label>
+                      <label class="component-demo__field component-demo__field--input-state">
+                        <span class="component-demo__label component-demo__label--error">Email <span class="component-demo__label-info component-demo__label-info--error">(Info)</span></span>
+                        <span class="component-demo__input component-demo__input--error">nombre@ejemplo.com</span>
+                        <span class="component-demo__supporting component-demo__supporting--error">Introduce un correo válido</span>
+                      </label>
+                      <label class="component-demo__field component-demo__field--input-state">
+                        <span class="component-demo__label component-demo__label--disabled">Email <span class="component-demo__label-info component-demo__label-info--disabled">(Info)</span></span>
+                        <span class="component-demo__input component-demo__input--disabled">nombre@ejemplo.com</span>
+                        <span class="component-demo__supporting component-demo__supporting--disabled">Te escribiremos aquí</span>
+                      </label>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="component-card reveal-up" style="--d: 0.25s">
+                  <div class="component-card__head">
+                    <div class="component-card__head-main">
+                      <h4 class="component-card__title">Cards</h4>
+                    </div>
+                    <ul class="component-card__meta" aria-label="Especificaciones del componente">
+                      <li>4 variantes</li>
+                      <li>2 tamaños</li>
+                      <li>default, hover, selected</li>
+                    </ul>
+                  </div>
+                  <div class="component-card__preview">
+                    <div class="component-preview component-preview--cards">
+                      <article class="component-demo__card">
+                        <span class="component-demo__badge">Activo</span>
+                        <h5 class="component-demo__card-title">Mis documentos</h5>
+                        <p class="component-demo__card-copy">Acceso rápido a la información importante.</p>
+                      </article>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="component-panel" id="panel-isocialpro" role="tabpanel" aria-labelledby="tab-isocialpro" data-product-panel="isocialpro" hidden>
+              <div class="component-stack">
+                <article class="component-card component-card--hero" data-product-panel-card="isocialpro">
+                  <div class="component-card__head">
+                    <div class="component-card__head-main">
+                      <h4 class="component-card__title">Botones</h4>
+                    </div>
+                    <ul class="component-card__meta" aria-label="Especificaciones del componente">
+                      <li>5 variantes</li>
+                      <li>3 tamaños</li>
+                      <li>hover, focus-visible, disabled</li>
+                    </ul>
+                  </div>
+                  <div class="component-card__preview">
+                    <div class="component-preview component-preview--buttons">
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Primary</p>
+                        <button class="component-demo__button component-demo__button--primary" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--primary is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--primary" type="button" disabled>Disabled</button>
+                      </div>
+
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Secondary</p>
+                        <button class="component-demo__button component-demo__button--secondary" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--secondary is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--secondary" type="button" disabled>Disabled</button>
+                      </div>
+
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Ghost</p>
+                        <button class="component-demo__button component-demo__button--ghost" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--ghost is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--ghost" type="button" disabled>Disabled</button>
+                      </div>
+
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Success</p>
+                        <button class="component-demo__button component-demo__button--success" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--success is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--success" type="button" disabled>Disabled</button>
+                      </div>
+
+                      <div class="component-demo__button-group">
+                        <p class="component-demo__group-title">Critical</p>
+                        <button class="component-demo__button component-demo__button--critical" type="button">Enabled</button>
+                        <button class="component-demo__button component-demo__button--critical is-pressed" type="button">Pressed</button>
+                        <button class="component-demo__button component-demo__button--critical" type="button" disabled>Disabled</button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="component-card" data-product-panel-card="isocialpro">
+                  <div class="component-card__head">
+                    <div class="component-card__head-main">
+                      <h4 class="component-card__title">Inputs</h4>
+                    </div>
+                    <ul class="component-card__meta" aria-label="Especificaciones del componente">
+                      <li>4 variantes</li>
+                      <li>3 tamaños</li>
+                      <li>focus, error, disabled</li>
+                    </ul>
+                  </div>
+                  <div class="component-card__preview">
+                    <div class="component-preview component-preview--input">
+                      <label class="component-demo__field component-demo__field--input-state">
+                        <span class="component-demo__label component-demo__label--default">Email <span class="component-demo__label-info component-demo__label-info--default">(Info)</span></span>
+                        <span class="component-demo__input component-demo__input--default">nombre@ejemplo.com</span>
+                        <span class="component-demo__supporting component-demo__supporting--default">Te escribiremos aquí</span>
+                      </label>
+                      <label class="component-demo__field component-demo__field--input-state">
+                        <span class="component-demo__label component-demo__label--focus">Email <span class="component-demo__label-info component-demo__label-info--focus">(Info)</span></span>
+                        <span class="component-demo__input component-demo__input--focus">nombre@ejemplo.com</span>
+                        <span class="component-demo__supporting component-demo__supporting--focus">Te escribiremos aquí</span>
+                      </label>
+                      <label class="component-demo__field component-demo__field--input-state">
+                        <span class="component-demo__label component-demo__label--error">Email <span class="component-demo__label-info component-demo__label-info--error">(Info)</span></span>
+                        <span class="component-demo__input component-demo__input--error">nombre@ejemplo.com</span>
+                        <span class="component-demo__supporting component-demo__supporting--error">Introduce un correo válido</span>
+                      </label>
+                      <label class="component-demo__field component-demo__field--input-state">
+                        <span class="component-demo__label component-demo__label--disabled">Email <span class="component-demo__label-info component-demo__label-info--disabled">(Info)</span></span>
+                        <span class="component-demo__input component-demo__input--disabled">nombre@ejemplo.com</span>
+                        <span class="component-demo__supporting component-demo__supporting--disabled">Te escribiremos aquí</span>
+                      </label>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="component-card" data-product-panel-card="isocialpro">
+                  <div class="component-card__head">
+                    <div class="component-card__head-main">
+                      <h4 class="component-card__title">Cards</h4>
+                    </div>
+                    <ul class="component-card__meta" aria-label="Especificaciones del componente">
+                      <li>4 variantes</li>
+                      <li>2 tamaños</li>
+                      <li>default, hover, selected</li>
+                    </ul>
+                  </div>
+                  <div class="component-card__preview">
+                    <div class="component-preview component-preview--cards">
+                      <article class="component-demo__card">
+                        <span class="component-demo__badge">Prioridad alta</span>
+                        <h5 class="component-demo__card-title">Seguimiento de caso</h5>
+                        <p class="component-demo__card-copy">Última actualización, estado y próximos pasos.</p>
+                      </article>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -349,18 +1032,18 @@
       <div class="divider"></div>
     </div>
 
-    <!-- DECISIONES DE DISEÑO -->
+    <!-- DECISIONES DE SISTEMA -->
     <section class="section project-process" id="decisiones" aria-labelledby="decisiones-title">
       <div class="container">
         <div class="project-process__grid">
           <div class="project-process__content reveal-up">
             <div class="section-head">
               <span class="dot" aria-hidden="true"></span>
-              <h2 class="section-title">DECISIONES DE DISEÑO</h2>
+              <h2 class="type-kicker">DECISIONES DE SISTEMA</h2>
             </div>
-            <h3 id="decisiones-title" class="copy-title">Las decisiones que definieron el producto</h3>
+            <h3 id="decisiones-title" class="type-heading-lg">Las decisiones que hicieron posible la coherencia</h3>
             <div class="copy-body">
-              <p>Tres momentos donde el diseño no fue solo una solución visual, sino una toma de posición sobre cómo debía funcionar el producto para cada perfil.</p>
+              <p>No se trataba de definir una capa visual común, sino de construir principios de interfaz que pudieran adaptarse sin romper la consistencia del ecosistema.</p>
             </div>
           </div>
 
@@ -368,26 +1051,26 @@
             <div class="project-process__track" id="timelineTrack" aria-hidden="true"></div>
             <div class="project-process__progress" id="timelineProgress" aria-hidden="true"></div>
 
-            <ol class="project-process__steps" aria-label="Decisiones de diseño">
+            <ol class="project-process__steps" aria-label="Decisiones de sistema">
               <li class="project-process__step reveal-up" style="--d: 0.1s" data-step="1">
                 <div class="project-process__bullet" data-bullet="1" aria-hidden="true"></div>
                 <p class="project-process__phase">Decisión 01</p>
-                <h4 class="project-process__step-title">Cuestionar antes de diseñar</h4>
-                <p class="project-process__step-desc">La primera versión de la selección de tipo de documento en NIDUS era un listado largo. Funcional, pero problemático para el perfil de usuario. Antes de resolver la interacción, se cuestionó el contenido: ¿son necesarios todos estos documentos? ¿Cuáles son realmente relevantes para este perfil? El resultado fue una cuadrícula de pictogramas con etiqueta corta. Menos opciones, reconocimiento visual en lugar de lectura, interacción más directa.</p>
+                <h4 class="project-process__step-title">Convertir marca en interfaz</h4>
+                <p class="project-process__step-desc">El punto de partida no era un sistema, sino activos de marca sueltos. El primer paso consistió en traducir logos, paletas y referencias visuales en foundations reales: color, tipografía, espaciado, jerarquías y reglas básicas de composición aplicables a producto digital.</p>
               </li>
 
               <li class="project-process__step reveal-up" style="--d: 0.2s" data-step="2">
                 <div class="project-process__bullet" data-bullet="2" aria-hidden="true"></div>
                 <p class="project-process__phase">Decisión 02</p>
-                <h4 class="project-process__step-title">Mismo contenido, distinta interacción</h4>
-                <p class="project-process__step-desc">La selección de tipo de documento existe en las dos apps. En iSocialPro es un dropdown de texto: el profesional conoce la terminología y necesita velocidad. En NIDUS es la cuadrícula de pictogramas: el usuario necesita reconocer, no leer. Mismo contenido. Dos modelos de interacción. Un principio que se repite a lo largo de todo el proyecto.</p>
+                <h4 class="project-process__step-title">Coherencia sin uniformidad</h4>
+                <p class="project-process__step-desc">NIDUS e iSocialPro no podían compartir la misma expresión visual ni el mismo grado de complejidad. El sistema se diseñó para permitir variaciones en tono, densidad, componentes y jerarquía sin perder una base común de comportamiento y estructura.</p>
               </li>
 
               <li class="project-process__step reveal-up" style="--d: 0.3s" data-step="3">
                 <div class="project-process__bullet" data-bullet="3" aria-hidden="true"></div>
                 <p class="project-process__phase">Decisión 03</p>
-                <h4 class="project-process__step-title">Coherencia sin uniformidad</h4>
-                <p class="project-process__step-desc">Las dos apps comparten estructura base: mismas secciones, misma arquitectura de información, mismos flujos principales. Pero el lenguaje visual es deliberadamente distinto. NIDUS usa naranja, botones grandes, jerarquía simplificada. iSocialPro usa púrpura, mayor densidad de información, navegación orientada a la gestión. La coherencia no está en que parezcan iguales, sino en que pertenecen al mismo sistema.</p>
+                <h4 class="project-process__step-title">Diseñar para escalar</h4>
+                <p class="project-process__step-desc">Más allá de resolver pantallas concretas, el sistema se construyó para acelerar nuevas funcionalidades, facilitar consistencia entre productos y reducir la dependencia de decisiones puntuales. Cada componente debía ser útil en el presente y sostenible en el crecimiento futuro del ecosistema.</p>
               </li>
             </ol>
           </div>
@@ -399,33 +1082,57 @@
       <div class="divider"></div>
     </div>
 
-    <!-- EL SISTEMA DE DISEÑO -->
-    <section class="section project-result" id="sistema" aria-label="El sistema de diseño">
+    <!-- IMPACTO -->
+    <section class="section" id="impacto" aria-labelledby="impacto-title">
       <div class="container">
-        <div class="project-result__content reveal-up">
+        <div class="section-intro reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">EL SISTEMA DE DISEÑO</h2>
+            <h2 class="type-kicker">IMPACTO</h2>
           </div>
-
-          <h3 class="copy-title">De cero a sistema</h3>
-
+          <h3 id="impacto-title" class="type-heading-lg">Lo que el sistema hizo posible</h3>
           <div class="copy-body">
-            <p>El cliente llegó sin sistema de diseño ni guías visuales. Estas son las bases que construimos para cada producto.</p>
+            <p>El design system no fue solo una entrega técnica. Transformó la forma en que el equipo toma decisiones de diseño y abrió la puerta a un crecimiento más consistente del ecosistema.</p>
           </div>
         </div>
 
-        <div class="project-result__gallery" aria-label="Sistema de diseño">
-          <figure class="project-result__item reveal-up">
-            <img src="images/isocial/placeholder.png" alt="Sistema de diseño NIDUS — colores y tipografía" loading="lazy" decoding="async" />
-            <figcaption>NIDUS</figcaption>
-          </figure>
-
-          <figure class="project-result__item reveal-up">
-            <img src="images/isocial/placeholder.png" alt="Sistema de diseño iSocialPro — colores y tipografía" loading="lazy" decoding="async" />
-            <figcaption>iSocialPro</figcaption>
-          </figure>
-        </div>
+        <ul class="project-impact__list reveal-up" style="--d: 0.1s" aria-label="Resultados del proyecto">
+          <li class="project-impact__item">
+            <span class="project-impact__marker" aria-hidden="true"></span>
+            <div>
+              <p class="project-impact__title">Base compartida para el equipo</p>
+              <p class="project-impact__desc">Por primera vez, todos los productos del ecosistema parten del mismo lenguaje. Tokens, componentes y patrones son reutilizables entre plataformas.</p>
+            </div>
+          </li>
+          <li class="project-impact__item">
+            <span class="project-impact__marker" aria-hidden="true"></span>
+            <div>
+              <p class="project-impact__title">Mayor consistencia entre productos</p>
+              <p class="project-impact__desc">Las interfaces de NIDUS e iSocialPro comparten una coherencia visual y estructural que antes no existía.</p>
+            </div>
+          </li>
+          <li class="project-impact__item">
+            <span class="project-impact__marker" aria-hidden="true"></span>
+            <div>
+              <p class="project-impact__title">Diseño más rápido</p>
+              <p class="project-impact__desc">Los flujos nuevos ya no parten de cero. El sistema acelera las decisiones y reduce el tiempo de definición visual en nuevas funcionalidades.</p>
+            </div>
+          </li>
+          <li class="project-impact__item">
+            <span class="project-impact__marker" aria-hidden="true"></span>
+            <div>
+              <p class="project-impact__title">Escalabilidad para nuevos productos</p>
+              <p class="project-impact__desc">El sistema fue construido para absorber la evolución del ecosistema. Nuevas plataformas pueden incorporarse sin redefinir las bases.</p>
+            </div>
+          </li>
+          <li class="project-impact__item">
+            <span class="project-impact__marker" aria-hidden="true"></span>
+            <div>
+              <p class="project-impact__title">Accesibilidad como condición estructural</p>
+              <p class="project-impact__desc">La accesibilidad dejó de ser un criterio puntual para convertirse en una condición integrada desde las bases del sistema.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -433,21 +1140,21 @@
       <div class="divider"></div>
     </div>
 
-    <!-- REFLEXIÓN FINAL -->
+    <!-- REFLEXIÓN -->
     <section class="section project-learnings" id="reflexion" aria-labelledby="reflexion-title">
       <div class="container">
         <div class="project-learnings__content reveal-up">
           <div class="section-head">
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="section-title">REFLEXIÓN</h2>
+            <h2 class="type-kicker">REFLEXIÓN</h2>
           </div>
 
-          <h3 id="reflexion-title" class="copy-title">El diseño real ocurre dentro de restricciones</h3>
+          <h3 id="reflexion-title" class="type-heading-lg">Un sistema no impone orden visual. Crea una base para tomar mejores decisiones.</h3>
 
           <div class="copy-body project-learnings__intro">
-            <p>Diseñar para perfiles vulnerables obliga a tomar partido: cada decisión tiene una consecuencia directa para alguien que quizás no ha usado nunca una app como esta.</p>
-            <p>Pero el diseño no ocurre en el vacío. Ocurre dentro de negociaciones, restricciones y decisiones que no siempre son tuyas. La diferencia entre un buen diseñador y uno excelente no está solo en las soluciones que propone, sino en saber cuándo defender una decisión y cuándo aceptar una limitación sin perder el criterio.</p>
-            <p>Algunas batallas se ganan. Otras definen mejor el territorio donde puedes actuar.</p>
+            <p>Este proyecto me obligó a entender que la coherencia no consiste en repetir componentes, sino en definir principios suficientemente sólidos como para adaptarse a realidades distintas.</p>
+            <p>Diseñar para un ecosistema social implica trabajar con restricciones reales, perfiles vulnerables y contextos donde la claridad y la accesibilidad no son un valor añadido, sino una necesidad estructural.</p>
+            <p>La diferencia entre diseñar pantallas y diseñar sistemas es que un sistema te obliga a pensar en consecuencias: qué pasa cuando escala, cuando cambia el equipo, cuando aparece un nuevo producto. El resultado no fue solo una librería de UI, sino una forma de diseñar con más consistencia, más criterio y más capacidad de crecimiento.</p>
           </div>
         </div>
       </div>
@@ -457,11 +1164,12 @@
       <div class="divider"></div>
     </div>
 
+    <!-- OTROS PROYECTOS -->
     <section class="project-navigation" aria-label="Navegación de proyectos">
       <div class="container">
         <div class="section-head project-navigation__head reveal-up">
           <span class="dot" aria-hidden="true"></span>
-          <h2 class="section-title">Otros proyectos</h2>
+          <h2 class="type-kicker">Otros proyectos</h2>
         </div>
         <ul class="project-navigation__grid" aria-label="Lista de proyectos">
           <li class="project-navigation__item reveal-up" style="--d: 0.1s">
@@ -476,8 +1184,8 @@
               <div class="portfolio-content">
                 <span class="portfolio-pill">UX/UI</span>
                 <div class="copy-body">
-                  <h3 id="project-nav-christies" class="copy-card-title">Christie's Pulse</h3>
-                  <p class="copy-card-desc">Mejoras de experiencia y navegación para una plataforma de contenido digital.</p>
+                  <h3 id="project-nav-christies" class="type-heading-md">Christie's Pulse</h3>
+                  <p class="type-body">Mejoras de experiencia y navegación para una plataforma de contenido digital.</p>
                 </div>
               </div>
             </a>
@@ -495,8 +1203,8 @@
               <div class="portfolio-content">
                 <span class="portfolio-pill">UX/UI</span>
                 <div class="copy-body">
-                  <h3 id="project-nav-safa" class="copy-card-title">Sagrada Família</h3>
-                  <p class="copy-card-desc">Replanteamiento estructural de la app para el contexto real de visita on-site.</p>
+                  <h3 id="project-nav-safa" class="type-heading-md">Sagrada Família</h3>
+                  <p class="type-body">Replanteamiento estructural de la app para el contexto real de visita on-site.</p>
                 </div>
               </div>
             </a>
@@ -514,8 +1222,8 @@
               <div class="portfolio-content">
                 <span class="portfolio-pill">Contacto</span>
                 <div class="copy-body">
-                  <h3 id="project-nav-contact" class="copy-card-title">TerraWay</h3>
-                  <p class="copy-card-desc">Si necesitas apoyo en UX y producto digital, podemos hablar de tu proyecto.</p>
+                  <h3 id="project-nav-contact" class="type-heading-md">TerraWay</h3>
+                  <p class="type-body">Si necesitas apoyo en UX y producto digital, podemos hablar de tu proyecto.</p>
                 </div>
               </div>
             </a>
@@ -526,21 +1234,20 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer" id="contact">
     <div class="container footer-inner">
       <div class="section-head footer-head">
-        <span class="dot dot--red" aria-hidden="true"></span>
-        <h6 class="section-title footer-title">Contacto</h6>
+        <span class="dot" aria-hidden="true"></span>
+        <p class="type-kicker footer-title">Contacto</p>
       </div>
 
       <h2 class="footer-hero">¿Hablamos?</h2>
-      <p class="copy-intro">
+      <p class="type-body">
         Si estás desarrollando un producto digital y necesitas ayuda con UX o diseño de producto, estaré encantado de conocer tu proyecto.
       </p>
 
       <div class="footer-links">
-        <a href="mailto:toniredondo86@gmail.com" class="button button--footer">
+        <a href="#" class="button button--footer" data-email-user="toniredondo86" data-email-domain="gmail.com">
           Envíame un E-mail
           <svg class="icon" aria-hidden="true">
             <use href="#icon-arrow-up-right"></use>
@@ -564,7 +1271,7 @@
 
       <div class="divider"></div>
 
-      <p class="copy-text">© 2026 Toni Redondo. Diseñado y desarrollado por mí.</p>
+      <p class="type-body footer-note">© 2026 Toni Redondo. Diseñado y desarrollado por mí.</p>
     </div>
   </footer>
 

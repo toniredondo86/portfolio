@@ -1,5 +1,7 @@
 import { prefersReducedMotion, HERO_INTRO_REVEAL_MS } from "./utils.js";
 
+const VISITED_KEY = "portfolio_visited";
+
 export function initHeroIntro() {
   if (!document.body.classList.contains("home")) return;
 
@@ -11,11 +13,16 @@ export function initHeroIntro() {
     window.dispatchEvent(new CustomEvent("home-intro:done"));
   };
 
-  if (!mount) {
+  const hasVisited = localStorage.getItem(VISITED_KEY);
+
+  if (!mount || hasVisited) {
     intro.remove();
     announceIntroDone();
+    if (!hasVisited) localStorage.setItem(VISITED_KEY, "1");
     return;
   }
+
+  localStorage.setItem(VISITED_KEY, "1");
 
   document.body.classList.add("intro-gated");
 

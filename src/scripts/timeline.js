@@ -13,17 +13,25 @@ export function initTimeline() {
   const shouldReduce = prefersReducedMotion();
 
   const measure = () => {
-    const containerRect = container.getBoundingClientRect();
-    const firstRect = bullets[0].getBoundingClientRect();
-    const lastRect = bullets[bullets.length - 1].getBoundingClientRect();
+    // Use offsetTop/offsetLeft (not getBoundingClientRect) so CSS transforms
+    // from reveal-up animations don't pollute the layout measurements.
+    const firstBullet = bullets[0];
+    const lastBullet = bullets[bullets.length - 1];
 
-    const top = firstRect.top + firstRect.height / 2 - containerRect.top;
-    const bottom = lastRect.top + lastRect.height / 2 - containerRect.top;
+    const firstStep = firstBullet.offsetParent; // .project-process__step
+    const lastStep  = lastBullet.offsetParent;
 
-    track.style.top = `${top}px`;
-    track.style.height = `${Math.max(0, bottom - top)}px`;
-    progress.style.top = `${top}px`;
-    progress.style.height = `${Math.max(0, bottom - top)}px`;
+    const top    = firstStep.offsetTop + firstBullet.offsetTop + firstBullet.offsetHeight / 2;
+    const bottom = lastStep.offsetTop  + lastBullet.offsetTop  + lastBullet.offsetHeight  / 2;
+    const left   = firstStep.offsetLeft + firstBullet.offsetLeft + firstBullet.offsetWidth / 2;
+
+    const h = Math.max(0, bottom - top);
+    track.style.top    = `${top}px`;
+    track.style.height = `${h}px`;
+    track.style.left   = `${left}px`;
+    progress.style.top    = `${top}px`;
+    progress.style.height = `${h}px`;
+    progress.style.left   = `${left}px`;
   };
 
   const updateProgress = () => {
